@@ -62,7 +62,7 @@ namespace StatesTool
 		/// <returns>The gameplay screen stack.</returns>
 		public override IScreen[] GetMainMenuScreenStack()
 		{
-			return new IScreen[] { new ModelScreen(AnimationManager), new ToolsScreen(AnimationManager) };
+			return new IScreen[] { new DonkeyScreen() };
 		}
 
 		#endregion //Methods

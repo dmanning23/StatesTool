@@ -5,14 +5,30 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatesTool", "StatesTool.csproj", "{42213458-C0DB-4747-A5E5-2F3EEFC20083}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LanguageGameDonkey.SharedProject", "..\..\languagegame\LanguageGameDonkey.SharedProject\LanguageGameDonkey.SharedProject.shproj", "{E7262486-CAF4-4973-AEBF-E94FC3DF6C37}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TassleGameLib.SharedProject", "..\..\tasslegame\TassleGameLib.SharedProject\TassleGameLib.SharedProject.shproj", "{D6DB4B9E-2F37-498B-8655-2D9F8364F9CF}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\languagegame\LanguageGameDonkey.SharedProject\LanguageGameDonkey.SharedProject.projitems*{42213458-c0db-4747-a5e5-2f3eefc20083}*SharedItemsImports = 4
+		..\..\tasslegame\TassleGameLib.SharedProject\TassleGameLib.SharedProject.projitems*{42213458-c0db-4747-a5e5-2f3eefc20083}*SharedItemsImports = 4
+		..\..\tasslegame\TassleGameLib.SharedProject\TassleGameLib.SharedProject.projitems*{d6db4b9e-2f37-498b-8655-2d9f8364f9cf}*SharedItemsImports = 13
+		..\..\languagegame\LanguageGameDonkey.SharedProject\LanguageGameDonkey.SharedProject.projitems*{e7262486-caf4-4973-aebf-e94fc3df6c37}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42213458-C0DB-4747-A5E5-2F3EEFC20083}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42213458-C0DB-4747-A5E5-2F3EEFC20083}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42213458-C0DB-4747-A5E5-2F3EEFC20083}.Debug|x86.ActiveCfg = Debug|x86
 		{42213458-C0DB-4747-A5E5-2F3EEFC20083}.Debug|x86.Build.0 = Debug|x86
+		{42213458-C0DB-4747-A5E5-2F3EEFC20083}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42213458-C0DB-4747-A5E5-2F3EEFC20083}.Release|Any CPU.Build.0 = Release|Any CPU
 		{42213458-C0DB-4747-A5E5-2F3EEFC20083}.Release|x86.ActiveCfg = Release|x86
 		{42213458-C0DB-4747-A5E5-2F3EEFC20083}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
