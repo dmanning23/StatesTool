@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<XnaContent>
+	<Asset Type="AnimationLib.AnimationContainerXML">
+		<animations>
+			<Item Type="AnimationLib.AnimationXML">
+				<name>CrotchSide</name>
+				<length>0.1</length>
+				<keys>
+					<Item Type="AnimationLib.KeyXML">
+						<time>0</time>
+						<layer>-1</layer>
+						<image>CrotchSide.png</image>
+						<joint>Crotch Nekkid</joint>
+					</Item>
+					<Item Type="AnimationLib.KeyXML">
+						<time>0</time>
+						<layer>-1</layer>
+						<image>CrotchSideColor.png</image>
+						<joint>Crotch Color</joint>
+					</Item>
+					<Item Type="AnimationLib.KeyXML">
+						<time>6</time>
+						<layer>-1</layer>
+						<image>CrotchSide.png</image>
+						<joint>Crotch Nekkid</joint>
+					</Item>
+					<Item Type="AnimationLib.KeyXML">
+						<time>6</time>
+						<layer>-1</layer>
+						<image>CrotchSideColor.png</image>
+						<joint>Crotch Color</joint>
+					</Item>
+				</keys>
+			</Item>
+		</animations>
+	</Asset>
+</XnaContent>

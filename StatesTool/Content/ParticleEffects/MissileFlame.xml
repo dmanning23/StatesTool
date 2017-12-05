@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<EmitterTemplate>
+	<R>190</R>
+	<G>230</G>
+	<B>255</B>
+	<Alpha>255</Alpha>
+	<FadeSpeed>4</FadeSpeed>
+	<MaxVelocity>1500 -1500</MaxVelocity>
+	<MinVelocity>-1500 1500</MinVelocity>
+	<ParticleSize>100</ParticleSize>
+	<Scale>-1300 -1000</Scale>
+	<StartRotation>0 0</StartRotation>
+	<Spin>0 0</Spin>
+	<NumStartParticles>10</NumStartParticles>
+	<EmitterLife>-1</EmitterLife>
+	<ParticleLife>1</ParticleLife>
+	<CreationPeriod>0.008</CreationPeriod>
+	<ParticleGrav>0</ParticleGrav>
+	<BmpFileName>Particles\smoke.png</BmpFileName>
+</EmitterTemplate>

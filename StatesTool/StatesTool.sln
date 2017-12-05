@@ -9,12 +9,20 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LanguageGameDonkey.SharedPr
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TassleGameLib.SharedProject", "..\..\tasslegame\TassleGameLib.SharedProject\TassleGameLib.SharedProject.shproj", "{D6DB4B9E-2F37-498B-8655-2D9F8364F9CF}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "RoboJetLib.SharedProject", "..\..\robojets\RoboJetLib\RoboJetLib.SharedProject.shproj", "{EC0F0BD5-6307-4E03-B02D-F31443AB92FE}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GameDonkeyWidgets", "..\GameDonkeyWidgets\GameDonkeyWidgets.shproj", "{9AE0F5BE-8505-4D20-B4B8-02D191A0FAF0}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		..\..\languagegame\LanguageGameDonkey.SharedProject\LanguageGameDonkey.SharedProject.projitems*{42213458-c0db-4747-a5e5-2f3eefc20083}*SharedItemsImports = 4
+		..\..\robojets\RoboJetLib\RoboJetLib.SharedProject.projitems*{42213458-c0db-4747-a5e5-2f3eefc20083}*SharedItemsImports = 4
+		..\GameDonkeyWidgets\GameDonkeyWidgets.projitems*{42213458-c0db-4747-a5e5-2f3eefc20083}*SharedItemsImports = 4
 		..\..\tasslegame\TassleGameLib.SharedProject\TassleGameLib.SharedProject.projitems*{42213458-c0db-4747-a5e5-2f3eefc20083}*SharedItemsImports = 4
+		..\GameDonkeyWidgets\GameDonkeyWidgets.projitems*{9ae0f5be-8505-4d20-b4b8-02d191a0faf0}*SharedItemsImports = 13
 		..\..\tasslegame\TassleGameLib.SharedProject\TassleGameLib.SharedProject.projitems*{d6db4b9e-2f37-498b-8655-2d9f8364f9cf}*SharedItemsImports = 13
 		..\..\languagegame\LanguageGameDonkey.SharedProject\LanguageGameDonkey.SharedProject.projitems*{e7262486-caf4-4973-aebf-e94fc3df6c37}*SharedItemsImports = 13
+		..\..\robojets\RoboJetLib\RoboJetLib.SharedProject.projitems*{ec0f0bd5-6307-4e03-b02d-f31443ab92fe}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

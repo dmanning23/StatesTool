@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<XnaContent>
+	<Asset Type="AnimationLib.GarmentBoneXML">
+		<name>Crotch Nekkid</name>
+		<type>Normal</type>
+		<colorable>false</colorable>
+		<joints>
+			<Item Type="AnimationLib.JointXML">
+				<name>Crotch Color</name>
+			</Item>
+		</joints>
+		<images>
+			<Item Type="AnimationLib.ImageXML">
+				<upperleft>0 0</upperleft>
+				<lowerright>89 243</lowerright>
+				<anchorcoord>28 156</anchorcoord>
+				<filename>Robot\graphics\CrotchSide.png</filename>
+				<joints>
+					<Item Type="AnimationLib.JointDataXML">
+						<location>0 0</location>
+						<limit1>-180</limit1>
+						<limit2>180</limit2>
+						<FloatRadius>0</FloatRadius>
+						<FloatOrRotate>false</FloatOrRotate>
+					</Item>
+				</joints>
+				<circles />
+				<lines />
+			</Item>
+		</images>
+		<bones>
+			<Item Type="AnimationLib.BoneXML">
+				<name>Crotch Color</name>
+				<type>Normal</type>
+				<colorable>true</colorable>
+				<joints />
+				<images>
+					<Item Type="AnimationLib.ImageXML">
+						<upperleft>0 0</upperleft>
+						<lowerright>89 243</lowerright>
+						<anchorcoord>0 0</anchorcoord>
+						<filename>Robot\graphics\CrotchSideColor.png</filename>
+						<joints />
+						<circles />
+						<lines />
+					</Item>
+				</images>
+				<bones />
+			</Item>
+		</bones>
+		<parentBone>Crotch</parentBone>
+	</Asset>
+</XnaContent>

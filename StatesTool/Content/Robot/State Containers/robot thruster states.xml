@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<XnaContent>
+	<Asset Type="SPFSettings.StateActionListXML">
+		<states>
+			<Item Type="SPFSettings.StateActionsXML">
+				<name>SitStill</name>
+				<actions>
+					<Item Type="SPFSettings.ConstantDeccelerationActionXML">
+						<type>ConstantDecceleration</type>
+						<time>0</time>
+						<direction>-1000 1000</direction>
+						<minYVelocity>0</minYVelocity>
+					</Item>
+				</actions>
+			</Item>
+			<Item Type="SPFSettings.StateActionsXML">
+				<name>Forward</name>
+				<actions>
+					<Item Type="SPFSettings.ConstantAccelerationActionXML">
+						<type>ConstantAcceleration</type>
+						<time>0</time>
+						<direction>
+							<velocity>10000 0</velocity>
+							<directionType>Controller</directionType>
+						</direction>
+						<maxVelocity>4000</maxVelocity>
+					</Item>
+				</actions>
+			</Item>
+			<Item Type="SPFSettings.StateActionsXML">
+				<name>Backward</name>
+				<actions>
+					<Item Type="SPFSettings.ConstantDeccelerationActionXML">
+						<type>ConstantDecceleration</type>
+						<time>0</time>
+						<direction>-10000 10000</direction>
+						<minYVelocity>0</minYVelocity>
+					</Item>
+				</actions>
+			</Item>
+			<Item Type="SPFSettings.StateActionsXML">
+				<name>Up</name>
+				<actions>
+					<Item Type="SPFSettings.ConstantAccelerationActionXML">
+						<type>ConstantAcceleration</type>
+						<time>0</time>
+						<direction>
+							<velocity>0 -10000</velocity>
+							<directionType>Controller</directionType>
+						</direction>
+						<maxVelocity>4000</maxVelocity>
+					</Item>
+				</actions>
+			</Item>
+			<Item Type="SPFSettings.StateActionsXML">
+				<name>Down</name>
+				<actions>
+					<Item Type="SPFSettings.ConstantAccelerationActionXML">
+						<type>ConstantAcceleration</type>
+						<time>0</time>
+						<direction>
+							<velocity>0 10000</velocity>
+							<directionType>Controller</directionType>
+						</direction>
+						<maxVelocity>4000</maxVelocity>
+					</Item>
+				</actions>
+			</Item>
+		</states>
+	</Asset>
+</XnaContent>

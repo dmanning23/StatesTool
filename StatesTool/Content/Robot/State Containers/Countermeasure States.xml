@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<XnaContent>
+	<Asset Type="SPFSettings.StateActionListXML">
+		<states>
+			<Item Type="SPFSettings.StateActionsXML">
+				<name>Neutral</name>
+				<actions />
+			</Item>
+			<Item Type="SPFSettings.StateActionsXML">
+				<name>Firing</name>
+				<actions>
+					<Item Type="SPFSettings.CameraShakeActionXML">
+						<type>CameraShake</type>
+						<time>0</time>
+						<TimeDelta>0.06</TimeDelta>
+						<ShakeAmount>0.65</ShakeAmount>
+					</Item>
+					<Item Type="SPFSettings.SendStateMessageActionXML">
+						<type>SendStateMessage</type>
+						<time>0.01</time>
+						<message>Done</message>
+					</Item>
+				</actions>
+			</Item>
+		</states>
+	</Asset>
+</XnaContent>

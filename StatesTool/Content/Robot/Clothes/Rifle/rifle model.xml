@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<XnaContent>
+	<Asset Type="AnimationLib.GarmentBoneXML">
+		<name>Weapon Nekkid</name>
+		<type>Normal</type>
+		<colorable>false</colorable>
+		<joints>
+			<Item Type="AnimationLib.JointXML">
+				<name>Chamber</name>
+			</Item>
+		</joints>
+		<images>
+			<Item Type="AnimationLib.ImageXML">
+				<upperleft>0 0</upperleft>
+				<lowerright>101 252</lowerright>
+				<anchorcoord>44 32</anchorcoord>
+				<filename>Robot\graphics\Rifle.png</filename>
+				<joints>
+					<Item Type="AnimationLib.JointDataXML">
+						<location>63 74</location>
+						<limit1>-180</limit1>
+						<limit2>180</limit2>
+						<FloatRadius>0</FloatRadius>
+						<FloatOrRotate>false</FloatOrRotate>
+					</Item>
+				</joints>
+				<circles />
+				<lines />
+			</Item>
+		</images>
+		<bones>
+			<Item Type="AnimationLib.BoneXML">
+				<name>Chamber</name>
+				<type>Normal</type>
+				<colorable>false</colorable>
+				<joints />
+				<images />
+				<bones />
+			</Item>
+		</bones>
+		<parentBone>Weapon</parentBone>
+	</Asset>
+</XnaContent>

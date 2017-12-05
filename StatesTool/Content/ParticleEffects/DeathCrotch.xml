@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<EmitterTemplate>
+	<R>255</R>
+	<G>255</G>
+	<B>255</B>
+	<Alpha>255</Alpha>
+	<FadeSpeed>0</FadeSpeed>
+	<MaxVelocity>1000 -1000</MaxVelocity>
+	<MinVelocity>-1000 1000</MinVelocity>
+	<ParticleSize>89</ParticleSize>
+	<Scale>0 0</Scale>
+	<StartRotation>0 0</StartRotation>
+	<Spin>-200 200</Spin>
+	<NumStartParticles>1</NumStartParticles>
+	<EmitterLife>0.1</EmitterLife>
+	<ParticleLife>3</ParticleLife>
+	<CreationPeriod>1</CreationPeriod>
+	<ParticleGrav>1000</ParticleGrav>
+	<BmpFileName>Robot\graphics\CrotchSide.png</BmpFileName>
+</EmitterTemplate>

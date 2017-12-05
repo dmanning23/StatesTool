@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<XnaContent>
+	<Asset Type="AnimationLib.GarmentBoneXML">
+		<name>Chesticle Nekkid</name>
+		<type>Normal</type>
+		<colorable>false</colorable>
+		<joints />
+		<images>
+			<Item Type="AnimationLib.ImageXML">
+				<upperleft>0 0</upperleft>
+				<lowerright>36 108</lowerright>
+				<anchorcoord>18 103</anchorcoord>
+				<filename>Robot\graphics\ChesticleSide.png</filename>
+				<joints />
+				<circles />
+				<lines />
+			</Item>
+		</images>
+		<bones />
+		<parentBone>Chesticle</parentBone>
+	</Asset>
+</XnaContent>

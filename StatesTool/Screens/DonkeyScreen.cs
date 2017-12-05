@@ -5,6 +5,7 @@ using MenuBuddy;
 using Microsoft.Xna.Framework;
 using RenderBuddy;
 using ResolutionBuddy;
+using RoboJetsLib;
 using System.Collections.Generic;
 using TassleGameLib;
 
@@ -42,22 +43,24 @@ namespace StatesTool
 			Renderer = new Renderer(ScreenManager.Game, Content);
 
 			//LoadArcher();
-			LoadCarrie();
+			//LoadCarrie();
+			LoadRoboJet();
 
 			ScreenManager.AddScreen(new ToolsScreen(Engine, Character));
+			ScreenManager.AddScreen(new StateContainersScreen(Engine, Character));
 		}
 
 		private void LoadArcher()
 		{
 			//create the correct engine
+			Filename.SetCurrentDirectory(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\");
 			Engine = new LanguageDonkey(Renderer, ScreenManager.Game);
-			Engine.LoadContent(ScreenManager.Game.GraphicsDevice);
 			Engine.Renderer.TextureLoader = new TextureFileLoader();
+			Engine.LoadContent(ScreenManager.Game.GraphicsDevice);
 			SetWorldBoundaries();
 
 			//load the file
-			Filename.SetCurrentDirectory(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\");
-			Filename dataFile = new Filename();
+			var dataFile = new Filename();
 			dataFile.File = @"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Archer\Archer_Data.xml";
 			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
 			Engine.Start();
@@ -66,15 +69,31 @@ namespace StatesTool
 		private void LoadCarrie()
 		{
 			//create the correct engine
+			Filename.SetCurrentDirectory(@"C:\Projects\tasslegame\Windows\Content\");
 			Engine = new TassleDonkey(Renderer, ScreenManager.Game);
-			Engine.LoadContent(ScreenManager.Game.GraphicsDevice);
 			Engine.Renderer.TextureLoader = new TextureFileLoader();
+			Engine.LoadContent(ScreenManager.Game.GraphicsDevice);
 			SetWorldBoundaries();
 
 			//load the file
-			Filename.SetCurrentDirectory(@"C:\Projects\tasslegame\Windows\Content\");
-			Filename dataFile = new Filename();
+			var dataFile = new Filename();
 			dataFile.File = @"C:\Projects\tasslegame\Windows\Content\Carrie\carrie data.xml";
+			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
+			Engine.Start();
+		}
+
+		private void LoadRoboJet()
+		{
+			//create the correct engine
+			Filename.SetCurrentDirectory(@"C:\Projects\robojets\Source\Content\");
+			Engine = new RoboJetsDonkey(Renderer, ScreenManager.Game);
+			Engine.Renderer.TextureLoader = new TextureFileLoader();
+			Engine.LoadContent(ScreenManager.Game.GraphicsDevice);
+			SetWorldBoundaries();
+
+			//load the file
+			var dataFile = new Filename();
+			dataFile.File = @"C:\Projects\robojets\Source\Content\Robot\Robot Data.xml";
 			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
 			Engine.Start();
 		}

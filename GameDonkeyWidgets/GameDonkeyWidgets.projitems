@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>9ae0f5be-8505-4d20-b4b8-02d191a0faf0</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>GameDonkeyWidgets</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)GameDonkeyBaseTab.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StateActionTypeDropdown.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StateActionTypeMessageBox.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StateContainerDropdown.cs" />
+  </ItemGroup>
+</Project>

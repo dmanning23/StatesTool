@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<XnaContent>
+	<Asset Type="AnimationLib.AnimationContainerXML">
+		<animations>
+			<Item Type="AnimationLib.AnimationXML">
+				<name>Neutral</name>
+				<length>0.2</length>
+				<keys>
+					<Item Type="AnimationLib.KeyXML">
+						<time>0</time>
+						<layer>-1</layer>
+						<image>finColor.png</image>
+						<joint>TailFin Color</joint>
+					</Item>
+					<Item Type="AnimationLib.KeyXML">
+						<time>12</time>
+						<layer>-1</layer>
+						<image>fin.png</image>
+						<joint>TailFin Nekkid</joint>
+					</Item>
+					<Item Type="AnimationLib.KeyXML">
+						<time>12</time>
+						<layer>-1</layer>
+						<image>finColor.png</image>
+						<joint>TailFin Color</joint>
+					</Item>
+				</keys>
+			</Item>
+			<Item Type="AnimationLib.AnimationXML">
+				<name>Up</name>
+				<length>0.2</length>
+				<keys>
+					<Item Type="AnimationLib.KeyXML">
+						<time>0</time>
+						<layer>-1</layer>
+						<image>finColor.png</image>
+						<joint>TailFin Color</joint>
+					</Item>
+					<Item Type="AnimationLib.KeyXML">
+						<time>12</time>
+						<rotation>-12</rotation>
+						<layer>-1</layer>
+						<image>fin.png</image>
+						<joint>TailFin Nekkid</joint>
+					</Item>
+					<Item Type="AnimationLib.KeyXML">
+						<time>12</time>
+						<layer>-1</layer>
+						<image>finColor.png</image>
+						<joint>TailFin Color</joint>
+					</Item>
+				</keys>
+			</Item>
+			<Item Type="AnimationLib.AnimationXML">
+				<name>Down</name>
+				<length>0.2</length>
+				<keys>
+					<Item Type="AnimationLib.KeyXML">
+						<time>0</time>
+						<layer>-1</layer>
+						<image>finColor.png</image>
+						<joint>TailFin Color</joint>
+					</Item>
+					<Item Type="AnimationLib.KeyXML">
+						<time>12</time>
+						<rotation>16</rotation>
+						<layer>-1</layer>
+						<image>fin.png</image>
+						<joint>TailFin Nekkid</joint>
+					</Item>
+					<Item Type="AnimationLib.KeyXML">
+						<time>12</time>
+						<layer>-1</layer>
+						<image>finColor.png</image>
+						<joint>TailFin Color</joint>
+					</Item>
+				</keys>
+			</Item>
+		</animations>
+	</Asset>
+</XnaContent>

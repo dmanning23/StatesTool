@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<XnaContent>
+	<Asset Type="StateMachineBuddy.StateMachineXML">
+		<initial>Neutral</initial>
+		<stateNames>
+			<Item Type="string">Neutral</Item>
+			<Item Type="string">Firing</Item>
+		</stateNames>
+		<messageNames>
+			<Item Type="string">Done</Item>
+		</messageNames>
+		<states>
+			<Item Type="StateMachineBuddy.StateTableXML">
+				<name>Neutral</name>
+				<transitions>
+					<Item Type="StateMachineBuddy.StateChangeXML">
+						<message>Shoot</message>
+						<state>Firing</state>
+					</Item>
+				</transitions>
+			</Item>
+			<Item Type="StateMachineBuddy.StateTableXML">
+				<name>Firing</name>
+				<transitions>
+					<Item Type="StateMachineBuddy.StateChangeXML">
+						<message>Done</message>
+						<state>Neutral</state>
+					</Item>
+				</transitions>
+			</Item>
+		</states>
+	</Asset>
+</XnaContent>
