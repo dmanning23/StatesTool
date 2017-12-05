@@ -9,6 +9,16 @@
     <Import_RootNamespace>GameDonkeyWidgets</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ActionScreenFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\BaseActionScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\CameraShakeActionScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\ParticleEffectActionScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\PlayAnimationActionScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\PlaySoundActionScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\ProjectileActionScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\SendStateMessageActionScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\TimedActionScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\TrailActionScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameDonkeyBaseTab.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StateActionTypeDropdown.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StateActionTypeMessageBox.cs" />

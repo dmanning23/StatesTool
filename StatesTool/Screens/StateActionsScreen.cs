@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using WidgetLib;
 using InputHelper;
 using GameDonkeyWidgets;
+using MenuBuddy;
 
 namespace StatesTool
 {
@@ -23,7 +24,7 @@ namespace StatesTool
 
 		#region Methods
 
-		public StateActionsScreen(IGameDonkey donkey, PlayerQueue character, StateActions stateActions) : base("State Actions Screen", true, true)
+		public StateActionsScreen(IGameDonkey donkey, PlayerQueue character, StateActions stateActions) : base(stateActions.StateName, true, true)
 		{
 			CoveredByOtherScreens = true;
 			CoverOtherScreens = true;
@@ -37,7 +38,13 @@ namespace StatesTool
 
 		public override void NavigateToItemScreen(BaseAction item)
 		{
-			throw new NotImplementedException();
+			var screen = ActionScreenFactory.CreateStateActionScreen(item);
+			if (null == screen)
+			{
+				screen = new OkScreen($"Haven't completed the screen for {item.ActionType.ToString()} yet.");
+				
+			}
+			ScreenManager.AddScreen(screen);
 		}
 
 		public override void AddItem(object obj, ClickEventArgs e)
@@ -58,7 +65,9 @@ namespace StatesTool
 
 		public override void RemoveItem(BaseAction item)
 		{
-			throw new NotImplementedException();
+			base.RemoveItem(item);
+
+			StateActions.RemoveAction(item);
 		}
 
 		#endregion //Methods
