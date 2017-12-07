@@ -1,19 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using GameDonkeyLib;
+using UndoRedoBuddy;
 
 namespace GameDonkeyWidgets
 {
-    public class PlayAnimationActionScreen : BaseActionScreen
-    {
+	public class PlayAnimationActionScreen : BaseActionScreen
+	{
 		#region Properties
 
 		#endregion //Properties
 
 		#region Methods
 
-		public PlayAnimationActionScreen() : base("Play Animation")
+		public PlayAnimationActionScreen(BaseAction stateAction, PlayerQueue character) : base("Play Animation", stateAction, character)
 		{
+		}
+
+		protected override void AddStateActionWidgets()
+		{
+			var animationAction = StateAction as PlayAnimationAction;
+
+			var tempStack = new UndoRedoStack();
+			var animation = AddAnimationDropdown(Character.Character.AnimationContainer, tempStack, ToolStack);
+			animation.SelectedItem = Character.Character.AnimationContainer.FindAnimation(animationAction.AnimationName);
+			animation.OnSelectedItemChange += (obj, e) =>
+			{
+				animationAction.AnimationName = animation.SelectedItem.Name;
+			};
+
+			var playback = AddPlaybackTypeDropdown(ToolStack);
+			playback.SelectedItem = animationAction.PlaybackMode;
+			playback.OnSelectedItemChange += (obj, e) =>
+			{
+				animationAction.PlaybackMode = playback.SelectedItem;
+			};
 		}
 
 		#endregion //Methods

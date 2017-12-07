@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameDonkeyLib;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -12,7 +13,11 @@ namespace GameDonkeyWidgets
 
 		#region Methods
 
-		public SendStateMessageActionScreen() : base("Send State Message")
+		public SendStateMessageActionScreen(BaseAction stateAction, PlayerQueue character) : base("Send State Message", stateAction, character)
+		{
+		}
+
+		protected override void AddStateActionWidgets()
 		{
 		}
 

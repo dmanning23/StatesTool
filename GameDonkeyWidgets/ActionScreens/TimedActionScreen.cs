@@ -13,13 +13,21 @@ namespace GameDonkeyWidgets
 
 		#region Methods
 
-		public TimedActionScreen(string screenName) : base(screenName)
+		public TimedActionScreen(string screenName, BaseAction stateAction, PlayerQueue character) : base(screenName, stateAction, character)
 		{
 		}
 
-		protected void AddTimeDeltaControl(TimedAction baseAction)
+		protected override void AddStateActionWidgets()
 		{
-			//TODO: add a control to change the time delta of the action
+			var timedAction = StateAction as TimedAction;
+
+			//Add the time delta widget
+			CreateLabel("Time Delta", ToolStack);
+			var time = CreateNumEditBox(timedAction.TimeDelta, ToolStack);
+			time.OnNumberEdited += (obj, e) =>
+			{
+				timedAction.TimeDelta = time.Number;
+			};
 		}
 
 		#endregion //Methods

@@ -8,37 +8,37 @@ namespace GameDonkeyWidgets
 {
     public static class ActionScreenFactory
     {
-		public static IScreen CreateStateActionScreen(BaseAction stateAction)
+		public static IScreen CreateStateActionScreen(BaseAction stateAction, PlayerQueue character)
 		{
 			switch (stateAction.ActionType)
 			{
 				case EActionType.CameraShake:
 					{
-						return new CameraShakeActionScreen();
+						return new CameraShakeActionScreen(stateAction, character);
 					}
 				case EActionType.ParticleEffect:
 					{
-						return new ParticleEffectActionScreen();
+						return new ParticleEffectActionScreen(stateAction, character);
 					}
 				case EActionType.PlayAnimation:
 					{
-						return new PlayAnimationActionScreen();
+						return new PlayAnimationActionScreen(stateAction, character);
 					}
 				case EActionType.PlaySound:
 					{
-						return new PlaySoundActionScreen();
+						return new PlaySoundActionScreen(stateAction, character);
 					}
 				case EActionType.Projectile:
 					{
-						return new ProjectileActionScreen();
+						return new ProjectileActionScreen(stateAction, character);
 					}
 				case EActionType.SendStateMessage:
 					{
-						return new SendStateMessageActionScreen();
+						return new SendStateMessageActionScreen(stateAction, character);
 					}
 				case EActionType.Trail:
 					{
-						return new TrailActionScreen();
+						return new TrailActionScreen(stateAction, character);
 					}
 				default:
 					{

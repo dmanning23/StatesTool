@@ -1,7 +1,4 @@
 ﻿using GameDonkeyLib;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace GameDonkeyWidgets
 {
@@ -9,17 +6,46 @@ namespace GameDonkeyWidgets
 	{
 		#region Properties
 
+		protected BaseAction StateAction { get; set; }
+		protected PlayerQueue Character { get; set; }
+
 		#endregion //Properties
 
 		#region Methods
 
-		public BaseActionScreen(string screenName) : base(screenName)
+		public BaseActionScreen(string screenName, BaseAction stateAction, PlayerQueue character) : base(screenName)
 		{
+			StateAction = stateAction;
+			Character = character;
 		}
 
-		protected void AddTimeControl(BaseAction baseAction)
+		public override void LoadContent()
 		{
-			//TODO: add a control to change the time of the action
+			base.LoadContent();
+
+			//add the close button
+			AddTitle(StateAction.ActionType.ToString(), false, ToolStack);
+
+			//add the time
+			AddTimeControl();
+
+			AddStateActionWidgets();
+
+			AddItem(ToolStack);
+		}
+
+		protected abstract void AddStateActionWidgets();
+
+		protected void AddTimeControl()
+		{
+			//add a control to change the time of the action
+			CreateLabel("Time", ToolStack);
+
+			var time = CreateNumEditBox(StateAction.Time, ToolStack);
+			time.OnNumberEdited += (obj, e) =>
+			{
+				StateAction.Time = time.Number;
+			};
 		}
 
 		#endregion //Methods

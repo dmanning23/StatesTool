@@ -2,6 +2,8 @@
 using MenuBuddy;
 using Microsoft.Xna.Framework;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace GameDonkeyWidgets
 {
@@ -15,9 +17,11 @@ namespace GameDonkeyWidgets
 
 		public StateActionTypeDropdown(IScreen screen) : base(screen)
 		{
-			foreach (var actionType in Enum.GetValues(typeof(EActionType)))
+			var stateActionValues = Enum.GetValues(typeof(EActionType)).OfType<EActionType>().OrderBy(x => x.ToString());
+
+			foreach (var actionType in stateActionValues)
 			{
-				var dropitem = new DropdownItem<EActionType>((EActionType)actionType, this)
+				var dropitem = new DropdownItem<EActionType>(actionType, this)
 				{
 					Vertical = VerticalAlignment.Center,
 					Horizontal = HorizontalAlignment.Center,

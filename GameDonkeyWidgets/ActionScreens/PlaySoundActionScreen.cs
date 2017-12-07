@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using GameDonkeyLib;
 
 namespace GameDonkeyWidgets
 {
@@ -12,8 +10,19 @@ namespace GameDonkeyWidgets
 
 		#region Methods
 
-		public PlaySoundActionScreen() : base("Play Sound")
+		public PlaySoundActionScreen(BaseAction stateAction, PlayerQueue character) : base("Play Sound", stateAction, character)
 		{
+		}
+
+		protected override void AddStateActionWidgets()
+		{
+			var soundAction = StateAction as PlaySoundAction;
+
+			var soundFiles = AddContentFileDropdown("Sound files:", ".wav", soundAction.SoundCueName, ToolStack);
+			soundFiles.OnSelectedItemChange += (obj, e) =>
+			{
+				soundAction.SoundCueName = soundFiles.SelectedItem;
+			};
 		}
 
 		#endregion //Methods

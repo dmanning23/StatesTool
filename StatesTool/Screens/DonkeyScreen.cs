@@ -7,6 +7,8 @@ using RenderBuddy;
 using ResolutionBuddy;
 using RoboJetsLib;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using TassleGameLib;
 
 namespace StatesTool

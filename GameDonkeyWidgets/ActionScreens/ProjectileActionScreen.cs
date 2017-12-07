@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameDonkeyLib;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -12,7 +13,11 @@ namespace GameDonkeyWidgets
 
 		#region Methods
 
-		public ProjectileActionScreen() : base("Projectile")
+		public ProjectileActionScreen(BaseAction stateAction, PlayerQueue character) : base("Projectile", stateAction, character)
+		{
+		}
+
+		protected override void AddStateActionWidgets()
 		{
 		}
 

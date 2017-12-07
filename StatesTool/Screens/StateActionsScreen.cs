@@ -38,7 +38,7 @@ namespace StatesTool
 
 		public override void NavigateToItemScreen(BaseAction item)
 		{
-			var screen = ActionScreenFactory.CreateStateActionScreen(item);
+			var screen = ActionScreenFactory.CreateStateActionScreen(item, Character);
 			if (null == screen)
 			{
 				screen = new OkScreen($"Haven't completed the screen for {item.ActionType.ToString()} yet.");

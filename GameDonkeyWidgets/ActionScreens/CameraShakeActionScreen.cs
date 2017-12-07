@@ -1,19 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using GameDonkeyLib;
 
 namespace GameDonkeyWidgets
 {
-    public class CameraShakeActionScreen : BaseActionScreen
-    {
+	public class CameraShakeActionScreen : BaseActionScreen
+	{
 		#region Properties
 
 		#endregion //Properties
 
 		#region Methods
 
-		public CameraShakeActionScreen() : base("Camera Shake")
+		public CameraShakeActionScreen(BaseAction stateAction, PlayerQueue character) : base("Camera Shake", stateAction, character)
 		{
+		}
+
+		protected override void AddStateActionWidgets()
+		{
+			var cameraShakeAction = StateAction as CameraShakeAction;
+
+			CreateLabel("Time Delta", ToolStack);
+			var time = CreateNumEditBox(cameraShakeAction.TimeDelta, ToolStack);
+			time.OnNumberEdited += (obj, e) =>
+			{
+				cameraShakeAction.TimeDelta = time.Number;
+			};
+
+			CreateLabel("Shake Amount", ToolStack);
+			var shake = CreateNumEditBox(cameraShakeAction.ShakeAmount, ToolStack);
+			shake.OnNumberEdited += (obj, e) =>
+			{
+				cameraShakeAction.ShakeAmount = time.Number;
+			};
 		}
 
 		#endregion //Methods

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameDonkeyLib;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -12,7 +13,11 @@ namespace GameDonkeyWidgets
 
 		#region Methods
 
-		public TrailActionScreen() : base("Trail")
+		public TrailActionScreen(BaseAction stateAction, PlayerQueue character) : base("Trail", stateAction, character)
+		{
+		}
+
+		protected override void AddStateActionWidgets()
 		{
 		}
 

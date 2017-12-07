@@ -1,4 +1,5 @@
-﻿using GameDonkeyLib;
+﻿using AnimationLibWidgets;
+using GameDonkeyLib;
 using MenuBuddy;
 using Microsoft.Xna.Framework;
 using System;
@@ -8,7 +9,7 @@ using WidgetLib;
 
 namespace GameDonkeyWidgets
 {
-	public class GameDonkeyBaseTab : BaseTab
+	public class GameDonkeyBaseTab : AnimationLibBaseTab
 	{
 		public GameDonkeyBaseTab(string screenName) : base(screenName)
 		{
