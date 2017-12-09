@@ -19,9 +19,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\SendStateMessageActionScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\TimedActionScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\TrailActionScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DirectionTypeDropdown.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameDonkeyBaseTab.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StateActionTypeDropdown.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StateActionTypeMessageBox.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StateContainerDropdown.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StateMessageDropdown.cs" />
   </ItemGroup>
 </Project>

@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace GameDonkeyWidgets
 {
-	public class StateActionTypeDropdown : Dropdown<EActionType>
+	public class DirectionTypeDropdown : Dropdown<EDirectionType>
 	{
 		#region Properties
 
@@ -14,14 +14,14 @@ namespace GameDonkeyWidgets
 
 		#region Methods
 
-		public StateActionTypeDropdown(IScreen screen) : base(screen)
+		public DirectionTypeDropdown(IScreen screen) : base(screen)
 		{
 			OnClick += CreateDropdownList;
-			var stateActionValues = Enum.GetValues(typeof(EActionType)).OfType<EActionType>().OrderBy(x => x.ToString());
+			var stateActionValues = Enum.GetValues(typeof(EDirectionType)).OfType<EDirectionType>().OrderBy(x => x.ToString());
 
 			foreach (var actionType in stateActionValues)
 			{
-				var dropitem = new DropdownItem<EActionType>(actionType, this)
+				var dropitem = new DropdownItem<EDirectionType>(actionType, this)
 				{
 					Vertical = VerticalAlignment.Center,
 					Horizontal = HorizontalAlignment.Center,

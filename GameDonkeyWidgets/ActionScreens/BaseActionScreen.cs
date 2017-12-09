@@ -40,7 +40,6 @@ namespace GameDonkeyWidgets
 		{
 			//add a control to change the time of the action
 			CreateLabel("Time", ToolStack);
-
 			var time = CreateNumEditBox(StateAction.Time, ToolStack);
 			time.OnNumberEdited += (obj, e) =>
 			{

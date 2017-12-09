@@ -19,6 +19,13 @@ namespace GameDonkeyWidgets
 
 		protected override void AddStateActionWidgets()
 		{
+			var messageAction = StateAction as SendStateMessageAction;
+			var message = AddStateMessageDropdown(Character.Character.States.StateMachine, ToolStack);
+			message.SelectedItem = messageAction.MessageName;
+			message.OnSelectedItemChange += (obj, e) =>
+			{
+				messageAction.MessageName = e.SelectedItem;
+			};
 		}
 
 		#endregion //Methods

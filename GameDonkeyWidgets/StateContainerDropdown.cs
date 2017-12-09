@@ -1,5 +1,4 @@
-﻿using AnimationLib;
-using GameDonkeyLib;
+﻿using GameDonkeyLib;
 using MenuBuddy;
 using Microsoft.Xna.Framework;
 
@@ -9,6 +8,7 @@ namespace GameDonkeyWidgets
 	{
 		public StateContainerDropdown(IScreen screen) : base(screen)
 		{
+			OnClick += CreateDropdownList;
 		}
 
 		/// <summary>
@@ -32,7 +32,8 @@ namespace GameDonkeyWidgets
 				{
 					Vertical = VerticalAlignment.Center,
 					Horizontal = HorizontalAlignment.Center,
-					Size = new Vector2(330f, 48f)
+					Size = new Vector2(330f, 48f),
+					Clickable = false
 				};
 
 				var label = new Label(subContainer.Name, FontSize.Small)
