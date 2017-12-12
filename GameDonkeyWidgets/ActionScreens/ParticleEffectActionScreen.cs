@@ -19,6 +19,14 @@ namespace GameDonkeyWidgets
 
 		protected override void AddStateActionWidgets()
 		{
+			var particleAction = StateAction as ParticleEffectAction;
+
+			//add the start offset 
+			var color = AddColorEdit("Color:", particleAction.Emitter.ParticleColor, ToolStack);
+			color.OnColorEdited += (obj, e) =>
+			{
+				particleAction.Emitter.ParticleColor = e.Color;
+			};
 		}
 
 		#endregion //Methods
