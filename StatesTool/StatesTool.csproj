@@ -78,7 +78,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="AnimationLibWidgets.DesktopGL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\AnimationLibWidgets.1.0.27\lib\net451\AnimationLibWidgets.DesktopGL.dll</HintPath>
+      <HintPath>packages\AnimationLibWidgets.1.0.33\lib\net451\AnimationLibWidgets.DesktopGL.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="AverageBuddy.DesktopGL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -126,7 +126,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="GameDonkey.DesktopGL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\GameDonkey.1.0.23\lib\net451\GameDonkey.DesktopGL.dll</HintPath>
+      <HintPath>packages\GameDonkey.1.0.24\lib\net451\GameDonkey.DesktopGL.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="GameTimer.DesktopGL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">

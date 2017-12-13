@@ -19,6 +19,30 @@ namespace GameDonkeyWidgets
 
 		protected override void AddStateActionWidgets()
 		{
+			var trailAction = StateAction as TrailAction;
+
+			//start color
+			var color = AddColorEdit("Color:", trailAction.StartColor, ToolStack);
+			color.OnColorEdited += (obj, e) =>
+			{
+				trailAction.StartColor = e.Color;
+			};
+
+			//trail life
+			CreateLabel("Trail Life:", ToolStack);
+			var trailLife = CreateNumEditBox(trailAction.TrailLifeDelta, ToolStack);
+			trailLife.OnNumberEdited += (obj, e) =>
+			{
+				trailAction.TrailLifeDelta = e.Num;
+			};
+
+			//spawn delta
+			CreateLabel("Spawn Delta:", ToolStack);
+			var spawn = CreateNumEditBox(trailAction.SpawnDelta, ToolStack);
+			spawn.OnNumberEdited += (obj, e) =>
+			{
+				trailAction.SpawnDelta = e.Num;
+			};
 		}
 
 		#endregion //Methods
