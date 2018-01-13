@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>9da568e9-5baf-4340-b591-b743e3593017</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>statestool.SharedProject</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Tabs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Game1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Screens\DonkeyScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Screens\StateActionsScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Screens\StateContainersScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Screens\StatesScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Screens\ToolsScreen.cs" />
+  </ItemGroup>
+</Project>

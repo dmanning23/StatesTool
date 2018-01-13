@@ -1,0 +1,1655 @@
+
+#----------------------------- Global Properties ----------------------------#
+
+/outputDir:bin/$(Platform)
+/intermediateDir:obj/$(Platform)
+/platform:DesktopGL
+/config:
+/profile:Reach
+/compress:False
+
+#-------------------------------- References --------------------------------#
+
+/reference:XmlBuddy.Content.dll
+
+#---------------------------------- Content ---------------------------------#
+
+#begin AlphaGradient.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:AlphaGradient.png
+
+#begin Anchor.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Anchor.png
+
+#begin AnimationBuddyShader.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:AnimationBuddyShader.fx
+
+#begin boid.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:boid.png
+
+#begin Cancel.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Cancel.png
+
+#begin Checked.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Checked.png
+
+#begin Collapse.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Collapse.png
+
+#begin down1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:down1.png
+
+#begin down10.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:down10.png
+
+#begin Expand.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Expand.png
+
+#begin gradient.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:gradient.png
+
+#begin hourglass.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:hourglass.png
+
+#begin Joint.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Joint.png
+
+#begin menu.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:menu.png
+
+#begin MenuMove.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:MenuMove.wav
+
+#begin MenuSelect.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:MenuSelect.wav
+
+#begin SelectedJoint.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:SelectedJoint.png
+
+#begin Unchecked.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Unchecked.png
+
+#begin up1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:up1.png
+
+#begin up10.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:up10.png
+
+#begin Fonts/ArialBlack10.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/ArialBlack10.spritefont
+
+#begin Fonts/ArialBlack14.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/ArialBlack14.spritefont
+
+#begin Fonts/ArialBlack24.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/ArialBlack24.spritefont
+
+#begin Fonts/ArialBlack36.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/ArialBlack36.spritefont
+
+#begin Fonts/ArialBlack48.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/ArialBlack48.spritefont
+
+#begin Fonts/ArialBlack48Spanish.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/ArialBlack48Spanish.spritefont
+
+#begin Fonts/ArialBlack72.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/ArialBlack72.spritefont
+
+#begin Fonts/ArialBlack96.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/ArialBlack96.spritefont
+
+#begin icons/copy.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:icons/copy.png
+
+#begin icons/leftright.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:icons/leftright.png
+
+#begin icons/paste.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:icons/paste.png
+
+#begin icons/pasteSpecial.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:icons/pasteSpecial.png
+
+#begin icons/redo.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:icons/redo.png
+
+#begin icons/save.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:icons/save.png
+
+#begin icons/undo.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:icons/undo.png
+
+#begin icons/unkey.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:icons/unkey.png
+
+#begin menus/copy.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:menus/copy.png
+
+#begin menus/delete.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:menus/delete.png
+
+#begin menus/leftright.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:menus/leftright.png
+
+#begin menus/load.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:menus/load.png
+
+#begin menus/new.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:menus/new.png
+
+#begin menus/paste.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:menus/paste.png
+
+#begin menus/redo.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:menus/redo.png
+
+#begin menus/save.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:menus/save.png
+
+#begin menus/undo.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:menus/undo.png
+
+#begin menus/unlink.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:menus/unlink.png
+
+#begin Sprites/Bullet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/Bullet.png
+
+#begin Sprites/CounterMeasure.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/CounterMeasure.png
+
+#begin Sprites/Explosion.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/Explosion.png
+
+#begin Sprites/Missile.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/Missile.png
+
+#begin ParticleEffects/CounterExhaust.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:ParticleEffects/CounterExhaust.xml
+
+#begin ParticleEffects/CounterFlame.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:ParticleEffects/CounterFlame.xml
+
+#begin ParticleEffects/DeathCalf.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:ParticleEffects/DeathCalf.xml
+
+#begin ParticleEffects/DeathCrotch.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:ParticleEffects/DeathCrotch.xml
+
+#begin ParticleEffects/DeathForearm.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:ParticleEffects/DeathForearm.xml
+
+#begin ParticleEffects/DeathHead.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:ParticleEffects/DeathHead.xml
+
+#begin ParticleEffects/DeathShoulder.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:ParticleEffects/DeathShoulder.xml
+
+#begin ParticleEffects/DeathSplosion.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:ParticleEffects/DeathSplosion.xml
+
+#begin ParticleEffects/DeathThigh.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:ParticleEffects/DeathThigh.xml
+
+#begin ParticleEffects/DeathTorso.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:ParticleEffects/DeathTorso.xml
+
+#begin ParticleEffects/DeathWeapon.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:ParticleEffects/DeathWeapon.xml
+
+#begin ParticleEffects/FireCounter.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:ParticleEffects/FireCounter.xml
+
+#begin ParticleEffects/FireMissile.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:ParticleEffects/FireMissile.xml
+
+#begin ParticleEffects/MissileExhaust.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:ParticleEffects/MissileExhaust.xml
+
+#begin ParticleEffects/MissileFlame.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:ParticleEffects/MissileFlame.xml
+
+#begin Particles/airdash vertical.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/airdash vertical.png
+
+#begin Particles/airdash.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/airdash.png
+
+#begin Particles/blood.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/blood.png
+
+#begin Particles/bone.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/bone.png
+
+#begin Particles/BrassCasing.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/BrassCasing.png
+
+#begin Particles/bubble.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/bubble.png
+
+#begin Particles/circle.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/circle.png
+
+#begin Particles/Death.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/Death.png
+
+#begin Particles/Feather.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/Feather.png
+
+#begin Particles/flame sideways.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/flame sideways.png
+
+#begin Particles/flame.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/flame.png
+
+#begin Particles/flame3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/flame3.png
+
+#begin Particles/flame4.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/flame4.png
+
+#begin Particles/KfCTooth.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/KfCTooth.png
+
+#begin Particles/log.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/log.png
+
+#begin Particles/muzzle flash.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/muzzle flash.png
+
+#begin Particles/Puff.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/Puff.png
+
+#begin Particles/ring.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/ring.png
+
+#begin Particles/Shield.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/Shield.png
+
+#begin Particles/skull.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/skull.png
+
+#begin Particles/smoke.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/smoke.png
+
+#begin Particles/spark.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/spark.png
+
+#begin Particles/star.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/star.png
+
+#begin Particles/star2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/star2.png
+
+#begin Particles/Triangle.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/Triangle.png
+
+#begin Particles/wind.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Particles/wind.png
+
+#begin Robot/Clothes/AfterBurners/left foot animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/AfterBurners/left foot animations.xml
+
+#begin Robot/Clothes/AfterBurners/left foot model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/AfterBurners/left foot model.xml
+
+#begin Robot/Clothes/AfterBurners/right foot animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/AfterBurners/right foot animations.xml
+
+#begin Robot/Clothes/AfterBurners/right foot model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/AfterBurners/right foot model.xml
+
+#begin Robot/Clothes/AirBrakes/Left bottom air brake animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/AirBrakes/Left bottom air brake animations.xml
+
+#begin Robot/Clothes/AirBrakes/Left bottom air brake model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/AirBrakes/Left bottom air brake model.xml
+
+#begin Robot/Clothes/AirBrakes/Right bottom air brake animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/AirBrakes/Right bottom air brake animations.xml
+
+#begin Robot/Clothes/AirBrakes/Right bottom air brake model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/AirBrakes/Right bottom air brake model.xml
+
+#begin Robot/Clothes/AirBrakes/top air brake animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/AirBrakes/top air brake animations.xml
+
+#begin Robot/Clothes/AirBrakes/top air brake model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/AirBrakes/top air brake model.xml
+
+#begin Robot/Clothes/Calf/left calf animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Calf/left calf animations.xml
+
+#begin Robot/Clothes/Calf/left calf model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Calf/left calf model.xml
+
+#begin Robot/Clothes/Calf/right calf animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Calf/right calf animations.xml
+
+#begin Robot/Clothes/Calf/right calf model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Calf/right calf model.xml
+
+#begin Robot/Clothes/Chesticle/chesticle animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Chesticle/chesticle animations.xml
+
+#begin Robot/Clothes/Chesticle/chesticle model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Chesticle/chesticle model.xml
+
+#begin Robot/Clothes/Crotch/crotch animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Crotch/crotch animations.xml
+
+#begin Robot/Clothes/Crotch/crotch model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Crotch/crotch model.xml
+
+#begin Robot/Clothes/Forearm/left forearm animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Forearm/left forearm animations.xml
+
+#begin Robot/Clothes/Forearm/left forearm model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Forearm/left forearm model.xml
+
+#begin Robot/Clothes/Forearm/right forearm animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Forearm/right forearm animations.xml
+
+#begin Robot/Clothes/Forearm/right forearm model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Forearm/right forearm model.xml
+
+#begin Robot/Clothes/Hand/left hand animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Hand/left hand animations.xml
+
+#begin Robot/Clothes/Hand/left hand model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Hand/left hand model.xml
+
+#begin Robot/Clothes/Hand/right hand animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Hand/right hand animations.xml
+
+#begin Robot/Clothes/Hand/right hand model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Hand/right hand model.xml
+
+#begin Robot/Clothes/Head/head animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Head/head animations.xml
+
+#begin Robot/Clothes/Head/head model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Head/head model.xml
+
+#begin Robot/Clothes/Rifle/rifle animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Rifle/rifle animations.xml
+
+#begin Robot/Clothes/Rifle/rifle model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Rifle/rifle model.xml
+
+#begin Robot/Clothes/Shoulder/left shoulder animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Shoulder/left shoulder animations.xml
+
+#begin Robot/Clothes/Shoulder/left shoulder model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Shoulder/left shoulder model.xml
+
+#begin Robot/Clothes/Shoulder/right shoulder animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Shoulder/right shoulder animations.xml
+
+#begin Robot/Clothes/Shoulder/right shoulder model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Shoulder/right shoulder model.xml
+
+#begin Robot/Clothes/TailFins/tailfin animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/TailFins/tailfin animations.xml
+
+#begin Robot/Clothes/TailFins/tailfin model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/TailFins/tailfin model.xml
+
+#begin Robot/Clothes/Thigh/left thigh animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Thigh/left thigh animations.xml
+
+#begin Robot/Clothes/Thigh/left thigh model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Thigh/left thigh model.xml
+
+#begin Robot/Clothes/Thigh/right thigh animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Thigh/right thigh animations.xml
+
+#begin Robot/Clothes/Thigh/right thigh model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Thigh/right thigh model.xml
+
+#begin Robot/Clothes/Torso/torso animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Torso/torso animations.xml
+
+#begin Robot/Clothes/Torso/torso model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Torso/torso model.xml
+
+#begin Robot/Clothes/Wings/wing animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Wings/wing animations.xml
+
+#begin Robot/Clothes/Wings/wing model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Wings/wing model.xml
+
+#begin Robot/Clothes/Nekkid.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Clothes/Nekkid.xml
+
+#begin Robot/graphics/BottomAirBrake.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/BottomAirBrake.png
+
+#begin Robot/graphics/BottomAirBrakeColor.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/BottomAirBrakeColor.png
+
+#begin Robot/graphics/CalfSide.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/CalfSide.png
+
+#begin Robot/graphics/CalfSideColor.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/CalfSideColor.png
+
+#begin Robot/graphics/ChesticleSide.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/ChesticleSide.png
+
+#begin Robot/graphics/CrotchSide.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/CrotchSide.png
+
+#begin Robot/graphics/CrotchSideColor.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/CrotchSideColor.png
+
+#begin Robot/graphics/fin.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/fin.png
+
+#begin Robot/graphics/finColor.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/finColor.png
+
+#begin Robot/graphics/FistBack.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/FistBack.png
+
+#begin Robot/graphics/FootSide.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/FootSide.png
+
+#begin Robot/graphics/ForearmSide.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/ForearmSide.png
+
+#begin Robot/graphics/ForearmSideColor.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/ForearmSideColor.png
+
+#begin Robot/graphics/HeadSide.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/HeadSide.png
+
+#begin Robot/graphics/Rifle.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/Rifle.png
+
+#begin Robot/graphics/ShoulderFront.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/ShoulderFront.png
+
+#begin Robot/graphics/ShoulderFrontColor.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/ShoulderFrontColor.png
+
+#begin Robot/graphics/ThighSide.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/ThighSide.png
+
+#begin Robot/graphics/ThighSideColor.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/ThighSideColor.png
+
+#begin Robot/graphics/TopAirBrake.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/TopAirBrake.png
+
+#begin Robot/graphics/TopAirBrakeColor.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/TopAirBrakeColor.png
+
+#begin Robot/graphics/TorsoSide.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/TorsoSide.png
+
+#begin Robot/graphics/TorsoSideColor.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/TorsoSideColor.png
+
+#begin Robot/graphics/wing.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/wing.png
+
+#begin Robot/graphics/wingColor.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Robot/graphics/wingColor.png
+
+#begin Robot/ParticleEffects/CounterExhaust.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/ParticleEffects/CounterExhaust.xml
+
+#begin Robot/ParticleEffects/CounterFlame.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/ParticleEffects/CounterFlame.xml
+
+#begin Robot/ParticleEffects/DeathCalf.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/ParticleEffects/DeathCalf.xml
+
+#begin Robot/ParticleEffects/DeathCrotch.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/ParticleEffects/DeathCrotch.xml
+
+#begin Robot/ParticleEffects/DeathForearm.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/ParticleEffects/DeathForearm.xml
+
+#begin Robot/ParticleEffects/DeathHead.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/ParticleEffects/DeathHead.xml
+
+#begin Robot/ParticleEffects/DeathShoulder.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/ParticleEffects/DeathShoulder.xml
+
+#begin Robot/ParticleEffects/DeathSplosion.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/ParticleEffects/DeathSplosion.xml
+
+#begin Robot/ParticleEffects/DeathThigh.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/ParticleEffects/DeathThigh.xml
+
+#begin Robot/ParticleEffects/DeathTorso.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/ParticleEffects/DeathTorso.xml
+
+#begin Robot/ParticleEffects/DeathWeapon.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/ParticleEffects/DeathWeapon.xml
+
+#begin Robot/ParticleEffects/FireCounter.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/ParticleEffects/FireCounter.xml
+
+#begin Robot/ParticleEffects/FireMissile.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/ParticleEffects/FireMissile.xml
+
+#begin Robot/ParticleEffects/MissileExhaust.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/ParticleEffects/MissileExhaust.xml
+
+#begin Robot/ParticleEffects/MissileFlame.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/ParticleEffects/MissileFlame.xml
+
+#begin Robot/State Containers/Countermeasure States.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/State Containers/Countermeasure States.xml
+
+#begin Robot/State Containers/Gun States.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/State Containers/Gun States.xml
+
+#begin Robot/State Containers/jet aileron states.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/State Containers/jet aileron states.xml
+
+#begin Robot/State Containers/jet states.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/State Containers/jet states.xml
+
+#begin Robot/State Containers/jet thruster states.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/State Containers/jet thruster states.xml
+
+#begin Robot/State Containers/Missile States.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/State Containers/Missile States.xml
+
+#begin Robot/State Containers/robot states.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/State Containers/robot states.xml
+
+#begin Robot/State Containers/robot thruster states.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/State Containers/robot thruster states.xml
+
+#begin Robot/RoboJet animations.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/RoboJet animations.xml
+
+#begin Robot/RoboJet model.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/RoboJet model.xml
+
+#begin Robot/Robot Data.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/Robot Data.xml
+
+#begin Robot/robot state machine.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/robot state machine.xml
+
+#begin Robot/weapon state machine.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Robot/weapon state machine.xml
+
+#begin Scripts/double_roll_seeds.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Scripts/double_roll_seeds.xml
+
+#begin Scripts/HomingMissile.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Scripts/HomingMissile.xml
+
+#begin Scripts/JetAntiMissiles.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Scripts/JetAntiMissiles.xml
+
+#begin Scripts/JetBullet.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Scripts/JetBullet.xml
+
+#begin Scripts/JetMissiles.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Scripts/JetMissiles.xml
+
+#begin Scripts/MissileCloud.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Scripts/MissileCloud.xml
+
+#begin Scripts/RobotAntiMissiles.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Scripts/RobotAntiMissiles.xml
+
+#begin Scripts/RobotBullet.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Scripts/RobotBullet.xml
+
+#begin Scripts/RobotMissiles.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Scripts/RobotMissiles.xml
+

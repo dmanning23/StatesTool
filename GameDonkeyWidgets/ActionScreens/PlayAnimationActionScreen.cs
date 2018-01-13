@@ -1,4 +1,5 @@
-﻿using GameDonkeyLib;
+﻿using AnimationLib;
+using GameDonkeyLib;
 using UndoRedoBuddy;
 
 namespace GameDonkeyWidgets
@@ -27,7 +28,7 @@ namespace GameDonkeyWidgets
 				animationAction.AnimationName = animation.SelectedItem.Name;
 			};
 
-			var playback = AddPlaybackTypeDropdown(ToolStack);
+			var playback = AddPlaybackTypeDropdown(EPlayback.Forwards, ToolStack);
 			playback.SelectedItem = animationAction.PlaybackMode;
 			playback.OnSelectedItemChange += (obj, e) =>
 			{

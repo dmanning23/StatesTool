@@ -1,8 +1,10 @@
 ﻿using FilenameBuddy;
+using FontBuddyLib;
 using GameDonkeyLib;
 using LanguageGameDonkey.SharedProject;
 using MenuBuddy;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using RenderBuddy;
 using ResolutionBuddy;
 using RoboJetsLib;
@@ -30,6 +32,8 @@ namespace StatesTool
 		/// </summary>
 		private PlayerQueue Character;
 
+		FontBuddy _text;
+
 		#endregion //Properties
 
 		#region Methods
@@ -42,11 +46,20 @@ namespace StatesTool
 		{
 			base.LoadContent();
 
-			Renderer = new Renderer(ScreenManager.Game, Content);
+			_text = new FontBuddy();
+			_text.LoadContent(Content, @"Fonts\ArialBlack14");
 
-			//LoadArcher();
+			Renderer = new Renderer(ScreenManager.Game, Content);
+			Renderer.TextureLoader = new TextureFileLoader();
+			Renderer.AmbientColor = new Color(.2f, .2f, .2f);
+			Renderer.ClearLights();
+			Renderer.AddDirectionalLight(new Vector3(.5f, -1f, .6f), new Color(1f, 1f, .75f));
+			Renderer.AddDirectionalLight(new Vector3(-.5f, -1f, -.1f), new Color(1f, .7f, 0f));
+			Renderer.AddDirectionalLight(new Vector3(0f, 1f, .1f), new Color(.2f, 0f, .3f));
+
+			LoadArcher();
 			//LoadCarrie();
-			LoadRoboJet();
+			//LoadRoboJet();
 
 			ScreenManager.AddScreen(new ToolsScreen(Engine, Character));
 			ScreenManager.AddScreen(new StateContainersScreen(Engine, Character));
@@ -57,7 +70,6 @@ namespace StatesTool
 			//create the correct engine
 			Filename.SetCurrentDirectory(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\");
 			Engine = new LanguageDonkey(Renderer, ScreenManager.Game);
-			Engine.Renderer.TextureLoader = new TextureFileLoader();
 			Engine.LoadContent(ScreenManager.Game.GraphicsDevice);
 			SetWorldBoundaries();
 
@@ -73,7 +85,6 @@ namespace StatesTool
 			//create the correct engine
 			Filename.SetCurrentDirectory(@"C:\Projects\tasslegame\Windows\Content\");
 			Engine = new TassleDonkey(Renderer, ScreenManager.Game);
-			Engine.Renderer.TextureLoader = new TextureFileLoader();
 			Engine.LoadContent(ScreenManager.Game.GraphicsDevice);
 			SetWorldBoundaries();
 
@@ -89,7 +100,6 @@ namespace StatesTool
 			//create the correct engine
 			Filename.SetCurrentDirectory(@"C:\Projects\robojets\Source\Content\");
 			Engine = new RoboJetsDonkey(Renderer, ScreenManager.Game);
-			Engine.Renderer.TextureLoader = new TextureFileLoader();
 			Engine.LoadContent(ScreenManager.Game.GraphicsDevice);
 			SetWorldBoundaries();
 
@@ -115,7 +125,7 @@ namespace StatesTool
 		public override void Update(GameTime gameTime, bool otherWindowHasFocus, bool covered)
 		{
 			base.Update(gameTime, otherWindowHasFocus, covered);
-			
+
 			if (null != Engine)
 			{
 				Engine.Update(gameTime);
@@ -126,11 +136,25 @@ namespace StatesTool
 		{
 			base.Draw(gameTime);
 
+			//add the center point to the camera to anchor the screen
+			Renderer.Camera.AddPoint(Resolution.ScreenArea.Center.ToVector2());
+
 			//update the camera
 			Engine.UpdateCameraMatrix();
 
 			//draw the game
 			Engine.Render();
+
+			//draw the current time at the top of the screen
+			Renderer.SpriteBatchBegin(BlendState.AlphaBlend, Resolution.TransformationMatrix(), SpriteSortMode.Texture);
+			_text.Write(string.Format("{0:0.00}", Character.CharacterClock.CurrentTime),
+				new Point(Resolution.TitleSafeArea.Center.X, Resolution.TitleSafeArea.Top),
+				Justify.Center,
+				1f,
+				Color.White,
+				Renderer.SpriteBatch,
+				Character.CharacterClock);
+			Renderer.SpriteBatchEnd();
 		}
 
 		public void ClockSpeed(float timeScale)
