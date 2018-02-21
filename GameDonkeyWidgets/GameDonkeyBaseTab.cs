@@ -18,7 +18,7 @@ namespace GameDonkeyWidgets
 
 		protected StateContainerDropdown AddStateContainerDropdown(IStateContainer container, IStackLayout layout)
 		{
-			layout.AddItem(new Label("State Containers: ", FontSize.Small)
+			layout.AddItem(new Label("State Containers: ", Content, FontSize.Small)
 			{
 				Horizontal = HorizontalAlignment.Left,
 				Vertical = VerticalAlignment.Top,
@@ -42,7 +42,7 @@ namespace GameDonkeyWidgets
 
 		protected StateMessageDropdown AddStateMessageDropdown(StateMachine stateMachine, IStackLayout layout)
 		{
-			layout.AddItem(new Label("Messages: ", FontSize.Small)
+			layout.AddItem(new Label("Messages: ", Content, FontSize.Small)
 			{
 				Horizontal = HorizontalAlignment.Left,
 				Vertical = VerticalAlignment.Top,
@@ -65,7 +65,7 @@ namespace GameDonkeyWidgets
 
 		protected void AddActionDirectionControls(ActionDirection direction, IStackLayout layout)
 		{
-			layout.AddItem(new Label("Direction Type: ", FontSize.Small)
+			layout.AddItem(new Label("Direction Type: ", Content, FontSize.Small)
 			{
 				Horizontal = HorizontalAlignment.Left,
 				Vertical = VerticalAlignment.Top,

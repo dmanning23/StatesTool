@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ResolutionBuddy;
 using System.Collections.Generic;
+using System.Linq;
 using Image = MenuBuddy.Image;
 
 namespace StatesTool
@@ -50,8 +51,9 @@ namespace StatesTool
 			};
 
 			var hamburgerItems = new List<ContextMenuItem>();
-			hamburgerItems.Add(new ContextMenuItem(ScreenManager.Game.Content.Load<Texture2D>(@"icons\save"), "Save", Save));
-			hamburgerItems.Add(new ContextMenuItem(ScreenManager.Game.Content.Load<Texture2D>(@"icons\undo"), "Reset", Reset));
+			hamburgerItems.Add(new ContextMenuItem(Content.Load<Texture2D>(@"icons\save"), "Save", Save));
+			hamburgerItems.Add(new ContextMenuItem(Content.Load<Texture2D>(@"icons\undo"), "Reset", Reset));
+			hamburgerItems.Add(new ContextMenuItem(Content.Load<Texture2D>(@"icons\undo"), "Restart State", RestartState));
 
 			//add each menu item below this
 			foreach (var hamburgerItem in hamburgerItems)
@@ -83,7 +85,7 @@ namespace StatesTool
 			{
 				Size = new Vector2(16f, 16f)
 			});
-			button.AddItem(new Label(hamburgerItem.IconText, FontSize.Small)
+			button.AddItem(new Label(hamburgerItem.IconText, Content, FontSize.Small)
 			{
 				Vertical = VerticalAlignment.Top,
 				Horizontal = HorizontalAlignment.Left,
@@ -110,6 +112,20 @@ namespace StatesTool
 		private void Reset(object obj, ClickEventArgs e)
 		{
 			Engine.RespawnPlayer(Character);
+		}
+
+		private void RestartState(object obj, ClickEventArgs e)
+		{
+			var actionsScreens = ScreenManager.FindScreens<StateActionsScreen>();
+			if (null != actionsScreens && actionsScreens.Count() > 0)
+			{
+				//get the states of the ActionsScreen
+				var actionsScreen = actionsScreens[0];
+				var state = actionsScreen.StateActions.StateName;
+				var stateIndex = Character.Character.States.StateMachine.GetStateFromName(state);
+				Character.Character.States.ForceStateChange(stateIndex);
+			}
+			
 		}
 
 		#endregion //Hamburger Event Handlers

@@ -57,6 +57,8 @@ namespace StatesTool
 			Renderer.AddDirectionalLight(new Vector3(-.5f, -1f, -.1f), new Color(1f, .7f, 0f));
 			Renderer.AddDirectionalLight(new Vector3(0f, 1f, .1f), new Color(.2f, 0f, .3f));
 
+			//LoadTree();
+			//LoadGoblin();
 			LoadArcher();
 			//LoadCarrie();
 			//LoadRoboJet();
@@ -67,6 +69,21 @@ namespace StatesTool
 
 		private void LoadArcher()
 		{
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Archer\Archer_Data.xml");
+		}
+
+		private void LoadTree()
+		{
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Tree\Tree_Data.xml");
+		}
+
+		private void LoadGoblin()
+		{
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Goblin\Goblin_Data.xml");
+		}
+
+		private void LoadLanguageMonster(string resource)
+		{
 			//create the correct engine
 			Filename.SetCurrentDirectory(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\");
 			Engine = new LanguageDonkey(Renderer, ScreenManager.Game);
@@ -75,7 +92,7 @@ namespace StatesTool
 
 			//load the file
 			var dataFile = new Filename();
-			dataFile.File = @"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Archer\Archer_Data.xml";
+			dataFile.File = resource;
 			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
 			Engine.Start();
 		}
@@ -99,7 +116,7 @@ namespace StatesTool
 		{
 			//create the correct engine
 			Filename.SetCurrentDirectory(@"C:\Projects\robojets\Source\Content\");
-			Engine = new RoboJetsDonkey(Renderer, ScreenManager.Game);
+			Engine = new RoboJetsDonkey(Renderer, null);
 			Engine.LoadContent(ScreenManager.Game.GraphicsDevice);
 			SetWorldBoundaries();
 
@@ -143,17 +160,43 @@ namespace StatesTool
 			Engine.UpdateCameraMatrix();
 
 			//draw the game
-			Engine.Render();
+			Engine.Render(BlendState.AlphaBlend);
 
 			//draw the current time at the top of the screen
 			Renderer.SpriteBatchBegin(BlendState.AlphaBlend, Resolution.TransformationMatrix(), SpriteSortMode.Texture);
-			_text.Write(string.Format("{0:0.00}", Character.CharacterClock.CurrentTime),
-				new Point(Resolution.TitleSafeArea.Center.X, Resolution.TitleSafeArea.Top),
+
+			var position = new Point(Resolution.TitleSafeArea.Center.X, Resolution.ScreenArea.Top);
+
+			_text.Write(string.Format("state clock: {0:0.00}", Character.Character.States.StateClock.CurrentTime),
+				position,
 				Justify.Center,
 				1f,
 				Color.White,
 				Renderer.SpriteBatch,
 				Character.CharacterClock);
+			position.Y += _text.Font.LineSpacing;
+
+			_text.Write(string.Format("current state: {0}", Character.Character.States.CurrentStateText),
+				position,
+				Justify.Center,
+				1f,
+				Color.White,
+				Renderer.SpriteBatch,
+				Character.CharacterClock);
+			position.Y += _text.Font.LineSpacing;
+
+			if (null != Character.Character.AnimationContainer.CurrentAnimation)
+			{
+				_text.Write(string.Format("animation: {0}", Character.Character.AnimationContainer.CurrentAnimation.Name),
+					position,
+					Justify.Center,
+					1f,
+					Color.White,
+					Renderer.SpriteBatch,
+					Character.CharacterClock);
+				position.Y += _text.Font.LineSpacing;
+			}
+
 			Renderer.SpriteBatchEnd();
 		}
 

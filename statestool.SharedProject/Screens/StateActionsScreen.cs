@@ -1,13 +1,8 @@
 ﻿using GameDonkeyLib;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WidgetLib;
-using InputHelper;
 using GameDonkeyWidgets;
+using InputHelper;
 using MenuBuddy;
+using WidgetLib;
 
 namespace StatesTool
 {
@@ -18,7 +13,7 @@ namespace StatesTool
 		IGameDonkey Engine { get; set; }
 		PlayerQueue Character { get; set; }
 
-		StateActions StateActions { get; set; }
+		public StateActions StateActions { get; private set; }
 
 		#endregion //Properties
 
@@ -54,7 +49,8 @@ namespace StatesTool
 			msgBox.OnSelect += (obj2, e2) =>
 			{
 				//add the bone to the skeleton
-				var action = StateActions.AddNewActionFromType(msgBox.StateActionType.SelectedItem, Character.Character);
+				var action = StateActions.AddNewActionFromType(msgBox.StateActionType.SelectedItem,
+					Character.Character, Engine, Character.Character.States, this.Content);
 
 				//add a button control for it
 				CreateItemControl(action);

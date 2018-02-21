@@ -22,7 +22,7 @@ namespace GameDonkeyWidgets
 					Size = new Vector2(330f, 48f)
 				};
 
-				var label = new Label(message, FontSize.Small)
+				var label = new Label(message, screen.Content, FontSize.Small)
 				{
 					Vertical = VerticalAlignment.Center,
 					Horizontal = HorizontalAlignment.Center

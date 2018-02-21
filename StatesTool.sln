@@ -1,13 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2020
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "statestool.SharedProject", "statestool.SharedProject\statestool.SharedProject.shproj", "{9DA568E9-5BAF-4340-B591-B743E3593017}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatesTool.DesktopGL", "StatesTool.DesktopGL\StatesTool.DesktopGL.csproj", "{7A63FBD8-DCFA-4C9B-8318-F32DA36B62C4}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GameDonkeyWidgets", "GameDonkeyWidgets\GameDonkeyWidgets.shproj", "{9AE0F5BE-8505-4D20-B4B8-02D191A0FAF0}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "RoboJetLib.SharedProject", "..\robojets\RoboJetLib\RoboJetLib.SharedProject.shproj", "{EC0F0BD5-6307-4E03-B02D-F31443AB92FE}"
 EndProject
@@ -15,8 +11,15 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LanguageGameDonkey.SharedPr
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TassleGameLib.SharedProject", "..\tasslegame\TassleGameLib.SharedProject\TassleGameLib.SharedProject.shproj", "{D6DB4B9E-2F37-498B-8655-2D9F8364F9CF}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WidgetLib", "..\WidgetLib\WidgetLib\WidgetLib.shproj", "{3DF21FB3-A2E5-44BE-975A-321C0FBE3519}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GameDonkeyWidgets", "GameDonkeyWidgets\GameDonkeyWidgets.shproj", "{9AE0F5BE-8505-4D20-B4B8-02D191A0FAF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatesTool.WindowsDX", "StatesTool.WindowsDX\StatesTool.WindowsDX.csproj", "{7A63FBD8-DCFA-4C9B-8318-F32DA36B62C4}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\WidgetLib\WidgetLib\WidgetLib.projitems*{3df21fb3-a2e5-44be-975a-321c0fbe3519}*SharedItemsImports = 13
 		..\languagegame\LanguageGameDonkey.SharedProject\LanguageGameDonkey.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
 		..\robojets\RoboJetLib\RoboJetLib.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
 		GameDonkeyWidgets\GameDonkeyWidgets.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4

@@ -36,7 +36,7 @@ namespace GameDonkeyWidgets
 					Clickable = false
 				};
 
-				var label = new Label(subContainer.Name, FontSize.Small)
+				var label = new Label(subContainer.Name, Screen.Content, FontSize.Small)
 				{
 					Vertical = VerticalAlignment.Center,
 					Horizontal = HorizontalAlignment.Center
