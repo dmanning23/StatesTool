@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using TassleGameLib;
+using WeddingGameLib;
 
 namespace StatesTool
 {
@@ -59,72 +60,16 @@ namespace StatesTool
 
 			//LoadTree();
 			//LoadGoblin();
-			LoadArcher();
-			//LoadCarrie();
+			//LoadArcher();
+			//LoadTassleCarrie();
 			//LoadRoboJet();
+			LoadWeddingTabby();
+			//LoadWeddingDan();
+			//LoadWeddingCarrie();
+			//LoadWeddingBestMen();
 
 			ScreenManager.AddScreen(new ToolsScreen(Engine, Character));
 			ScreenManager.AddScreen(new StateContainersScreen(Engine, Character));
-		}
-
-		private void LoadArcher()
-		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Archer\Archer_Data.xml");
-		}
-
-		private void LoadTree()
-		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Tree\Tree_Data.xml");
-		}
-
-		private void LoadGoblin()
-		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Goblin\Goblin_Data.xml");
-		}
-
-		private void LoadLanguageMonster(string resource)
-		{
-			//create the correct engine
-			Filename.SetCurrentDirectory(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\");
-			Engine = new LanguageDonkey(Renderer, ScreenManager.Game);
-			Engine.LoadContent(ScreenManager.Game.GraphicsDevice);
-			SetWorldBoundaries();
-
-			//load the file
-			var dataFile = new Filename();
-			dataFile.File = resource;
-			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
-			Engine.Start();
-		}
-
-		private void LoadCarrie()
-		{
-			//create the correct engine
-			Filename.SetCurrentDirectory(@"C:\Projects\tasslegame\Windows\Content\");
-			Engine = new TassleDonkey(Renderer, ScreenManager.Game);
-			Engine.LoadContent(ScreenManager.Game.GraphicsDevice);
-			SetWorldBoundaries();
-
-			//load the file
-			var dataFile = new Filename();
-			dataFile.File = @"C:\Projects\tasslegame\Windows\Content\Carrie\carrie data.xml";
-			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
-			Engine.Start();
-		}
-
-		private void LoadRoboJet()
-		{
-			//create the correct engine
-			Filename.SetCurrentDirectory(@"C:\Projects\robojets\Source\Content\");
-			Engine = new RoboJetsDonkey(Renderer, null);
-			Engine.LoadContent(ScreenManager.Game.GraphicsDevice);
-			SetWorldBoundaries();
-
-			//load the file
-			var dataFile = new Filename();
-			dataFile.File = @"C:\Projects\robojets\Source\Content\Robot\Robot Data.xml";
-			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
-			Engine.Start();
 		}
 
 		/// <summary>
@@ -217,5 +162,121 @@ namespace StatesTool
 		}
 
 		#endregion //Methods
+
+		#region Load Stuff
+
+		#region Language Warriors
+
+		private void LoadArcher()
+		{
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Archer\Archer_Data.xml");
+		}
+
+		private void LoadTree()
+		{
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Tree\Tree_Data.xml");
+		}
+
+		private void LoadGoblin()
+		{
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Goblin\Goblin_Data.xml");
+		}
+
+		private void LoadLanguageMonster(string resource)
+		{
+			//create the correct engine
+			Filename.SetCurrentDirectory(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\");
+			Engine = new LanguageDonkey(Renderer, ScreenManager.Game);
+			Engine.LoadContent(ScreenManager.Game.GraphicsDevice);
+			SetWorldBoundaries();
+
+			//load the file
+			var dataFile = new Filename();
+			dataFile.File = resource;
+			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
+			Engine.Start();
+		}
+
+		#endregion //Language Warriors
+
+		#region RoboJets
+
+		private void LoadRoboJet()
+		{
+			//create the correct engine
+			Filename.SetCurrentDirectory(@"C:\Projects\robojets\Source\Content\");
+			Engine = new RoboJetsDonkey(Renderer, null);
+			Engine.LoadContent(ScreenManager.Game.GraphicsDevice);
+			SetWorldBoundaries();
+
+			//load the file
+			var dataFile = new Filename();
+			dataFile.File = @"C:\Projects\robojets\Source\Content\Robot\Robot Data.xml";
+			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
+			Engine.Start();
+		}
+
+		#endregion //RoboJets
+
+		#region Wedding
+
+		private void LoadWeddingTabby()
+		{
+			LoadWedding(@"C:\Projects\weddinggame\WeddingGame.SharedProject\Content\Tabby\Tabby data.xml");
+		}
+
+		private void LoadWeddingDan()
+		{
+			LoadWedding(@"C:\Projects\weddinggame\WeddingGame.SharedProject\Content\Dan\Dan data.xml");
+		}
+
+		private void LoadWeddingCarrie()
+		{
+			LoadWedding(@"C:\Projects\weddinggame\WeddingGame.SharedProject\Content\Carrie\Carrie data.xml");
+		}
+
+		private void LoadWeddingBestMen()
+		{
+			LoadWedding(@"C:\Projects\weddinggame\WeddingGame.SharedProject\Content\BestMen\BestMen data.xml");
+		}
+
+		private void LoadWedding(string dataFilename)
+		{
+			//create the correct engine
+			Filename.SetCurrentDirectory(@"C:\Projects\weddinggame\WeddingGame.SharedProject\Content\");
+			Engine = new WeddingDonkey(Renderer, ScreenManager.Game);
+			Engine.LoadContent(ScreenManager.Game.GraphicsDevice);
+			SetWorldBoundaries();
+
+			//load the file
+			var dataFile = new Filename();
+			//dataFile.File = ;
+			dataFile.File = dataFilename;
+			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
+			Engine.Start();
+		}
+
+		#endregion //Wedding
+
+		#region Tassle
+
+		private void LoadTassleCarrie()
+		{
+			//create the correct engine
+			Filename.SetCurrentDirectory(@"C:\Projects\tasslegame\Windows\Content\");
+			Engine = new TassleDonkey(Renderer, ScreenManager.Game);
+			Engine.LoadContent(ScreenManager.Game.GraphicsDevice);
+			SetWorldBoundaries();
+
+			//load the file
+			var dataFile = new Filename();
+			dataFile.File = @"C:\Projects\tasslegame\Windows\Content\Carrie\carrie data.xml";
+			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
+			Engine.Start();
+		}
+
+		#endregion //Tassle
+
+		#endregion //Load Stuff
 	}
 }
