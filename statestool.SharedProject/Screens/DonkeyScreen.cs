@@ -58,12 +58,12 @@ namespace StatesTool
 			Renderer.AddDirectionalLight(new Vector3(-.5f, -1f, -.1f), new Color(1f, .7f, 0f));
 			Renderer.AddDirectionalLight(new Vector3(0f, 1f, .1f), new Color(.2f, 0f, .3f));
 
-			//LoadTree();
+			LoadTree();
 			//LoadGoblin();
 			//LoadArcher();
 			//LoadTassleCarrie();
 			//LoadRoboJet();
-			LoadWeddingTabby();
+			//LoadWeddingTabby();
 			//LoadWeddingDan();
 			//LoadWeddingCarrie();
 			//LoadWeddingBestMen();
@@ -187,7 +187,7 @@ namespace StatesTool
 			//create the correct engine
 			Filename.SetCurrentDirectory(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\");
 			Engine = new LanguageDonkey(Renderer, ScreenManager.Game);
-			Engine.LoadContent(ScreenManager.Game.GraphicsDevice);
+			Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
 			SetWorldBoundaries();
 
 			//load the file
@@ -206,7 +206,7 @@ namespace StatesTool
 			//create the correct engine
 			Filename.SetCurrentDirectory(@"C:\Projects\robojets\Source\Content\");
 			Engine = new RoboJetsDonkey(Renderer, null);
-			Engine.LoadContent(ScreenManager.Game.GraphicsDevice);
+			Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
 			SetWorldBoundaries();
 
 			//load the file
@@ -244,8 +244,11 @@ namespace StatesTool
 		{
 			//create the correct engine
 			Filename.SetCurrentDirectory(@"C:\Projects\weddinggame\WeddingGame.SharedProject\Content\");
-			Engine = new WeddingDonkey(Renderer, ScreenManager.Game);
-			Engine.LoadContent(ScreenManager.Game.GraphicsDevice);
+			Engine = new WeddingDonkey(Renderer, ScreenManager.Game)
+			{
+				ToolMode = true
+			};
+			Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
 			SetWorldBoundaries();
 
 			//load the file
@@ -265,7 +268,7 @@ namespace StatesTool
 			//create the correct engine
 			Filename.SetCurrentDirectory(@"C:\Projects\tasslegame\Windows\Content\");
 			Engine = new TassleDonkey(Renderer, ScreenManager.Game);
-			Engine.LoadContent(ScreenManager.Game.GraphicsDevice);
+			Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
 			SetWorldBoundaries();
 
 			//load the file

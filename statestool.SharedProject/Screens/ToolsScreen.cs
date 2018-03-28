@@ -123,9 +123,11 @@ namespace StatesTool
 				var actionsScreen = actionsScreens[0];
 				var state = actionsScreen.StateActions.StateName;
 				var stateIndex = Character.Character.States.StateMachine.GetStateFromName(state);
-				Character.Character.States.ForceStateChange(stateIndex);
+				if (-1 < stateIndex)
+				{
+					Character.Character.States.ForceStateChange(stateIndex);
+				}
 			}
-			
 		}
 
 		#endregion //Hamburger Event Handlers

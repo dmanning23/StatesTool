@@ -12,6 +12,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreenFactory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\BaseActionScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\CameraShakeActionScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\DeccelerationActionScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\ParticleEffectActionScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\PlayAnimationActionScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\PlaySoundActionScreen.cs" />

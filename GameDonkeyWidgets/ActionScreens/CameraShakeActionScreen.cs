@@ -29,7 +29,7 @@ namespace GameDonkeyWidgets
 			var shake = CreateNumEditBox(cameraShakeAction.ShakeAmount, ToolStack);
 			shake.OnNumberEdited += (obj, e) =>
 			{
-				cameraShakeAction.ShakeAmount = time.Number;
+				cameraShakeAction.ShakeAmount = shake.Number;
 			};
 		}
 

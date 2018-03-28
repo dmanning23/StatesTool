@@ -19,9 +19,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatesTool.WindowsDX", "Sta
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WeddingGameDonkey.SharedProject", "..\weddinggame\WeddingGameDonkey.SharedProject\WeddingGameDonkey.SharedProject.shproj", "{9DF20236-AB29-467E-9FCD-0A99EDBF2302}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GameDonkey.SharedProject", "..\gamedonkey\GameDonkey\GameDonkey.SharedProject\GameDonkey.SharedProject.shproj", "{A242C23A-06C6-4462-941A-49B5CF426F00}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		..\WidgetLib\WidgetLib\WidgetLib.projitems*{3df21fb3-a2e5-44be-975a-321c0fbe3519}*SharedItemsImports = 13
+		..\gamedonkey\GameDonkey\GameDonkey.SharedProject\GameDonkey.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
 		..\languagegame\LanguageGameDonkey.SharedProject\LanguageGameDonkey.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
 		..\robojets\RoboJetLib\RoboJetLib.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
 		GameDonkeyWidgets\GameDonkeyWidgets.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
@@ -31,6 +34,7 @@ Global
 		GameDonkeyWidgets\GameDonkeyWidgets.projitems*{9ae0f5be-8505-4d20-b4b8-02d191a0faf0}*SharedItemsImports = 13
 		statestool.SharedProject\statestool.SharedProject.projitems*{9da568e9-5baf-4340-b591-b743e3593017}*SharedItemsImports = 13
 		..\weddinggame\WeddingGameDonkey.SharedProject\WeddingGameDonkey.SharedProject.projitems*{9df20236-ab29-467e-9fcd-0a99edbf2302}*SharedItemsImports = 13
+		..\gamedonkey\GameDonkey\GameDonkey.SharedProject\GameDonkey.SharedProject.projitems*{a242c23a-06c6-4462-941a-49b5cf426f00}*SharedItemsImports = 13
 		..\tasslegame\TassleGameLib.SharedProject\TassleGameLib.SharedProject.projitems*{d6db4b9e-2f37-498b-8655-2d9f8364f9cf}*SharedItemsImports = 13
 		..\languagegame\LanguageGameDonkey.SharedProject\LanguageGameDonkey.SharedProject.projitems*{e7262486-caf4-4973-aebf-e94fc3df6c37}*SharedItemsImports = 13
 		..\robojets\RoboJetLib\RoboJetLib.SharedProject.projitems*{ec0f0bd5-6307-4e03-b02d-f31443ab92fe}*SharedItemsImports = 13

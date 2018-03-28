@@ -40,6 +40,10 @@ namespace GameDonkeyWidgets
 					{
 						return new TrailActionScreen(stateAction, character);
 					}
+				case EActionType.ConstantDecceleration:
+					{
+						return new DeccelerationActionScreen(stateAction, character);
+					}
 				default:
 					{
 						return null;
