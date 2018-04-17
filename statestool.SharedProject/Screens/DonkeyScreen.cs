@@ -58,9 +58,10 @@ namespace StatesTool
 			Renderer.AddDirectionalLight(new Vector3(-.5f, -1f, -.1f), new Color(1f, .7f, 0f));
 			Renderer.AddDirectionalLight(new Vector3(0f, 1f, .1f), new Color(.2f, 0f, .3f));
 
-			LoadTree();
+			//LoadTree();
 			//LoadGoblin();
 			//LoadArcher();
+			LoadKnight();
 			//LoadTassleCarrie();
 			//LoadRoboJet();
 			//LoadWeddingTabby();
@@ -170,6 +171,11 @@ namespace StatesTool
 		private void LoadArcher()
 		{
 			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Archer\Archer_Data.xml");
+		}
+
+		private void LoadKnight()
+		{
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Knight\Knight_Data.xml");
 		}
 
 		private void LoadTree()

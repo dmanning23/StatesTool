@@ -22,7 +22,7 @@ namespace GameDonkeyWidgets
 			var projectileAction = StateAction as ProjectileAction;
 
 			//change the projectile data file
-			var dataFile = AddContentFileDropdown("Data file:", ".xml", projectileAction.FileName, ToolStack);
+			var dataFile = AddContentFileDropdown("Data file:", projectileAction.FileName.GetPath(), ".xml", projectileAction.FileName, ToolStack);
 			dataFile.OnSelectedItemChange += (obj, e) =>
 			{
 				projectileAction.FileName = dataFile.SelectedItem;

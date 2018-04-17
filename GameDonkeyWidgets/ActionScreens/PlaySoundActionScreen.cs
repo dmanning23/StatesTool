@@ -18,7 +18,7 @@ namespace GameDonkeyWidgets
 		{
 			var soundAction = StateAction as PlaySoundAction;
 
-			var soundFiles = AddContentFileDropdown("Sound files:", ".wav", soundAction.SoundCueName, ToolStack);
+			var soundFiles = AddContentFileDropdown("Sound files:", string.Empty, ".wav", soundAction.SoundCueName, ToolStack);
 			soundFiles.OnSelectedItemChange += (obj, e) =>
 			{
 				soundAction.SoundCueName = soundFiles.SelectedItem;

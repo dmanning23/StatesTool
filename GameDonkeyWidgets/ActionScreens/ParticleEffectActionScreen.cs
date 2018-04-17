@@ -104,7 +104,7 @@ namespace GameDonkeyWidgets
 			};
 
 			//content image
-			var content = AddContentFileDropdown("Particle Image", ".png", particleAction.Emitter.Filename, scrollingStack);
+			var content = AddContentFileDropdown("Particle Image", particleAction.Emitter.Filename.GetPath(), ".png", particleAction.Emitter.Filename, scrollingStack);
 			content.OnSelectedItemChange += (obj, e) =>
 			{
 				particleAction.Emitter.Filename = e.SelectedItem;
