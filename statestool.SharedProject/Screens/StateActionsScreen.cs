@@ -53,7 +53,7 @@ namespace StatesTool
 					Character.Character, Engine, Character.Character.States, this.Content);
 
 				//add a button control for it
-				CreateItemControl(action);
+				CreateItemControl(action, false);
 			};
 
 			ScreenManager.AddScreen(msgBox);
