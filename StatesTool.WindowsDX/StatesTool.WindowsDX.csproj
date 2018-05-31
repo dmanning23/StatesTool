@@ -90,7 +90,7 @@
       <HintPath>..\packages\FontBuddy.1.0.25\lib\net451\FontBuddyLib.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="GameDonkey.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GameDonkey.1.0.53\lib\net451\GameDonkey.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\GameDonkey.1.0.54\lib\net451\GameDonkey.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="GameTimer.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\GameTimer.1.0.8\lib\net452\GameTimer.WindowsDX.dll</HintPath>
@@ -117,7 +117,7 @@
       <HintPath>..\packages\MatrixExtensions.1.0.3\lib\net451\MatrixExtensions.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="MenuBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MenuBuddy.1.0.133\lib\net451\MenuBuddy.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\MenuBuddy.1.0.134\lib\net451\MenuBuddy.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="MonoGame.Framework, Version=3.6.0.1625, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MonoGame.Framework.WindowsDX.3.6.0.1625\lib\net40\MonoGame.Framework.dll</HintPath>

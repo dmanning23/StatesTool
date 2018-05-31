@@ -61,7 +61,8 @@ namespace StatesTool
 			//LoadTree();
 			//LoadGoblin();
 			//LoadArcher();
-			LoadKnight();
+			//LoadKnight();
+			LoadWizard();
 			//LoadTassleCarrie();
 			//LoadRoboJet();
 			//LoadWeddingTabby();
@@ -188,7 +189,12 @@ namespace StatesTool
 			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Goblin\Goblin_Data.xml");
 		}
 
-		private void LoadLanguageMonster(string resource)
+		private void LoadWizard()
+		{
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Wizard\Wizard_Data.xml", true);
+		}
+
+		private void LoadLanguageMonster(string resource, bool setColor = false)
 		{
 			//create the correct engine
 			Filename.SetCurrentDirectory(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\");
@@ -199,7 +205,7 @@ namespace StatesTool
 			//load the file
 			var dataFile = new Filename();
 			dataFile.File = resource;
-			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
+			Character = Engine.LoadPlayer(setColor ? new Color(55, 155, 240) : Color.White, dataFile, PlayerIndex.One, "Catpants");
 			Engine.Start();
 		}
 
