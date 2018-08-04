@@ -9,9 +9,6 @@
     <Import_RootNamespace>statestool.SharedProject</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Tabs\" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Game1.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Screens\DonkeyScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Screens\StateActionsScreen.cs" />
