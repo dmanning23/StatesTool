@@ -110,7 +110,7 @@ namespace StatesTool
 			Engine.Render(BlendState.AlphaBlend);
 
 			//draw the current time at the top of the screen
-			Renderer.SpriteBatchBegin(BlendState.AlphaBlend, Resolution.TransformationMatrix(), SpriteSortMode.Texture);
+			Renderer.SpriteBatchBeginNoEffect(BlendState.AlphaBlend, Resolution.TransformationMatrix(), SpriteSortMode.Texture);
 
 			var position = new Point(Resolution.TitleSafeArea.Center.X, Resolution.ScreenArea.Top);
 

@@ -28,6 +28,10 @@ namespace GameDonkeyWidgets
 					{
 						return new PlaySoundActionScreen(stateAction, character);
 					}
+				case EActionType.PointLight:
+					{
+						return new PointLightActionScreen(stateAction, character);
+					}
 				case EActionType.Projectile:
 					{
 						return new ProjectileActionScreen(stateAction, character);
