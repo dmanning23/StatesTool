@@ -81,7 +81,10 @@ namespace StatesTool
 		{
 			if (null != Engine)
 			{
-				Engine.WorldBoundaries = Resolution.ScreenArea;
+				Engine.WorldBoundaries = new Rectangle(Resolution.ScreenArea.X, 
+					Resolution.ScreenArea.Y, 
+					Resolution.ScreenArea.Width, 
+					Resolution.ScreenArea.Height * 2);;
 				Engine.SpawnPoints = new List<Vector2> { Resolution.ScreenArea.Center.ToVector2() };
 			}
 		}
@@ -102,6 +105,7 @@ namespace StatesTool
 
 			//add the center point to the camera to anchor the screen
 			Renderer.Camera.AddPoint(Resolution.ScreenArea.Center.ToVector2());
+			Renderer.Camera.AddPoint(new Vector2( Resolution.ScreenArea.Center.X, Resolution.ScreenArea.Center.Y - 500));
 
 			//update the camera
 			Engine.UpdateCameraMatrix();

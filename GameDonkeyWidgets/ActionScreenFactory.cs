@@ -8,7 +8,7 @@ namespace GameDonkeyWidgets
 {
     public static class ActionScreenFactory
     {
-		public static IScreen CreateStateActionScreen(BaseAction stateAction, PlayerQueue character)
+		public static BaseActionScreen CreateStateActionScreen(BaseAction stateAction, PlayerQueue character)
 		{
 			switch (stateAction.ActionType)
 			{

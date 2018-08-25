@@ -9,6 +9,8 @@ namespace GameDonkeyWidgets
 		protected BaseAction StateAction { get; set; }
 		protected PlayerQueue Character { get; set; }
 
+		public IGameDonkey Engine { get; set; }
+
 		#endregion //Properties
 
 		#region Methods

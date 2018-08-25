@@ -3,10 +3,6 @@ using GameDonkeyLib;
 using MenuBuddy;
 using Microsoft.Xna.Framework;
 using StateMachineBuddy;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using WidgetLib;
 
 namespace GameDonkeyWidgets
 {

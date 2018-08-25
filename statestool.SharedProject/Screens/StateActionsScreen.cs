@@ -34,12 +34,15 @@ namespace StatesTool
 		public override void NavigateToItemScreen(BaseAction item)
 		{
 			var screen = ActionScreenFactory.CreateStateActionScreen(item, Character);
+			screen.Engine = Engine;
 			if (null == screen)
 			{
-				screen = new OkScreen($"Haven't completed the screen for {item.ActionType.ToString()} yet.");
-				
+				ScreenManager.AddScreen(new OkScreen($"Haven't completed the screen for {item.ActionType.ToString()} yet."));
 			}
-			ScreenManager.AddScreen(screen);
+			else
+			{
+				ScreenManager.AddScreen(screen);
+			}
 		}
 
 		public override void AddItem(object obj, ClickEventArgs e)

@@ -42,7 +42,7 @@ namespace GameDonkeyWidgets
 			};
 
 			//bone dropdown (with null option)
-			var bone = AddBoneDropdown(Character.Character.AnimationContainer, scrollingStack, true);
+			var bone = AddBoneDropdown(Character.Character.AnimationContainer, scrollingStack, true, particleAction.Bone);
 			bone.OnSelectedItemChange += (obj, e) =>
 			{
 				particleAction.BoneName = e.SelectedItem != null ? e.SelectedItem.Name : null;
@@ -104,10 +104,11 @@ namespace GameDonkeyWidgets
 			};
 
 			//content image
-			var content = AddContentFileDropdown("Particle Image", particleAction.Emitter.Filename.GetPath(), ".png", particleAction.Emitter.Filename, scrollingStack);
+			var content = AddContentFileDropdown("Particle Image", "Particles", ".png", particleAction.Emitter.ImageFile, scrollingStack);
 			content.OnSelectedItemChange += (obj, e) =>
 			{
-				particleAction.Emitter.Filename = e.SelectedItem;
+				particleAction.Emitter.ImageFile = e.SelectedItem;
+				particleAction.Emitter.LoadContent(Engine.Renderer);
 			};
 
 			//start rotation: 
