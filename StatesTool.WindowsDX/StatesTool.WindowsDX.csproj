@@ -51,10 +51,10 @@
       <HintPath>..\packages\AnimationKinectLib.1.0.3\lib\net451\AnimationKinectLib.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="AnimationLib.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\AnimationLib.1.0.36\lib\net451\AnimationLib.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\AnimationLib.1.0.40\lib\net451\AnimationLib.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="AnimationLibWidgets.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\AnimationLibWidgets.1.0.51\lib\net451\AnimationLibWidgets.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\AnimationLibWidgets.1.0.55\lib\net451\AnimationLibWidgets.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="AverageBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\AverageBuddy.1.0.1\lib\net451\AverageBuddy.WindowsDX.dll</HintPath>
@@ -142,7 +142,7 @@
       <HintPath>..\packages\RectangleF.1.0.1\lib\net451\RectangleF.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="RenderBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RenderBuddy.1.0.43\lib\net451\RenderBuddy.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\RenderBuddy.1.0.44\lib\net451\RenderBuddy.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="ResolutionBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ResolutionBuddy.1.0.17\lib\net451\ResolutionBuddy.WindowsDX.dll</HintPath>

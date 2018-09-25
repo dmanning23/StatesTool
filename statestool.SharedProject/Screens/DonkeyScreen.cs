@@ -59,10 +59,12 @@ namespace StatesTool
 			Renderer.AddDirectionalLight(new Vector3(0f, 1f, .1f), new Color(.2f, 0f, .3f));
 
 			//LoadTree();
-			//LoadGoblin();
+			LoadGoblin();
+			//LoadMummy();
+			//LoadSkeleton();
 			//LoadArcher();
 			//LoadKnight();
-			LoadWizard();
+			//LoadWizard();
 			//LoadTassleCarrie();
 			//LoadRoboJet();
 			//LoadWeddingTabby();
@@ -84,8 +86,10 @@ namespace StatesTool
 				Engine.WorldBoundaries = new Rectangle(Resolution.ScreenArea.X, 
 					Resolution.ScreenArea.Y, 
 					Resolution.ScreenArea.Width, 
-					Resolution.ScreenArea.Height * 2);;
-				Engine.SpawnPoints = new List<Vector2> { Resolution.ScreenArea.Center.ToVector2() };
+					Resolution.ScreenArea.Height * 5);
+				Engine.Renderer.Camera.IgnoreWorldBoundary = true;
+
+				Engine.SpawnPoints = new List<Vector2> { new Vector2(-1000f,1000f) };
 			}
 		}
 
@@ -104,8 +108,7 @@ namespace StatesTool
 			base.Draw(gameTime);
 
 			//add the center point to the camera to anchor the screen
-			Renderer.Camera.AddPoint(Resolution.ScreenArea.Center.ToVector2());
-			Renderer.Camera.AddPoint(new Vector2( Resolution.ScreenArea.Center.X, Resolution.ScreenArea.Center.Y - 500));
+			Renderer.Camera.AddPoint(new Vector2(Character.Character.Position.X, Character.Character.Position.Y - 400));
 
 			//update the camera
 			Engine.UpdateCameraMatrix();
@@ -193,6 +196,16 @@ namespace StatesTool
 			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Goblin\Goblin_Data.xml");
 		}
 
+		private void LoadMummy()
+		{
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Mummy\Mummy_Data.xml");
+		}
+
+		private void LoadSkeleton()
+		{
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Skeleton\Skeleton_Data.xml");
+		}
+
 		private void LoadWizard()
 		{
 			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Wizard\Wizard_Data.xml", true);
@@ -210,6 +223,7 @@ namespace StatesTool
 			var dataFile = new Filename();
 			dataFile.File = resource;
 			Character = Engine.LoadPlayer(setColor ? new Color(55, 155, 240) : Color.White, dataFile, PlayerIndex.One, "Catpants");
+			Character.Character.Flip = false;
 			Engine.Start();
 		}
 

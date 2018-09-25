@@ -26,12 +26,11 @@ namespace StatesTool
 
 		public Game1()
 		{
-			//FullScreen = true;
+			IsMouseVisible = true;
 
-			//AnimationManager = new AnimationManager(this);
-
-			var debug = new DebugInputComponent(this, ResolutionBuddy.Resolution.TransformationMatrix);
-			debug.DrawOrder = 1000;
+			//Graphics.SupportedOrientations = DisplayOrientation.Portrait | DisplayOrientation.PortraitDown;
+			//VirtualResolution = new Point(720, 1280);
+			//ScreenResolution = new Point(720, 1280);
 		}
 
 		protected override void LoadContent()
