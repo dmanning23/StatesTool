@@ -128,114 +128,6 @@
 /processorParam:TextureFormat=Color
 /build:Expand.png
 
-#begin gradient.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:gradient.png
-
-#begin hourglass.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:hourglass.png
-
-#begin Joint.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Joint.png
-
-#begin menu.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:menu.png
-
-#begin MenuMove.wav
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:MenuMove.wav
-
-#begin MenuSelect.wav
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:MenuSelect.wav
-
-#begin SelectedJoint.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:SelectedJoint.png
-
-#begin Unchecked.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Unchecked.png
-
-#begin up1.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:up1.png
-
-#begin up10.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:up10.png
-
 #begin Fonts/ArialBlack10.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
@@ -291,6 +183,30 @@
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
 /build:Fonts/ArialBlack96.spritefont
+
+#begin gradient.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:gradient.png
+
+#begin hourglass.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:hourglass.png
 
 #begin icons/copy.png
 /importer:TextureImporter
@@ -387,6 +303,36 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:icons/unkey.png
+
+#begin Joint.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Joint.png
+
+#begin menu.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:menu.png
+
+#begin MenuMove.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:MenuMove.wav
 
 #begin menus/copy.png
 /importer:TextureImporter
@@ -508,53 +454,11 @@
 /processorParam:TextureFormat=Color
 /build:menus/unlink.png
 
-#begin Sprites/Bullet.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/Bullet.png
-
-#begin Sprites/CounterMeasure.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/CounterMeasure.png
-
-#begin Sprites/Explosion.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/Explosion.png
-
-#begin Sprites/Missile.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/Missile.png
+#begin MenuSelect.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:MenuSelect.wav
 
 #begin ParticleEffects/CounterExhaust.xml
 /importer:XmlSourceImporter
@@ -943,51 +847,6 @@
 /processorParam:TextureFormat=Color
 /build:Particles/wind.png
 
-#begin Scripts/double_roll_seeds.xml
-/importer:XmlSourceImporter
-/processor:XmlDocumentProcessor
-/build:Scripts/double_roll_seeds.xml
-
-#begin Scripts/HomingMissile.xml
-/importer:XmlSourceImporter
-/processor:XmlDocumentProcessor
-/build:Scripts/HomingMissile.xml
-
-#begin Scripts/JetAntiMissiles.xml
-/importer:XmlSourceImporter
-/processor:XmlDocumentProcessor
-/build:Scripts/JetAntiMissiles.xml
-
-#begin Scripts/JetBullet.xml
-/importer:XmlSourceImporter
-/processor:XmlDocumentProcessor
-/build:Scripts/JetBullet.xml
-
-#begin Scripts/JetMissiles.xml
-/importer:XmlSourceImporter
-/processor:XmlDocumentProcessor
-/build:Scripts/JetMissiles.xml
-
-#begin Scripts/MissileCloud.xml
-/importer:XmlSourceImporter
-/processor:XmlDocumentProcessor
-/build:Scripts/MissileCloud.xml
-
-#begin Scripts/RobotAntiMissiles.xml
-/importer:XmlSourceImporter
-/processor:XmlDocumentProcessor
-/build:Scripts/RobotAntiMissiles.xml
-
-#begin Scripts/RobotBullet.xml
-/importer:XmlSourceImporter
-/processor:XmlDocumentProcessor
-/build:Scripts/RobotBullet.xml
-
-#begin Scripts/RobotMissiles.xml
-/importer:XmlSourceImporter
-/processor:XmlDocumentProcessor
-/build:Scripts/RobotMissiles.xml
-
 #begin Robot/ParticleEffects/CounterExhaust.xml
 /importer:XmlSourceImporter
 /processor:XmlDocumentProcessor
@@ -1062,4 +921,391 @@
 /importer:XmlSourceImporter
 /processor:XmlDocumentProcessor
 /build:Robot/ParticleEffects/MissileFlame.xml
+
+#begin Scripts/double_roll_seeds.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Scripts/double_roll_seeds.xml
+
+#begin Scripts/HomingMissile.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Scripts/HomingMissile.xml
+
+#begin Scripts/JetAntiMissiles.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Scripts/JetAntiMissiles.xml
+
+#begin Scripts/JetBullet.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Scripts/JetBullet.xml
+
+#begin Scripts/JetMissiles.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Scripts/JetMissiles.xml
+
+#begin Scripts/MissileCloud.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Scripts/MissileCloud.xml
+
+#begin Scripts/RobotAntiMissiles.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Scripts/RobotAntiMissiles.xml
+
+#begin Scripts/RobotBullet.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Scripts/RobotBullet.xml
+
+#begin Scripts/RobotMissiles.xml
+/importer:XmlSourceImporter
+/processor:XmlDocumentProcessor
+/build:Scripts/RobotMissiles.xml
+
+#begin SelectedJoint.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:SelectedJoint.png
+
+#begin soundfx/afterburner.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:soundfx/afterburner.wav
+
+#begin soundfx/brakes.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:soundfx/brakes.wav
+
+#begin soundfx/countermeasureExplosion.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:soundfx/countermeasureExplosion.wav
+
+#begin soundfx/fireCountermeasure.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:soundfx/fireCountermeasure.wav
+
+#begin soundfx/fireMissile.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:soundfx/fireMissile.wav
+
+#begin soundfx/gamestart.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:soundfx/gamestart.wav
+
+#begin soundfx/gun.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:soundfx/gun.wav
+
+#begin soundfx/missileExplosion.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:soundfx/missileExplosion.wav
+
+#begin soundfx/playerExplosion.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:soundfx/playerExplosion.wav
+
+#begin soundfx/playerjoin.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:soundfx/playerjoin.wav
+
+#begin soundfx/transformRobot.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:soundfx/transformRobot.wav
+
+#begin Sounds/Archer Attack Hit.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Archer Attack Hit.wav
+
+#begin Sounds/Archer Attack Miss.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Archer Attack Miss.wav
+
+#begin Sounds/Archer Attack Start.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Archer Attack Start.wav
+
+#begin Sounds/Battle Start.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Battle Start.wav
+
+#begin Sounds/Big Heal.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Big Heal.wav
+
+#begin Sounds/Big Hit.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Big Hit.wav
+
+#begin Sounds/Block.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Block.wav
+
+#begin Sounds/Death.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Death.wav
+
+#begin Sounds/Fire Fizzle.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Fire Fizzle.wav
+
+#begin Sounds/Fire Hit.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Fire Hit.wav
+
+#begin Sounds/Fire Start.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Fire Start.wav
+
+#begin Sounds/Full Resurrection.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Full Resurrection.wav
+
+#begin Sounds/Heal.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Heal.wav
+
+#begin Sounds/Hit.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Hit.wav
+
+#begin Sounds/Knight Attack Hit.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Knight Attack Hit.wav
+
+#begin Sounds/Knight Attack Miss.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Knight Attack Miss.wav
+
+#begin Sounds/Knight Attack Start.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Knight Attack Start.wav
+
+#begin Sounds/Lightning.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Lightning.wav
+
+#begin Sounds/Mana Bar Full.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Mana Bar Full.wav
+
+#begin Sounds/Player Hit.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Player Hit.wav
+
+#begin Sounds/Rain.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Rain.wav
+
+#begin Sounds/Resurrection.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Resurrection.wav
+
+#begin Sounds/Smoke Fizzle.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Smoke Fizzle.wav
+
+#begin Sounds/Star1.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Star1.wav
+
+#begin Sounds/Star2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Star2.wav
+
+#begin Sounds/Star3.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Star3.wav
+
+#begin Sounds/Sword Drawn.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Sword Drawn.wav
+
+#begin Sounds/Tornado.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Tornado.wav
+
+#begin Sounds/Wizard Special Miss.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Wizard Special Miss.wav
+
+#begin Sounds/Wizard Special Start.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Wizard Special Start.wav
+
+#begin Sprites/Bullet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/Bullet.png
+
+#begin Sprites/CounterMeasure.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/CounterMeasure.png
+
+#begin Sprites/Explosion.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/Explosion.png
+
+#begin Sprites/Missile.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/Missile.png
+
+#begin Unchecked.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Unchecked.png
+
+#begin up1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:up1.png
+
+#begin up10.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:up10.png
 

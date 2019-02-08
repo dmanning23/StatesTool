@@ -1,11 +1,12 @@
 ﻿using GameDonkeyLib;
 using InputHelper;
 using System;
+using System.Linq;
 using WidgetLib;
 
 namespace StatesTool
 {
-	public class StatesScreen : ListScreen<StateActions>
+	public class StatesScreen : ListScreen<SingleStateActions>
 	{
 		#region Properties
 
@@ -26,7 +27,7 @@ namespace StatesTool
 			Engine = donkey;
 			Character = character;
 
-			Items = container.Actions.Actions;
+			Items = container.Actions.Actions.Values.OrderBy(x => x.StateName).ToList();
 		}
 
 		public override void AddItem(object obj, ClickEventArgs e)
@@ -34,12 +35,12 @@ namespace StatesTool
 			throw new NotImplementedException();
 		}
 
-		public override void RemoveItem(StateActions item)
+		public override void RemoveItem(SingleStateActions item)
 		{
 			throw new NotImplementedException();
 		}
 
-		public override void NavigateToItemScreen(StateActions item)
+		public override void NavigateToItemScreen(SingleStateActions item)
 		{
 			ScreenManager.AddScreen(new StateActionsScreen(Engine, Character, item));
 		}

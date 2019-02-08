@@ -1,11 +1,8 @@
 ﻿using GameDonkeyLib;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace GameDonkeyWidgets
 {
-    public abstract class TimedActionScreen : BaseActionScreen
+	public abstract class TimedActionScreen : BaseActionScreen
 	{
 		#region Properties
 

@@ -36,7 +36,7 @@ namespace GameDonkeyWidgets
 			return dropdown;
 		}
 
-		protected StateMessageDropdown AddStateMessageDropdown(StateMachine stateMachine, IStackLayout layout)
+		protected StateMessageDropdown AddStateMessageDropdown(HybridStateMachine stateMachine, IStackLayout layout)
 		{
 			layout.AddItem(new Label("Messages: ", Content, FontSize.Small)
 			{

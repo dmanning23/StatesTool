@@ -2,13 +2,10 @@
 using MenuBuddy;
 using Microsoft.Xna.Framework;
 using ResolutionBuddy;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace GameDonkeyWidgets
 {
-    public class ParticleEffectActionScreen : BaseActionScreen
+	public class ParticleEffectActionScreen : BaseActionScreen
 	{
 		#region Properties
 

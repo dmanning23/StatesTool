@@ -47,6 +47,8 @@ namespace StatesTool
 		protected override void InitStyles()
 		{
 			StyleSheet.SmallFontResource = @"Fonts\ArialBlack10";
+			StyleSheet.ClickedSoundResource = string.Empty;
+			StyleSheet.HighlightedSoundResource = string.Empty;
 			base.InitStyles();
 
 			//DefaultStyles.Instance().MainStyle.HasOutline = true;

@@ -1,7 +1,4 @@
 ﻿using GameDonkeyLib;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace GameDonkeyWidgets
 {

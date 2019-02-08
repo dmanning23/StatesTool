@@ -54,14 +54,17 @@ namespace StatesTool
 			Renderer.TextureLoader = new TextureFileLoader();
 			Renderer.AmbientColor = new Color(.2f, .2f, .2f);
 			Renderer.ClearLights();
-			Renderer.AddDirectionalLight(new Vector3(.5f, -1f, .6f), new Color(1f, 1f, .75f));
-			Renderer.AddDirectionalLight(new Vector3(-.5f, -1f, -.1f), new Color(1f, .7f, 0f));
+			Renderer.AddDirectionalLight(new Vector3(-.5f, -1f, .6f), new Color(1f, 1f, .75f));
+			Renderer.AddDirectionalLight(new Vector3(.5f, -1f, -.1f), new Color(1f, .7f, 0f));
 			Renderer.AddDirectionalLight(new Vector3(0f, 1f, .1f), new Color(.2f, 0f, .3f));
 
 			//LoadTree();
-			LoadGoblin();
+			//LoadGoblin();
 			//LoadMummy();
 			//LoadSkeleton();
+			//LoadDragon();
+			//LoadHydra();
+			//LoadWolf();
 			//LoadArcher();
 			//LoadKnight();
 			//LoadWizard();
@@ -69,7 +72,7 @@ namespace StatesTool
 			//LoadRoboJet();
 			//LoadWeddingTabby();
 			//LoadWeddingDan();
-			//LoadWeddingCarrie();
+			LoadWeddingCarrie();
 			//LoadWeddingBestMen();
 
 			ScreenManager.AddScreen(new ToolsScreen(Engine, Character));
@@ -114,7 +117,7 @@ namespace StatesTool
 			Engine.UpdateCameraMatrix();
 
 			//draw the game
-			Engine.Render(BlendState.AlphaBlend);
+			Engine.Render(BlendState.NonPremultiplied);
 
 			//draw the current time at the top of the screen
 			Renderer.SpriteBatchBeginNoEffect(BlendState.AlphaBlend, Resolution.TransformationMatrix(), SpriteSortMode.Texture);
@@ -130,7 +133,7 @@ namespace StatesTool
 				Character.CharacterClock);
 			position.Y += _text.Font.LineSpacing;
 
-			_text.Write(string.Format("current state: {0}", Character.Character.States.CurrentStateText),
+			_text.Write(string.Format("current state: {0}", Character.Character.States.CurrentState),
 				position,
 				Justify.Center,
 				1f,
@@ -206,6 +209,21 @@ namespace StatesTool
 			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Skeleton\Skeleton_Data.xml");
 		}
 
+		private void LoadDragon()
+		{
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Dragon\Dragon_Data.xml");
+		}
+
+		private void LoadHydra()
+		{
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Hydra\Hydra_Data.xml");
+		}
+
+		private void LoadWolf()
+		{
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Wolf\Wolf_Data.xml");
+		}
+
 		private void LoadWizard()
 		{
 			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Wizard\Wizard_Data.xml", true);
@@ -235,7 +253,7 @@ namespace StatesTool
 		{
 			//create the correct engine
 			Filename.SetCurrentDirectory(@"C:\Projects\robojets\Source\Content\");
-			Engine = new RoboJetsDonkey(Renderer, null);
+			Engine = new RoboJetsDonkey(Renderer, ScreenManager.Game);
 			Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
 			SetWorldBoundaries();
 

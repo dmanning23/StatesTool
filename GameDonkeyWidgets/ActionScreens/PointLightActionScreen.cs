@@ -2,9 +2,6 @@
 using MenuBuddy;
 using Microsoft.Xna.Framework;
 using ResolutionBuddy;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace GameDonkeyWidgets
 {

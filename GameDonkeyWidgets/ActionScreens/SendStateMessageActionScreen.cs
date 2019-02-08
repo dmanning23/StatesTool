@@ -1,7 +1,4 @@
 ﻿using GameDonkeyLib;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace GameDonkeyWidgets
 {
@@ -21,10 +18,10 @@ namespace GameDonkeyWidgets
 		{
 			var messageAction = StateAction as SendStateMessageAction;
 			var message = AddStateMessageDropdown(Character.Character.States.StateMachine, ToolStack);
-			message.SelectedItem = messageAction.MessageName;
+			message.SelectedItem = messageAction.Message;
 			message.OnSelectedItemChange += (obj, e) =>
 			{
-				messageAction.MessageName = e.SelectedItem;
+				messageAction.Message = e.SelectedItem;
 			};
 		}
 

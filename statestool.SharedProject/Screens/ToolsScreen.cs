@@ -122,11 +122,7 @@ namespace StatesTool
 				//get the states of the ActionsScreen
 				var actionsScreen = actionsScreens[0];
 				var state = actionsScreen.StateActions.StateName;
-				var stateIndex = Character.Character.States.StateMachine.GetStateFromName(state);
-				if (-1 < stateIndex)
-				{
-					Character.Character.States.ForceStateChange(stateIndex);
-				}
+				Character.Character.States.ForceStateChange(state);
 			}
 		}
 

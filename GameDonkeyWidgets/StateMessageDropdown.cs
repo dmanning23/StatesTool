@@ -8,13 +8,12 @@ namespace GameDonkeyWidgets
 	{
 		#region Methods
 
-		public StateMessageDropdown(StateMachine stateMachine, IScreen screen) : base(screen)
+		public StateMessageDropdown(HybridStateMachine stateMachine, IScreen screen) : base(screen)
 		{
 			OnClick += CreateDropdownList;
 
-			for (int i = 0; i < stateMachine.NumMessages; i++)
+			foreach (var message in  stateMachine.Messages)
 			{
-				var message = stateMachine.GetMessageName(i);
 				var dropitem = new DropdownItem<string>(message, this)
 				{
 					Vertical = VerticalAlignment.Center,

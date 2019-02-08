@@ -1,12 +1,9 @@
 ﻿using GameDonkeyLib;
-using MenuBuddy;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace GameDonkeyWidgets
 {
-    public static class ActionScreenFactory
+	public static class ActionScreenFactory
     {
 		public static BaseActionScreen CreateStateActionScreen(BaseAction stateAction, PlayerQueue character)
 		{
@@ -48,9 +45,21 @@ namespace GameDonkeyWidgets
 					{
 						return new DeccelerationActionScreen(stateAction, character);
 					}
+				case EActionType.AddVelocity:
+					{
+						return new AddVelocityActionScreen(stateAction, character);
+					}
+				case EActionType.SetVelocity:
+					{
+						return new SetVelocityActionScreen(stateAction, character);
+					}
+				case EActionType.ConstantAcceleration:
+					{
+						return new AccelerationActionScreen(stateAction, character);
+					}
 				default:
 					{
-						return null;
+						throw new Exception($"{stateAction.ActionType.ToString()} screen has not been implemented yet.");
 					}
 			}
 		}

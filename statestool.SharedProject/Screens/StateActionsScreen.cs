@@ -13,13 +13,13 @@ namespace StatesTool
 		IGameDonkey Engine { get; set; }
 		PlayerQueue Character { get; set; }
 
-		public StateActions StateActions { get; private set; }
+		public SingleStateActions StateActions { get; private set; }
 
 		#endregion //Properties
 
 		#region Methods
 
-		public StateActionsScreen(IGameDonkey donkey, PlayerQueue character, StateActions stateActions) : base(stateActions.StateName, true, true)
+		public StateActionsScreen(IGameDonkey donkey, PlayerQueue character, SingleStateActions stateActions) : base(stateActions.StateName, true, true)
 		{
 			CoveredByOtherScreens = true;
 			CoverOtherScreens = true;
