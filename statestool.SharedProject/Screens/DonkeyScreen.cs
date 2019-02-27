@@ -1,6 +1,7 @@
 ﻿using FilenameBuddy;
 using FontBuddyLib;
 using GameDonkeyLib;
+using GrimoireLib;
 using LanguageGameDonkey.SharedProject;
 using MenuBuddy;
 using Microsoft.Xna.Framework;
@@ -8,6 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using RenderBuddy;
 using ResolutionBuddy;
 using RoboJetsLib;
+using StateMachineBuddy;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -31,7 +33,12 @@ namespace StatesTool
 		/// The character we are editing the states for
 		/// null until the files get loaded
 		/// </summary>
-		private PlayerQueue Character;
+		public PlayerQueue Character { get; set; }
+
+		/// <summary>
+		/// Extra state container to add & save out
+		/// </summary>
+		Dictionary<string, StateMachineActions> StateActions { get; set; }
 
 		FontBuddy _text;
 
@@ -41,6 +48,7 @@ namespace StatesTool
 
 		public DonkeyScreen() : base("DonkeyScreen")
 		{
+			StateActions = new Dictionary<string, StateMachineActions>();
 		}
 
 		public override void LoadContent()
@@ -50,9 +58,11 @@ namespace StatesTool
 			_text = new FontBuddy();
 			_text.LoadContent(Content, @"Fonts\ArialBlack14");
 
-			Renderer = new Renderer(ScreenManager.Game, Content);
-			Renderer.TextureLoader = new TextureFileLoader();
-			Renderer.AmbientColor = new Color(.2f, .2f, .2f);
+			Renderer = new Renderer(ScreenManager.Game, Content)
+			{
+				TextureLoader = new TextureFileLoader(),
+				AmbientColor = new Color(.2f, .2f, .2f)
+			};
 			Renderer.ClearLights();
 			Renderer.AddDirectionalLight(new Vector3(-.5f, -1f, .6f), new Color(1f, 1f, .75f));
 			Renderer.AddDirectionalLight(new Vector3(.5f, -1f, -.1f), new Color(1f, .7f, 0f));
@@ -70,13 +80,62 @@ namespace StatesTool
 			//LoadWizard();
 			//LoadTassleCarrie();
 			//LoadRoboJet();
+
 			//LoadWeddingTabby();
 			//LoadWeddingDan();
-			LoadWeddingCarrie();
+			//LoadWeddingCarrie();
 			//LoadWeddingBestMen();
 
-			ScreenManager.AddScreen(new ToolsScreen(Engine, Character));
+			//LoadGrimoireDan();
+			LoadGrimoireKnight();
+
+			ScreenManager.AddScreen(new ToolsScreen(Engine, this));
 			ScreenManager.AddScreen(new StateContainersScreen(Engine, Character));
+		}
+
+		protected void LoadStateContainer(string containerName, string stateMachineFile, string containerFile)
+		{
+			var stateMachineFilename = new Filename() { File = stateMachineFile };
+			var stateChanges = new StateMachineModel(stateMachineFilename);
+			stateChanges.ReadXmlFile();
+	
+			var containerFilename = new Filename() { File = containerFile };
+			var stateActions = new StateMachineActions();
+			var stateContainer = new SingleStateContainerModel(containerFilename);
+			stateContainer.ReadXmlFile();
+			stateActions.LoadStateActions(stateChanges.StateNames, stateContainer, Character.Character);
+
+			stateActions.LoadContent(Engine, Content);
+
+			foreach (var characterStateContainer in Character.Character.States.StateContainers)
+			{
+				characterStateContainer.Actions.AddStateMachineActions(stateActions);
+			}
+			StateActions[containerFile] = stateActions;
+		}
+
+		public void Save()
+		{
+			foreach (var stateContainer in StateActions)
+			{
+				var filename = new Filename() { File = stateContainer.Key };
+				var single = new SingleStateContainerModel(filename, stateContainer.Value);
+				single.WriteXml();
+				foreach (var characterStateContainer in Character.Character.States.StateContainers)
+				{
+					characterStateContainer.Actions.RemoveStateMachineActions(stateContainer.Value);
+				}
+			}
+
+			Character.Character.States.WriteXml();
+
+			foreach (var stateContainer in StateActions)
+			{
+				foreach (var characterStateContainer in Character.Character.States.StateContainers)
+				{
+					characterStateContainer.Actions.AddStateMachineActions(stateContainer.Value);
+				}
+			}
 		}
 
 		/// <summary>
@@ -238,8 +297,10 @@ namespace StatesTool
 			SetWorldBoundaries();
 
 			//load the file
-			var dataFile = new Filename();
-			dataFile.File = resource;
+			var dataFile = new Filename
+			{
+				File = resource
+			};
 			Character = Engine.LoadPlayer(setColor ? new Color(55, 155, 240) : Color.White, dataFile, PlayerIndex.One, "Catpants");
 			Character.Character.Flip = false;
 			Engine.Start();
@@ -258,8 +319,10 @@ namespace StatesTool
 			SetWorldBoundaries();
 
 			//load the file
-			var dataFile = new Filename();
-			dataFile.File = @"C:\Projects\robojets\Source\Content\Robot\Robot Data.xml";
+			var dataFile = new Filename
+			{
+				File = @"C:\Projects\robojets\Source\Content\Robot\Robot Data.xml"
+			};
 			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
 			Engine.Start();
 		}
@@ -300,9 +363,10 @@ namespace StatesTool
 			SetWorldBoundaries();
 
 			//load the file
-			var dataFile = new Filename();
-			//dataFile.File = ;
-			dataFile.File = dataFilename;
+			var dataFile = new Filename
+			{
+				File = dataFilename
+			};
 			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
 			Engine.Start();
 		}
@@ -320,13 +384,59 @@ namespace StatesTool
 			SetWorldBoundaries();
 
 			//load the file
-			var dataFile = new Filename();
-			dataFile.File = @"C:\Projects\tasslegame\Windows\Content\Carrie\carrie data.xml";
+			var dataFile = new Filename
+			{
+				File = @"C:\Projects\tasslegame\Windows\Content\Carrie\carrie data.xml"
+			};
 			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
 			Engine.Start();
 		}
 
 		#endregion //Tassle
+
+		#region Grimoire
+
+		private void LoadGrimoireKnight()
+		{
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Knight\Knight_Data.xml");
+		}
+
+		private void LoadGrimoireDan()
+		{
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Dan\Dan_Data.xml");
+			LoadStateContainer("Sword", 
+				@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Sword\Slash_StateMachine.xml",
+				@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Sword\Slash_States.xml");
+			LoadStateContainer("Shield",
+				@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Shield\Block_StateMachine.xml",
+				@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Shield\Block_States.xml");
+			LoadStateContainer("Broom",
+				@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Broom\Dash_StateMachine.xml",
+				@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Broom\Dash_States.xml");
+
+		}
+
+		private void LoadGrimoire(string dataFilename)
+		{
+			//create the correct engine
+			Filename.SetCurrentDirectory(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\");
+			Engine = new GrimoireDonkey(Renderer, ScreenManager.Game)
+			{
+				ToolMode = true
+			};
+			Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
+			SetWorldBoundaries();
+
+			//load the file
+			var dataFile = new Filename
+			{
+				File = dataFilename
+			};
+			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
+			Engine.Start();
+		}
+
+		#endregion //Grimoire
 
 		#endregion //Load Stuff
 	}

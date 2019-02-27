@@ -22,7 +22,13 @@ namespace GameDonkeyWidgets
 
 			var tempStack = new UndoRedoStack();
 			var animation = AddAnimationDropdown(Character.Character.AnimationContainer, tempStack, ToolStack);
-			animation.SelectedItem = Character.Character.AnimationContainer.FindAnimation(animationAction.AnimationName);
+			
+			if (!string.IsNullOrEmpty(animationAction.AnimationName))
+			{
+				var selectedAnimation = Character.Character.AnimationContainer.FindAnimation(animationAction.AnimationName);
+				animation.SelectedItem = Character.Character.AnimationContainer.FindAnimation(animationAction.AnimationName);
+			}
+
 			animation.OnSelectedItemChange += (obj, e) =>
 			{
 				animationAction.AnimationName = animation.SelectedItem.Name;

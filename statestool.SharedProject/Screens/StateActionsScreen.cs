@@ -53,7 +53,7 @@ namespace StatesTool
 			{
 				//add the bone to the skeleton
 				var action = StateActions.AddNewActionFromType(msgBox.StateActionType.SelectedItem,
-					Character.Character, Engine, Character.Character.States, this.Content);
+					Character.Character, Engine, this.Content);
 
 				//add a button control for it
 				CreateItemControl(action, false);

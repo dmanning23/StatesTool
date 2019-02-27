@@ -18,19 +18,19 @@ namespace StatesTool
 		#region Properties
 
 		IGameDonkey Engine { get; set; }
-		PlayerQueue Character { get; set; }
+		DonkeyScreen DonkeyScreen { get; set; }
 
 		#endregion //Properties
 
 		#region Methods
 
-		public ToolsScreen(IGameDonkey donkey, PlayerQueue character) : base("ToolsScreen")
+		public ToolsScreen(IGameDonkey donkey, DonkeyScreen donkeyScreen) : base("ToolsScreen")
 		{
 			CoveredByOtherScreens = false;
 			CoverOtherScreens = false;
 
 			Engine = donkey;
-			Character = character;
+			DonkeyScreen = donkeyScreen;
 		}
 
 		public override void LoadContent()
@@ -50,10 +50,12 @@ namespace StatesTool
 				Vertical = VerticalAlignment.Top,
 			};
 
-			var hamburgerItems = new List<ContextMenuItem>();
-			hamburgerItems.Add(new ContextMenuItem(Content.Load<Texture2D>(@"icons\save"), "Save", Save));
-			hamburgerItems.Add(new ContextMenuItem(Content.Load<Texture2D>(@"icons\undo"), "Reset", Reset));
-			hamburgerItems.Add(new ContextMenuItem(Content.Load<Texture2D>(@"icons\undo"), "Restart State", RestartState));
+			var hamburgerItems = new List<ContextMenuItem>
+			{
+				new ContextMenuItem(Content.Load<Texture2D>(@"icons\save"), "Save", Save),
+				new ContextMenuItem(Content.Load<Texture2D>(@"icons\undo"), "Reset", Reset),
+				new ContextMenuItem(Content.Load<Texture2D>(@"icons\undo"), "Restart State", RestartState)
+			};
 
 			//add each menu item below this
 			foreach (var hamburgerItem in hamburgerItems)
@@ -106,12 +108,13 @@ namespace StatesTool
 
 		private void Save(object obj, ClickEventArgs e)
 		{
-			Character.Character.States.WriteXml();
+
+			DonkeyScreen.Save();
 		}
 
 		private void Reset(object obj, ClickEventArgs e)
 		{
-			Engine.RespawnPlayer(Character);
+			Engine.RespawnPlayer(DonkeyScreen.Character);
 		}
 
 		private void RestartState(object obj, ClickEventArgs e)
@@ -122,7 +125,7 @@ namespace StatesTool
 				//get the states of the ActionsScreen
 				var actionsScreen = actionsScreens[0];
 				var state = actionsScreen.StateActions.StateName;
-				Character.Character.States.ForceStateChange(state);
+				DonkeyScreen.Character.Character.States.ForceStateChange(state);
 			}
 		}
 
