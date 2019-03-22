@@ -4,7 +4,7 @@ using InputHelper;
 using MenuBuddy;
 using WidgetLib;
 
-namespace StatesTool
+namespace GameDonkeyWidgets
 {
 	public class StateActionsScreen : ListScreen<BaseAction>
 	{
@@ -13,13 +13,13 @@ namespace StatesTool
 		IGameDonkey Engine { get; set; }
 		PlayerQueue Character { get; set; }
 
-		public SingleStateActions StateActions { get; private set; }
+		public IStateActionsList StateActions { get; private set; }
 
 		#endregion //Properties
 
 		#region Methods
 
-		public StateActionsScreen(IGameDonkey donkey, PlayerQueue character, SingleStateActions stateActions) : base(stateActions.StateName, true, true)
+		public StateActionsScreen(IGameDonkey donkey, PlayerQueue character, IStateActionsList stateActions, string screenName) : base(screenName, true, true)
 		{
 			CoveredByOtherScreens = true;
 			CoverOtherScreens = true;

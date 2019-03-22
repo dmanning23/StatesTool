@@ -1,4 +1,5 @@
 ﻿using GameDonkeyLib;
+using GameDonkeyWidgets;
 using InputHelper;
 using MenuBuddy;
 using Microsoft.Xna.Framework;
@@ -124,7 +125,7 @@ namespace StatesTool
 			{
 				//get the states of the ActionsScreen
 				var actionsScreen = actionsScreens[0];
-				var state = actionsScreen.StateActions.StateName;
+				var state = actionsScreen.ScreenName;
 				DonkeyScreen.Character.Character.States.ForceStateChange(state);
 			}
 		}

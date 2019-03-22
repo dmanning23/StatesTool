@@ -57,6 +57,10 @@ namespace GameDonkeyWidgets
 					{
 						return new AccelerationActionScreen(stateAction, character);
 					}
+				case EActionType.Random:
+					{
+						return new RandomActionScreen(stateAction, character);
+					}
 				default:
 					{
 						throw new Exception($"{stateAction.ActionType.ToString()} screen has not been implemented yet.");

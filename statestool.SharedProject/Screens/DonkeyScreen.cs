@@ -68,7 +68,7 @@ namespace StatesTool
 			Renderer.AddDirectionalLight(new Vector3(.5f, -1f, -.1f), new Color(1f, .7f, 0f));
 			Renderer.AddDirectionalLight(new Vector3(0f, 1f, .1f), new Color(.2f, 0f, .3f));
 
-			//LoadTree();
+			LoadTree();
 			//LoadGoblin();
 			//LoadMummy();
 			//LoadSkeleton();
@@ -87,7 +87,7 @@ namespace StatesTool
 			//LoadWeddingBestMen();
 
 			//LoadGrimoireDan();
-			LoadGrimoireKnight();
+			//LoadGrimoireKnight();
 
 			ScreenManager.AddScreen(new ToolsScreen(Engine, this));
 			ScreenManager.AddScreen(new StateContainersScreen(Engine, Character));

@@ -11,6 +11,7 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreenFactory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\AccelerationActionScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\RandomActionScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\SetVelocityActionScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\BaseActionScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\CameraShakeActionScreen.cs" />
@@ -26,6 +27,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\TrailActionScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DirectionTypeDropdown.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameDonkeyBaseTab.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StateActionsScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StateActionTypeDropdown.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StateActionTypeMessageBox.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StateContainerDropdown.cs" />

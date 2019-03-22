@@ -48,13 +48,13 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="AnimationKinectLib.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\AnimationKinectLib.1.0.3\lib\net451\AnimationKinectLib.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\AnimationKinectLib.2.0.0\lib\net451\AnimationKinectLib.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="AnimationLib.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\AnimationLib.2.0.11\lib\net451\AnimationLib.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\AnimationLib.2.0.14\lib\net451\AnimationLib.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="AnimationLibWidgets.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\AnimationLibWidgets.2.0.4\lib\net451\AnimationLibWidgets.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\AnimationLibWidgets.2.0.6\lib\net451\AnimationLibWidgets.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="AverageBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\AverageBuddy.2.0.0\lib\net451\AverageBuddy.WindowsDX.dll</HintPath>
@@ -81,16 +81,16 @@
       <HintPath>..\packages\Equationator.1.0.7\lib\net451\Equationator.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="FilenameBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FilenameBuddy.2.0.1\lib\net452\FilenameBuddy.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\FilenameBuddy.2.0.4\lib\net452\FilenameBuddy.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="FlockBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FlockBuddy.1.0.8\lib\net451\FlockBuddy.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="FontBuddyLib.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FontBuddy.2.0.0\lib\net451\FontBuddyLib.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\FontBuddy.2.0.4\lib\net451\FontBuddyLib.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="GameDonkey.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GameDonkey.2.0.27\lib\net451\GameDonkey.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\GameDonkey.2.0.31\lib\net451\GameDonkey.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="GameTimer.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\GameTimer.2.0.0\lib\net452\GameTimer.WindowsDX.dll</HintPath>
@@ -102,10 +102,10 @@
       <HintPath>..\packages\InputHelper.2.0.0\lib\net451\InputHelper.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="KinectBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\KinectBuddy.1.0.6\lib\net451\KinectBuddy.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\KinectBuddy.2.0.0\lib\net451\KinectBuddy.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="KinectTextureSizeBuddy, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\KinectTextureSizeBuddy.1.0.1\lib\net451\KinectTextureSizeBuddy.dll</HintPath>
+      <HintPath>..\packages\KinectTextureSizeBuddy.2.0.0\lib\net451\KinectTextureSizeBuddy.dll</HintPath>
     </Reference>
     <Reference Include="ListExtensions.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ListExtensions.2.0.0\lib\net451\ListExtensions.WindowsDX.dll</HintPath>
@@ -117,7 +117,7 @@
       <HintPath>..\packages\MatrixExtensions.2.0.0\lib\net451\MatrixExtensions.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="MenuBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MenuBuddy.2.0.12\lib\net451\MenuBuddy.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\MenuBuddy.2.0.20\lib\net451\MenuBuddy.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="MonoGame.Framework, Version=3.7.1.189, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\lib\net45\MonoGame.Framework.dll</HintPath>
@@ -132,7 +132,7 @@
       <HintPath>..\packages\ParallaxBackgroundBuddy.2.0.0\lib\net451\ParallaxBackgroundBuddy.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="ParticleBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ParticleBuddy.2.0.0\lib\net451\ParticleBuddy.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\ParticleBuddy.2.0.2\lib\net451\ParticleBuddy.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="PrimitiveBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\PrimitiveBuddy.2.0.0\lib\net451\PrimitiveBuddy.WindowsDX.dll</HintPath>
@@ -195,7 +195,7 @@
       <HintPath>..\packages\UndoRedoBuddy.2.0.1\lib\net451\UndoRedoBuddy.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="Vector2Extensions.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Vector2Extensions.2.0.0\lib\net451\Vector2Extensions.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\Vector2Extensions.2.0.1\lib\net451\Vector2Extensions.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="XmlBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\XmlBuddy.2.0.1\lib\net451\XmlBuddy.WindowsDX.dll</HintPath>

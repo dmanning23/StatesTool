@@ -11,7 +11,6 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Game1.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Screens\DonkeyScreen.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Screens\StateActionsScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Screens\StateContainersScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Screens\StatesScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Screens\ToolsScreen.cs" />

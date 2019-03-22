@@ -1,4 +1,5 @@
 ﻿using GameDonkeyLib;
+using GameDonkeyWidgets;
 using InputHelper;
 using System;
 using System.Linq;
@@ -42,7 +43,7 @@ namespace StatesTool
 
 		public override void NavigateToItemScreen(SingleStateActions item)
 		{
-			ScreenManager.AddScreen(new StateActionsScreen(Engine, Character, item));
+			ScreenManager.AddScreen(new StateActionsScreen(Engine, Character, item, item.StateName));
 		}
 
 		#endregion //Methods
