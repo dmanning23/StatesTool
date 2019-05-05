@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "statestool.SharedProject", "statestool.SharedProject\statestool.SharedProject.shproj", "{9DA568E9-5BAF-4340-B591-B743E3593017}"
 EndProject
@@ -19,10 +19,14 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WeddingGameDonkey.SharedPro
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GrimoireDonkey.SharedProject", "..\Grimoire\GrimoireDonkey.SharedProject\GrimoireDonkey.SharedProject.shproj", "{F43FD178-1BD4-48C3-B2A2-609CD4627B82}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BeachBlocksGameDonkey.SharedProject", "..\opposites.mobile\BeachBlocksGameDonkey.SharedProject\BeachBlocksGameDonkey.SharedProject.shproj", "{3D6D161D-5B3E-4678-AAA5-1C3EF1AF0F27}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\opposites.mobile\BeachBlocksGameDonkey.SharedProject\BeachBlocksGameDonkey.SharedProject.projitems*{3d6d161d-5b3e-4678-aaa5-1c3ef1af0f27}*SharedItemsImports = 13
 		..\Grimoire\GrimoireDonkey.SharedProject\WeddingGameDonkey.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
 		..\languagegame\LanguageGameDonkey.SharedProject\LanguageGameDonkey.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
+		..\opposites.mobile\BeachBlocksGameDonkey.SharedProject\BeachBlocksGameDonkey.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
 		..\robojets\RoboJetLib\RoboJetLib.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
 		GameDonkeyWidgets\GameDonkeyWidgets.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
 		statestool.SharedProject\statestool.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4

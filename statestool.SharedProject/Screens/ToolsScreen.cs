@@ -109,7 +109,6 @@ namespace StatesTool
 
 		private void Save(object obj, ClickEventArgs e)
 		{
-
 			DonkeyScreen.Save();
 		}
 

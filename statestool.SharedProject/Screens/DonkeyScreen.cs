@@ -1,4 +1,6 @@
-﻿using FilenameBuddy;
+﻿using AnimationLib;
+using BeachBlocksGameDonkey.SharedProject;
+using FilenameBuddy;
 using FontBuddyLib;
 using GameDonkeyLib;
 using GrimoireLib;
@@ -68,7 +70,7 @@ namespace StatesTool
 			Renderer.AddDirectionalLight(new Vector3(.5f, -1f, -.1f), new Color(1f, .7f, 0f));
 			Renderer.AddDirectionalLight(new Vector3(0f, 1f, .1f), new Color(.2f, 0f, .3f));
 
-			LoadTree();
+			//LoadTree();
 			//LoadGoblin();
 			//LoadMummy();
 			//LoadSkeleton();
@@ -82,12 +84,14 @@ namespace StatesTool
 			//LoadRoboJet();
 
 			//LoadWeddingTabby();
-			//LoadWeddingDan();
+			LoadWeddingDan();
 			//LoadWeddingCarrie();
 			//LoadWeddingBestMen();
 
 			//LoadGrimoireDan();
 			//LoadGrimoireKnight();
+
+			//LoadBeachBlocks();
 
 			ScreenManager.AddScreen(new ToolsScreen(Engine, this));
 			ScreenManager.AddScreen(new StateContainersScreen(Engine, Character));
@@ -236,6 +240,22 @@ namespace StatesTool
 
 		#region Load Stuff
 
+		private Garment LoadGarment(string garmentFile, PlayerQueue player)
+		{
+			if (!string.IsNullOrEmpty(garmentFile))
+			{
+				var filename = new Filename();
+				filename.File = garmentFile;
+
+				var garment = new Garment(filename, player.Character.AnimationContainer.Skeleton, Renderer);
+				garment.AddToSkeleton();
+
+				return garment;
+			}
+
+			return null;
+		}
+
 		#region Language Warriors
 
 		private void LoadArcher()
@@ -338,7 +358,7 @@ namespace StatesTool
 
 		private void LoadWeddingDan()
 		{
-			LoadWedding(@"C:\Projects\weddinggame\WeddingGame.SharedProject\Content\Dan\Dan data.xml");
+			LoadWedding(@"C:\Projects\weddinggame\WeddingGame.SharedProject\Content\Dan\DanData.xml");
 		}
 
 		private void LoadWeddingCarrie()
@@ -437,6 +457,43 @@ namespace StatesTool
 		}
 
 		#endregion //Grimoire
+
+		#region Beach Blocks
+
+		private void LoadBeachBlocks()
+		{
+			//create the correct engine
+			Filename.SetCurrentDirectory(@"C:\Projects\opposites.mobile\Opposites.SharedProject\Content\");
+			Engine = new BeachBlocksDonkey(Renderer, ScreenManager.Game);
+			Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
+			SetWorldBoundaries();
+
+			//load the file
+			var dataFile = new Filename
+			{
+				File = @"C:\Projects\opposites.mobile\Opposites.SharedProject\Content\Character\Character_Data.xml"
+			};
+			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
+
+			var garmentFile = new Filename();
+			garmentFile.SetFilenameRelativeToPath(dataFile, @"Clothes\Eye\GreenEyes.xml");
+			LoadGarment(garmentFile.File, Character);
+			garmentFile.SetFilenameRelativeToPath(dataFile, @"Clothes\Bikini\RedBikini.xml");
+			LoadGarment(garmentFile.File, Character);
+			garmentFile.SetFilenameRelativeToPath(dataFile, @"Hair\PixieCut\PixieCut.xml");
+			LoadGarment(garmentFile.File, Character);
+
+			Character.Character.AnimationContainer.SetColor("skin", new Color(255, 210, 210));
+			Character.Character.AnimationContainer.SetColor("lips", Color.HotPink);
+			Character.Character.AnimationContainer.SetColor("lashes", new Color(40, 30, 20));
+			Character.Character.AnimationContainer.SetColor("eyebrows", new Color(140, 110, 40));
+			Character.Character.AnimationContainer.SetColor("hair", new Color(230, 230, 130));
+			Character.Character.AnimationContainer.SetColor("tetrad", new Color(0, 0, 128));
+
+			Engine.Start();
+		}
+
+		#endregion //Beach Blocks
 
 		#endregion //Load Stuff
 	}
