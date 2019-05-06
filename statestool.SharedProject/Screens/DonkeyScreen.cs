@@ -10,11 +10,9 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using RenderBuddy;
 using ResolutionBuddy;
-using RoboJetsLib;
+using RoboJetsDonkeyLib;
 using StateMachineBuddy;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using TassleGameLib;
 using WeddingGameLib;
 
@@ -84,9 +82,11 @@ namespace StatesTool
 			//LoadRoboJet();
 
 			//LoadWeddingTabby();
-			LoadWeddingDan();
+			//LoadWeddingDan();
 			//LoadWeddingCarrie();
 			//LoadWeddingBestMen();
+
+			LoadRoboJet();
 
 			//LoadGrimoireDan();
 			//LoadGrimoireKnight();
@@ -333,7 +333,7 @@ namespace StatesTool
 		private void LoadRoboJet()
 		{
 			//create the correct engine
-			Filename.SetCurrentDirectory(@"C:\Projects\robojets\Source\Content\");
+			Filename.SetCurrentDirectory(@"C:\Projects\robojets\RoboJets\RoboJets.SharedProject\Content\");
 			Engine = new RoboJetsDonkey(Renderer, ScreenManager.Game);
 			Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
 			SetWorldBoundaries();
@@ -341,7 +341,7 @@ namespace StatesTool
 			//load the file
 			var dataFile = new Filename
 			{
-				File = @"C:\Projects\robojets\Source\Content\Robot\Robot Data.xml"
+				File = @"C:\Projects\robojets\RoboJets\RoboJets.SharedProject\Content\Robot\RobotData.xml"
 			};
 			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
 			Engine.Start();
