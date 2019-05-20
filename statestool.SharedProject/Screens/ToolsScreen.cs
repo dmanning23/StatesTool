@@ -32,6 +32,7 @@ namespace StatesTool
 
 			Engine = donkey;
 			DonkeyScreen = donkeyScreen;
+			Layer = -100;
 		}
 
 		public override void LoadContent()

@@ -28,6 +28,8 @@ namespace StatesTool
 
 			Engine = donkey;
 			Character = character;
+
+			Layer = -200;
 		}
 
 		public override void LoadContent()

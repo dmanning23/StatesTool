@@ -4,6 +4,7 @@ using FilenameBuddy;
 using FontBuddyLib;
 using GameDonkeyLib;
 using GrimoireLib;
+using HadoukInput;
 using LanguageGameDonkey.SharedProject;
 using MenuBuddy;
 using Microsoft.Xna.Framework;
@@ -21,7 +22,7 @@ namespace StatesTool
 	/// <summary>
 	/// This is the screen that displays the model
 	/// </summary>
-	public class DonkeyScreen : Screen
+	public class DonkeyScreen : Screen, IGameScreen
 	{
 		#region Properties
 
@@ -42,6 +43,13 @@ namespace StatesTool
 
 		FontBuddy _text;
 
+		bool addAllMessages;
+
+		/// <summary>
+		/// This is used for getting controller input
+		/// </summary>
+		InputState _input;
+
 		#endregion //Properties
 
 		#region Methods
@@ -49,6 +57,7 @@ namespace StatesTool
 		public DonkeyScreen() : base("DonkeyScreen")
 		{
 			StateActions = new Dictionary<string, StateMachineActions>();
+			Layer = -300;
 		}
 
 		public override void LoadContent()
@@ -68,6 +77,11 @@ namespace StatesTool
 			Renderer.AddDirectionalLight(new Vector3(.5f, -1f, -.1f), new Color(1f, .7f, 0f));
 			Renderer.AddDirectionalLight(new Vector3(0f, 1f, .1f), new Color(.2f, 0f, .3f));
 
+			_input = new InputState();
+
+			addAllMessages = true;
+
+
 			//LoadTree();
 			//LoadGoblin();
 			//LoadMummy();
@@ -83,10 +97,10 @@ namespace StatesTool
 
 			//LoadWeddingTabby();
 			//LoadWeddingDan();
-			//LoadWeddingCarrie();
+			LoadWeddingCarrie();
 			//LoadWeddingBestMen();
 
-			LoadRoboJet();
+			//LoadRoboJet();
 
 			//LoadGrimoireDan();
 			//LoadGrimoireKnight();
@@ -107,7 +121,7 @@ namespace StatesTool
 			var stateActions = new StateMachineActions();
 			var stateContainer = new SingleStateContainerModel(containerFilename);
 			stateContainer.ReadXmlFile();
-			stateActions.LoadStateActions(stateChanges.StateNames, stateContainer, Character.Character);
+			stateActions.LoadStateActions(stateChanges.StateNames, stateContainer, Character.Character, Character.Character.States);
 
 			stateActions.LoadContent(Engine, Content);
 
@@ -131,7 +145,7 @@ namespace StatesTool
 				}
 			}
 
-			Character.Character.States.WriteXml();
+			Character.Character.States.WriteXml(addAllMessages);
 
 			foreach (var stateContainer in StateActions)
 			{
@@ -166,6 +180,14 @@ namespace StatesTool
 			if (null != Engine)
 			{
 				Engine.Update(gameTime);
+
+				for (int i = 0; i < Engine.Players.Count; i++)
+				{
+					Engine.Players[i].GetPlayerInput(Engine.Players, false);
+
+					//check hard coded states for all players, but only on the server
+					Engine.Players[i].CheckHardCodedStates();
+				}
 			}
 		}
 
@@ -234,6 +256,12 @@ namespace StatesTool
 			{
 				Engine.RespawnPlayer(Character);
 			}
+		}
+
+		public void HandleInput(InputState input)
+		{
+			_input.Update();
+			Engine.UpdateInput(_input);
 		}
 
 		#endregion //Methods
@@ -334,7 +362,10 @@ namespace StatesTool
 		{
 			//create the correct engine
 			Filename.SetCurrentDirectory(@"C:\Projects\robojets\RoboJets\RoboJets.SharedProject\Content\");
-			Engine = new RoboJetsDonkey(Renderer, ScreenManager.Game);
+			Engine = new RoboJetsDonkey(Renderer, ScreenManager.Game)
+			{
+				ToolMode = true,
+			};
 			Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
 			SetWorldBoundaries();
 
@@ -353,7 +384,7 @@ namespace StatesTool
 
 		private void LoadWeddingTabby()
 		{
-			LoadWedding(@"C:\Projects\weddinggame\WeddingGame.SharedProject\Content\Tabby\Tabby data.xml");
+			LoadWedding(@"C:\Projects\weddinggame\WeddingGame.SharedProject\Content\Tabby\TabbyData.xml");
 		}
 
 		private void LoadWeddingDan()
@@ -363,12 +394,12 @@ namespace StatesTool
 
 		private void LoadWeddingCarrie()
 		{
-			LoadWedding(@"C:\Projects\weddinggame\WeddingGame.SharedProject\Content\Carrie\Carrie data.xml");
+			LoadWedding(@"C:\Projects\weddinggame\WeddingGame.SharedProject\Content\Carrie\CarrieData.xml");
 		}
 
 		private void LoadWeddingBestMen()
 		{
-			LoadWedding(@"C:\Projects\weddinggame\WeddingGame.SharedProject\Content\BestMen\BestMen data.xml");
+			LoadWedding(@"C:\Projects\weddinggame\WeddingGame.SharedProject\Content\BestMen\BestMenData.xml");
 		}
 
 		private void LoadWedding(string dataFilename)
@@ -380,7 +411,9 @@ namespace StatesTool
 				ToolMode = true
 			};
 			Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
-			SetWorldBoundaries();
+
+			//SetWorldBoundaries();
+			Engine.LoadBoard(new Filename(@"WeddingVenue\WeddingVenueBoard.xml"));
 
 			//load the file
 			var dataFile = new Filename
