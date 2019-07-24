@@ -79,7 +79,7 @@ namespace StatesTool
 
 			_input = new InputState();
 
-			addAllMessages = true;
+			addAllMessages = false;
 
 
 			//LoadTree();
@@ -97,8 +97,8 @@ namespace StatesTool
 
 			//LoadWeddingTabby();
 			//LoadWeddingDan();
-			LoadWeddingCarrie();
-			//LoadWeddingBestMen();
+			//LoadWeddingCarrie();
+			LoadWeddingBestMen();
 
 			//LoadRoboJet();
 
