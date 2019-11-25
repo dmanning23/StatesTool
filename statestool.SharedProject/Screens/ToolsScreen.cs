@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 using ResolutionBuddy;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Image = MenuBuddy.Image;
 
 namespace StatesTool
@@ -35,9 +36,9 @@ namespace StatesTool
 			Layer = -100;
 		}
 
-		public override void LoadContent()
+		public override async Task LoadContent()
 		{
-			base.LoadContent();
+			await base.LoadContent();
 
 			AddAsMenuItems();
 		}

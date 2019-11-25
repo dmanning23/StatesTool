@@ -24,6 +24,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\SendStateMessageActionScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\TimedActionScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\PointLightActionScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\CreateAttackActionScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\TrailActionScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DirectionTypeDropdown.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameDonkeyBaseTab.cs" />

@@ -1,5 +1,5 @@
 ﻿using AnimationLib;
-using BeachBlocksGameDonkey.SharedProject;
+using BeachBlocksGameDonkey;
 using FilenameBuddy;
 using FontBuddyLib;
 using GameDonkeyLib;
@@ -13,7 +13,9 @@ using RenderBuddy;
 using ResolutionBuddy;
 using RoboJetsDonkeyLib;
 using StateMachineBuddy;
+using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using TassleGameLib;
 using WeddingGameLib;
 
@@ -60,9 +62,9 @@ namespace StatesTool
 			Layer = -300;
 		}
 
-		public override void LoadContent()
+		public override async Task LoadContent()
 		{
-			base.LoadContent();
+			await base.LoadContent();
 
 			_text = new FontBuddy();
 			_text.LoadContent(Content, @"Fonts\ArialBlack14");
@@ -81,34 +83,44 @@ namespace StatesTool
 
 			addAllMessages = false;
 
+			try
+			{
+				//LoadTree();
+				//LoadGoblin();
+				//LoadMummy();
+				//LoadSkeleton();
+				//LoadDragon();
+				//LoadHydra();
+				//LoadWolf();
+				//LoadArcher();
+				//LoadKnight();
+				//LoadWizard();
+				//LoadTassleCarrie();
+				//LoadRoboJet();
 
-			//LoadTree();
-			//LoadGoblin();
-			//LoadMummy();
-			//LoadSkeleton();
-			//LoadDragon();
-			//LoadHydra();
-			//LoadWolf();
-			//LoadArcher();
-			//LoadKnight();
-			//LoadWizard();
-			//LoadTassleCarrie();
-			//LoadRoboJet();
+				//LoadWeddingTabby();
+				//LoadWeddingDan();
+				//LoadWeddingCarrie();
+				//LoadWeddingBestMen();
 
-			//LoadWeddingTabby();
-			//LoadWeddingDan();
-			//LoadWeddingCarrie();
-			LoadWeddingBestMen();
+				//LoadRoboJet();
 
-			//LoadRoboJet();
+				//LoadGrimoireDan();
+				//LoadGrimoireKnight();
+				//LoadGrimoireArcher();
+				//LoadGrimoireDragon();
+				LoadGrimoireGoblin();
+				//LoadGrimoireSkeleton();
 
-			//LoadGrimoireDan();
-			//LoadGrimoireKnight();
+				//LoadBeachBlocks();
 
-			//LoadBeachBlocks();
-
-			ScreenManager.AddScreen(new ToolsScreen(Engine, this));
-			ScreenManager.AddScreen(new StateContainersScreen(Engine, Character));
+				await ScreenManager.AddScreen(new ToolsScreen(Engine, this));
+				await ScreenManager.AddScreen(new StateContainersScreen(Engine, Character));
+			}
+			catch (Exception ex)
+			{
+				await ScreenManager.ErrorScreen(ex);
+			}
 		}
 
 		protected void LoadStateContainer(string containerName, string stateMachineFile, string containerFile)
@@ -258,7 +270,7 @@ namespace StatesTool
 			}
 		}
 
-		public void HandleInput(InputState input)
+		public void HandleInput(IInputState input)
 		{
 			_input.Update();
 			Engine.UpdateInput(_input);
@@ -272,8 +284,10 @@ namespace StatesTool
 		{
 			if (!string.IsNullOrEmpty(garmentFile))
 			{
-				var filename = new Filename();
-				filename.File = garmentFile;
+				var filename = new Filename()
+				{
+					File = garmentFile
+				};
 
 				var garment = new Garment(filename, player.Character.AnimationContainer.Skeleton, Renderer);
 				garment.AddToSkeleton();
@@ -452,6 +466,36 @@ namespace StatesTool
 		private void LoadGrimoireKnight()
 		{
 			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Knight\Knight_Data.xml");
+
+			ClockSpeed(0.5f);
+		}
+
+		private void LoadGrimoireArcher()
+		{
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Archer\Archer_Data.xml");
+
+			ClockSpeed(0.5f);
+		}
+
+		private void LoadGrimoireDragon()
+		{
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Dragon\Dragon_Data.xml");
+
+			ClockSpeed(0.5f);
+		}
+
+		private void LoadGrimoireGoblin()
+		{
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Goblin\Goblin_Data.xml");
+
+			ClockSpeed(0.5f);
+		}
+
+		private void LoadGrimoireSkeleton()
+		{
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Skeleton\Skeleton_Data.xml");
+
+			ClockSpeed(0.5f);
 		}
 
 		private void LoadGrimoireDan()
@@ -475,7 +519,8 @@ namespace StatesTool
 			Filename.SetCurrentDirectory(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\");
 			Engine = new GrimoireDonkey(Renderer, ScreenManager.Game)
 			{
-				ToolMode = true
+				ToolMode = true,
+				HasShadows = false
 			};
 			Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
 			SetWorldBoundaries();

@@ -1,4 +1,5 @@
 ﻿using GameDonkeyLib;
+using System.Threading.Tasks;
 
 namespace GameDonkeyWidgets
 {
@@ -21,9 +22,9 @@ namespace GameDonkeyWidgets
 			Character = character;
 		}
 
-		public override void LoadContent()
+		public override async Task LoadContent()
 		{
-			base.LoadContent();
+			await base.LoadContent();
 
 			//add the close button
 			AddTitle(StateAction.ActionType.ToString(), false, ToolStack);

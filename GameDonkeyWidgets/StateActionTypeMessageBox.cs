@@ -1,5 +1,6 @@
 ﻿using MenuBuddy;
 using Microsoft.Xna.Framework;
+using System.Threading.Tasks;
 
 namespace GameDonkeyWidgets
 {
@@ -11,9 +12,9 @@ namespace GameDonkeyWidgets
 		{
 		}
 
-		protected override void AddAddtionalControls()
+		protected override async Task AddAdditionalControls()
 		{
-			base.AddAddtionalControls();
+			await base.AddAdditionalControls();
 
 			//add a shim between the text and the buttons
 			ControlStack.AddItem(new Shim() { Size = new Vector2(0, 16f) });

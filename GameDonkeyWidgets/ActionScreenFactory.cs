@@ -61,6 +61,10 @@ namespace GameDonkeyWidgets
 					{
 						return new RandomActionScreen(stateAction, character);
 					}
+				case EActionType.CreateAttack:
+					{
+						return new CreateAttackActionScreen(stateAction, character);
+					}
 				default:
 					{
 						throw new Exception($"{stateAction.ActionType.ToString()} screen has not been implemented yet.");
