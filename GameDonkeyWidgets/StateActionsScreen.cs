@@ -27,6 +27,7 @@ namespace GameDonkeyWidgets
 			Engine = donkey;
 			Character = character;
 			StateActions = stateActions;
+			StateActions.Sort();
 
 			Items = StateActions.Actions;
 		}

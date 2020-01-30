@@ -65,6 +65,14 @@ namespace GameDonkeyWidgets
 					{
 						return new CreateAttackActionScreen(stateAction, character);
 					}
+				case EActionType.CreateHitCircle:
+					{
+						return new CreateHitCircleActionScreen(stateAction, character);
+					}
+				case EActionType.Block:
+					{
+						return new BlockActionScreen(stateAction, character);
+					}
 				default:
 					{
 						throw new Exception($"{stateAction.ActionType.ToString()} screen has not been implemented yet.");

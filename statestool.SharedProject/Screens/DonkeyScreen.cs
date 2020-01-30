@@ -93,23 +93,30 @@ namespace StatesTool
 				//LoadHydra();
 				//LoadWolf();
 				//LoadArcher();
-				//LoadKnight();
+				//LoadWarrior();
 				//LoadWizard();
 				//LoadTassleCarrie();
 				//LoadRoboJet();
 
-				//LoadWeddingTabby();
-				//LoadWeddingDan();
-				//LoadWeddingCarrie();
-				//LoadWeddingBestMen();
+				LoadWeddingTabby();
+				Save();
+				LoadWeddingDan();
+				Save();
+				LoadWeddingCarrie();
+				Save();
+				LoadWeddingBestMen();
+				Save();
 
 				//LoadRoboJet();
 
 				//LoadGrimoireDan();
-				//LoadGrimoireKnight();
+				//LoadGrimoireWarrior();
 				//LoadGrimoireArcher();
 				//LoadGrimoireDragon();
-				LoadGrimoireGoblin();
+				//LoadGrimoireDragonFireball();
+				//LoadGrimoireGoblin();
+				//LoadGrimoireGoblinAx();
+				//LoadGrimoireArcherArrow();
 				//LoadGrimoireSkeleton();
 
 				//LoadBeachBlocks();
@@ -126,22 +133,24 @@ namespace StatesTool
 		protected void LoadStateContainer(string containerName, string stateMachineFile, string containerFile)
 		{
 			var stateMachineFilename = new Filename() { File = stateMachineFile };
-			var stateChanges = new StateMachineModel(stateMachineFilename);
-			stateChanges.ReadXmlFile();
-	
-			var containerFilename = new Filename() { File = containerFile };
-			var stateActions = new StateMachineActions();
-			var stateContainer = new SingleStateContainerModel(containerFilename);
-			stateContainer.ReadXmlFile();
-			stateActions.LoadStateActions(stateChanges.StateNames, stateContainer, Character.Character, Character.Character.States);
-
-			stateActions.LoadContent(Engine, Content);
-
-			foreach (var characterStateContainer in Character.Character.States.StateContainers)
+			using (var stateChanges = new StateMachineModel(stateMachineFilename))
 			{
-				characterStateContainer.Actions.AddStateMachineActions(stateActions);
+				stateChanges.ReadXmlFile();
+
+				var containerFilename = new Filename() { File = containerFile };
+				var stateActions = new StateMachineActions();
+				var stateContainer = new SingleStateContainerModel(containerFilename);
+				stateContainer.ReadXmlFile();
+				stateActions.LoadStateActions(stateChanges.StateNames, stateContainer, Character.Character, Character.Character.States);
+
+				stateActions.LoadContent(Engine, Content);
+
+				foreach (var characterStateContainer in Character.Character.States.StateContainers)
+				{
+					characterStateContainer.Actions.AddStateMachineActions(stateActions);
+				}
+				StateActions[containerFile] = stateActions;
 			}
-			StateActions[containerFile] = stateActions;
 		}
 
 		public void Save()
@@ -149,8 +158,11 @@ namespace StatesTool
 			foreach (var stateContainer in StateActions)
 			{
 				var filename = new Filename() { File = stateContainer.Key };
-				var single = new SingleStateContainerModel(filename, stateContainer.Value);
-				single.WriteXml();
+				using (var single = new SingleStateContainerModel(filename, stateContainer.Value))
+				{
+					single.WriteXml();
+				}
+
 				foreach (var characterStateContainer in Character.Character.States.StateContainers)
 				{
 					characterStateContainer.Actions.RemoveStateMachineActions(stateContainer.Value);
@@ -208,7 +220,11 @@ namespace StatesTool
 			base.Draw(gameTime);
 
 			//add the center point to the camera to anchor the screen
-			Renderer.Camera.AddPoint(new Vector2(Character.Character.Position.X, Character.Character.Position.Y - 400));
+			if (null != Character)
+			{
+				Renderer.Camera.AddPoint(new Vector2(Character.Character.Position.X, Character.Character.Position.Y - 400));
+			}
+
 
 			//update the camera
 			Engine.UpdateCameraMatrix();
@@ -219,36 +235,41 @@ namespace StatesTool
 			//draw the current time at the top of the screen
 			Renderer.SpriteBatchBeginNoEffect(BlendState.AlphaBlend, Resolution.TransformationMatrix(), SpriteSortMode.Texture);
 
-			var position = new Point(Resolution.TitleSafeArea.Center.X, Resolution.ScreenArea.Top);
+			var position = new Vector2(Resolution.TitleSafeArea.Center.X, Resolution.ScreenArea.Top);
 
-			_text.Write(string.Format("state clock: {0:0.00}", Character.Character.States.StateClock.CurrentTime),
-				position,
-				Justify.Center,
-				1f,
-				Color.White,
-				Renderer.SpriteBatch,
-				Character.CharacterClock);
-			position.Y += _text.Font.LineSpacing;
-
-			_text.Write(string.Format("current state: {0}", Character.Character.States.CurrentState),
-				position,
-				Justify.Center,
-				1f,
-				Color.White,
-				Renderer.SpriteBatch,
-				Character.CharacterClock);
-			position.Y += _text.Font.LineSpacing;
-
-			if (null != Character.Character.AnimationContainer.CurrentAnimation)
+			if (null != Character)
 			{
-				_text.Write(string.Format("animation: {0}", Character.Character.AnimationContainer.CurrentAnimation.Name),
+				var height = _text.MeasureString("CATPANTS").Y;
+
+				_text.Write(string.Format("state clock: {0:0.00}", Character.Character.States.StateClock.CurrentTime),
+				position,
+				Justify.Center,
+				1f,
+				Color.White,
+				Renderer.SpriteBatch,
+				Character.CharacterClock);
+				position.Y += height;
+
+				_text.Write(string.Format("current state: {0}", Character.Character.States.CurrentState),
 					position,
 					Justify.Center,
 					1f,
 					Color.White,
 					Renderer.SpriteBatch,
 					Character.CharacterClock);
-				position.Y += _text.Font.LineSpacing;
+				position.Y += height;
+
+				if (null != Character.Character.AnimationContainer.CurrentAnimation)
+				{
+					_text.Write(string.Format("animation: {0}", Character.Character.AnimationContainer.CurrentAnimation.Name),
+						position,
+						Justify.Center,
+						1f,
+						Color.White,
+						Renderer.SpriteBatch,
+						Character.CharacterClock);
+					position.Y += height;
+				}
 			}
 
 			Renderer.SpriteBatchEnd();
@@ -305,9 +326,9 @@ namespace StatesTool
 			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Archer\Archer_Data.xml");
 		}
 
-		private void LoadKnight()
+		private void LoadWarrior()
 		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Knight\Knight_Data.xml");
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Warrior\Warrior_Data.xml");
 		}
 
 		private void LoadTree()
@@ -422,7 +443,8 @@ namespace StatesTool
 			Filename.SetCurrentDirectory(@"C:\Projects\weddinggame\WeddingGame.SharedProject\Content\");
 			Engine = new WeddingDonkey(Renderer, ScreenManager.Game)
 			{
-				ToolMode = true
+				ToolMode = true,
+				HasShadows = false
 			};
 			Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
 
@@ -463,9 +485,9 @@ namespace StatesTool
 
 		#region Grimoire
 
-		private void LoadGrimoireKnight()
+		private void LoadGrimoireWarrior()
 		{
-			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Knight\Knight_Data.xml");
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Warrior\Warrior_Data.xml");
 
 			ClockSpeed(0.5f);
 		}
@@ -484,9 +506,30 @@ namespace StatesTool
 			ClockSpeed(0.5f);
 		}
 
+		private void LoadGrimoireDragonFireball()
+		{
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Dragon\Projectiles\Data.xml");
+
+			ClockSpeed(0.5f);
+		}
+
 		private void LoadGrimoireGoblin()
 		{
 			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Goblin\Goblin_Data.xml");
+
+			ClockSpeed(0.5f);
+		}
+
+		private void LoadGrimoireGoblinAx()
+		{
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Goblin\Projectiles\Data.xml");
+
+			ClockSpeed(0.5f);
+		}
+
+		private void LoadGrimoireArcherArrow()
+		{
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Archer\Projectiles\Data.xml");
 
 			ClockSpeed(0.5f);
 		}
@@ -517,7 +560,7 @@ namespace StatesTool
 		{
 			//create the correct engine
 			Filename.SetCurrentDirectory(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\");
-			Engine = new GrimoireDonkey(Renderer, ScreenManager.Game)
+			Engine = new GrimoireDonkey(Renderer, ScreenManager.Game, false)
 			{
 				ToolMode = true,
 				HasShadows = false
