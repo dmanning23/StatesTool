@@ -384,7 +384,7 @@ namespace StatesTool
 			{
 				File = resource
 			};
-			Character = Engine.LoadPlayer(setColor ? new Color(55, 155, 240) : Color.White, dataFile, PlayerIndex.One, "Catpants");
+			Character = Engine.LoadPlayer(setColor ? new Color(55, 155, 240) : Color.White, dataFile, 0, "Catpants");
 			Character.Character.Flip = false;
 			Engine.Start();
 		}
@@ -409,7 +409,7 @@ namespace StatesTool
 			{
 				File = @"C:\Projects\robojets\RoboJets\RoboJets.SharedProject\Content\Robot\RobotData.xml"
 			};
-			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
+			Character = Engine.LoadPlayer(Color.White, dataFile, 0, "Catpants");
 			Engine.Start();
 		}
 
@@ -456,7 +456,7 @@ namespace StatesTool
 			{
 				File = dataFilename
 			};
-			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
+			Character = Engine.LoadPlayer(Color.White, dataFile, 0, "Catpants");
 			Engine.Start();
 		}
 
@@ -477,7 +477,7 @@ namespace StatesTool
 			{
 				File = @"C:\Projects\tasslegame\Windows\Content\Carrie\carrie data.xml"
 			};
-			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
+			Character = Engine.LoadPlayer(Color.White, dataFile, 0, "Catpants");
 			Engine.Start();
 		}
 
@@ -573,7 +573,7 @@ namespace StatesTool
 			{
 				File = dataFilename
 			};
-			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
+			Character = Engine.LoadPlayer(Color.White, dataFile, 0, "Catpants");
 			Engine.Start();
 		}
 
@@ -594,7 +594,7 @@ namespace StatesTool
 			{
 				File = @"C:\Projects\opposites.mobile\Opposites.SharedProject\Content\Character\Character_Data.xml"
 			};
-			Character = Engine.LoadPlayer(Color.White, dataFile, PlayerIndex.One, "Catpants");
+			Character = Engine.LoadPlayer(Color.White, dataFile, 0, "Catpants");
 
 			var garmentFile = new Filename();
 			garmentFile.SetFilenameRelativeToPath(dataFile, @"Clothes\Eye\GreenEyes.xml");
