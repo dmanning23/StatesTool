@@ -99,13 +99,9 @@ namespace StatesTool
 				//LoadRoboJet();
 
 				LoadWeddingTabby();
-				Save();
-				LoadWeddingDan();
-				Save();
-				LoadWeddingCarrie();
-				Save();
-				LoadWeddingBestMen();
-				Save();
+				//LoadWeddingDan();
+				//LoadWeddingCarrie();
+				//LoadWeddingBestMen();
 
 				//LoadRoboJet();
 

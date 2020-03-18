@@ -51,19 +51,19 @@
       <HintPath>..\packages\AnimationKinectLib.2.0.2\lib\net451\AnimationKinectLib.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="AnimationLib.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\AnimationLib.2.0.29\lib\net451\AnimationLib.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\AnimationLib.2.0.32\lib\net451\AnimationLib.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="AnimationLibWidgets.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\AnimationLibWidgets.2.0.12\lib\net451\AnimationLibWidgets.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\AnimationLibWidgets.2.0.13\lib\net451\AnimationLibWidgets.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="AverageBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\AverageBuddy.2.0.0\lib\net451\AverageBuddy.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="BulletCircus.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BulletCircus.1.0.3\lib\net451\BulletCircus.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\BulletCircus.2.0.1\lib\net451\BulletCircus.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="BulletMLLib.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BulletMLLib.2.0.0\lib\net451\BulletMLLib.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\BulletMLLib.2.0.1\lib\net451\BulletMLLib.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="CameraBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\CameraBuddy.2.0.6\lib\net451\CameraBuddy.WindowsDX.dll</HintPath>
@@ -88,9 +88,6 @@
     </Reference>
     <Reference Include="FontBuddyLib.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FontBuddy.2.0.15\lib\net451\FontBuddyLib.WindowsDX.dll</HintPath>
-    </Reference>
-    <Reference Include="GameDonkey.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GameDonkey.2.0.55\lib\net451\GameDonkey.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="GameTimer.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\GameTimer.2.0.0\lib\net452\GameTimer.WindowsDX.dll</HintPath>
@@ -177,7 +174,7 @@
       <HintPath>..\packages\SpriteFontPlus.MonoGame.0.7.0.22\lib\net45\SpriteFontPlus.dll</HintPath>
     </Reference>
     <Reference Include="StateMachineBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\StateMachineBuddy.2.0.19\lib\net451\StateMachineBuddy.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\StateMachineBuddy.2.0.20\lib\net451\StateMachineBuddy.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
@@ -213,6 +210,12 @@
   <ItemGroup>
     <Content Include="Content\AnimationBuddyShader.fx" />
     <Content Include="Content\XmlBuddy.Content.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\gamedonkey\GameDonkey\GameDonkey.WindowsDX\GameDonkey.WindowsDX.csproj">
+      <Project>{27f5328a-5c7f-4429-bd5e-2434ff5cf7c1}</Project>
+      <Name>GameDonkey.WindowsDX</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\..\languagegame\LanguageGameDonkey.SharedProject\LanguageGameDonkey.SharedProject.projitems" Label="Shared" />
   <Import Project="..\..\tasslegame\TassleGameLib.SharedProject\TassleGameLib.SharedProject.projitems" Label="Shared" />
