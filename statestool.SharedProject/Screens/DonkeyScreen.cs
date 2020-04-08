@@ -9,6 +9,7 @@ using LanguageGameDonkey.SharedProject;
 using MenuBuddy;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using PajamoramaLib;
 using RenderBuddy;
 using ResolutionBuddy;
 using RoboJetsDonkeyLib;
@@ -98,7 +99,7 @@ namespace StatesTool
 				//LoadTassleCarrie();
 				//LoadRoboJet();
 
-				LoadWeddingTabby();
+				//LoadWeddingTabby();
 				//LoadWeddingDan();
 				//LoadWeddingCarrie();
 				//LoadWeddingBestMen();
@@ -116,6 +117,8 @@ namespace StatesTool
 				//LoadGrimoireSkeleton();
 
 				//LoadBeachBlocks();
+
+				LoadPajamoramaDan();
 
 				await ScreenManager.AddScreen(new ToolsScreen(Engine, this));
 				await ScreenManager.AddScreen(new StateContainersScreen(Engine, Character));
@@ -611,6 +614,38 @@ namespace StatesTool
 		}
 
 		#endregion //Beach Blocks
+
+		#region Pajamorama
+
+		private void LoadPajamoramaDan()
+		{
+			LoadPajamorama(@"C:\Projects\PajamoramaMobile\Pajamorama.SharedProject\Content\Dan\DanData.xml");
+		}
+
+		private void LoadPajamorama(string dataFilename)
+		{
+			//create the correct engine
+			Filename.SetCurrentDirectory(@"C:\Projects\PajamoramaMobile\Pajamorama.SharedProject\Content\");
+			Engine = new PajamoramaDonkey(Renderer, ScreenManager.Game)
+			{
+				ToolMode = true,
+				HasShadows = false
+			};
+			Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
+
+			//SetWorldBoundaries();
+			Engine.LoadBoard(new Filename(@"WeddingVenue\WeddingVenueBoard.xml"));
+
+			//load the file
+			var dataFile = new Filename
+			{
+				File = dataFilename
+			};
+			Character = Engine.LoadPlayer(Color.White, dataFile, 0, "Catpants");
+			Engine.Start();
+		}
+
+		#endregion //Pajamorama
 
 		#endregion //Load Stuff
 	}
