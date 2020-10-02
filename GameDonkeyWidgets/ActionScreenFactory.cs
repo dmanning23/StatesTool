@@ -37,6 +37,10 @@ namespace GameDonkeyWidgets
 					{
 						return new SendStateMessageActionScreen(stateAction, character);
 					}
+				case EActionType.SendToBack:
+					{
+						return new SendToBackActionScreen(stateAction, character);
+					}
 				case EActionType.Trail:
 					{
 						return new TrailActionScreen(stateAction, character);
@@ -72,6 +76,10 @@ namespace GameDonkeyWidgets
 				case EActionType.Block:
 					{
 						return new BlockActionScreen(stateAction, character);
+					}
+				case EActionType.Shield:
+					{
+						return new ShieldActionScreen(stateAction, character);
 					}
 				default:
 					{

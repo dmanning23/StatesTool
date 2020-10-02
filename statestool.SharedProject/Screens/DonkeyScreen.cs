@@ -107,7 +107,7 @@ namespace StatesTool
 				//LoadRoboJet();
 
 				//LoadGrimoireDan();
-				//LoadGrimoireWarrior();
+				LoadGrimoireWarrior();
 				//LoadGrimoireArcher();
 				//LoadGrimoireDragon();
 				//LoadGrimoireDragonFireball();
@@ -118,7 +118,9 @@ namespace StatesTool
 
 				//LoadBeachBlocks();
 
-				LoadPajamoramaDan();
+				//LoadPajamoramaDan();
+
+				ClockSpeed(0.5f);
 
 				await ScreenManager.AddScreen(new ToolsScreen(Engine, this));
 				await ScreenManager.AddScreen(new StateContainersScreen(Engine, Character));
@@ -487,62 +489,52 @@ namespace StatesTool
 		private void LoadGrimoireWarrior()
 		{
 			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Warrior\Warrior_Data.xml");
-
-			ClockSpeed(0.5f);
 		}
 
 		private void LoadGrimoireArcher()
 		{
 			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Archer\Archer_Data.xml");
-
-			ClockSpeed(0.5f);
 		}
 
 		private void LoadGrimoireDragon()
 		{
 			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Dragon\Dragon_Data.xml");
-
-			ClockSpeed(0.5f);
 		}
 
 		private void LoadGrimoireDragonFireball()
 		{
 			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Dragon\Projectiles\Data.xml");
-
-			ClockSpeed(0.5f);
 		}
 
 		private void LoadGrimoireGoblin()
 		{
 			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Goblin\Goblin_Data.xml");
-
-			ClockSpeed(0.5f);
 		}
 
 		private void LoadGrimoireGoblinAx()
 		{
 			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Goblin\Projectiles\Data.xml");
-
-			ClockSpeed(0.5f);
 		}
 
 		private void LoadGrimoireArcherArrow()
 		{
 			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Archer\Projectiles\Data.xml");
-
-			ClockSpeed(0.5f);
 		}
 
 		private void LoadGrimoireSkeleton()
 		{
 			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Skeleton\Skeleton_Data.xml");
-
-			ClockSpeed(0.5f);
 		}
 
 		private void LoadGrimoireDan()
 		{
-			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Dan\Dan_Data.xml");
+			//load the file
+			var dataFile = new Filename
+			{
+				File = @"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Character\Grimoire_Character_Data.xml"
+			};
+
+			LoadGrimoire(dataFile.File);
 			LoadStateContainer("Sword", 
 				@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Sword\Slash_StateMachine.xml",
 				@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Sword\Slash_States.xml");
@@ -553,6 +545,22 @@ namespace StatesTool
 				@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Broom\Dash_StateMachine.xml",
 				@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Broom\Dash_States.xml");
 
+			var garmentFile = new Filename();
+			garmentFile.SetFilenameRelativeToPath(dataFile, @"Skin\Skin.xml");
+			LoadGarment(garmentFile.File, Character);
+			garmentFile.SetFilenameRelativeToPath(dataFile, @"Face\Eyes\Eyes1\Eyes.xml");
+			LoadGarment(garmentFile.File, Character);
+			//garmentFile.SetFilenameRelativeToPath(dataFile, @"Clothes\Bikini\RedBikini.xml");
+			//LoadGarment(garmentFile.File, Character);
+			garmentFile.SetFilenameRelativeToPath(dataFile, @"Hair\PixieCut\PixieCut.xml");
+			LoadGarment(garmentFile.File, Character);
+
+			Character.Character.AnimationContainer.SetColor("skin", new Color(255, 210, 210));
+			Character.Character.AnimationContainer.SetColor("lips", Color.HotPink);
+			Character.Character.AnimationContainer.SetColor("lashes", new Color(40, 30, 20));
+			Character.Character.AnimationContainer.SetColor("eyebrows", new Color(140, 110, 40));
+			Character.Character.AnimationContainer.SetColor("hair", new Color(230, 230, 130));
+			Character.Character.AnimationContainer.SetColor("tetrad", new Color(0, 0, 128));
 		}
 
 		private void LoadGrimoire(string dataFilename)

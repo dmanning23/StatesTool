@@ -11,6 +11,8 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreenFactory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\AccelerationActionScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\SendToBackActionScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\ShieldActionScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\BlockActionScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\CreateHitCircleActionScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ActionScreens\RandomActionScreen.cs" />
