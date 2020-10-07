@@ -107,7 +107,7 @@ namespace StatesTool
 				//LoadRoboJet();
 
 				//LoadGrimoireDan();
-				LoadGrimoireWarrior();
+				//LoadGrimoireWarrior();
 				//LoadGrimoireArcher();
 				//LoadGrimoireDragon();
 				//LoadGrimoireDragonFireball();
@@ -115,6 +115,10 @@ namespace StatesTool
 				//LoadGrimoireGoblinAx();
 				//LoadGrimoireArcherArrow();
 				//LoadGrimoireSkeleton();
+				//LoadGrimoireTree();
+				LoadGrimoireMummy();
+				//LoadGrimoireWolf();
+				//LoadGrimoireWizard();
 
 				//LoadBeachBlocks();
 
@@ -524,6 +528,26 @@ namespace StatesTool
 		private void LoadGrimoireSkeleton()
 		{
 			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Skeleton\Skeleton_Data.xml");
+		}
+
+		private void LoadGrimoireWolf()
+		{
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Wolf\Wolf_Data.xml");
+		}
+
+		private void LoadGrimoireWizard()
+		{
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Wizard\Wizard_Data.xml");
+		}
+
+		private void LoadGrimoireTree()
+		{
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Tree\Tree_Data.xml");
+		}
+
+		private void LoadGrimoireMummy()
+		{
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Mummy\Mummy_Data.xml");
 		}
 
 		private void LoadGrimoireDan()
