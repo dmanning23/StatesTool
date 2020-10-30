@@ -1,4 +1,4 @@
-﻿using AnimationLib;
+using AnimationLib;
 using BeachBlocksGameDonkey;
 using FilenameBuddy;
 using FontBuddyLib;
@@ -116,9 +116,9 @@ namespace StatesTool
 				//LoadGrimoireArcherArrow();
 				//LoadGrimoireSkeleton();
 				//LoadGrimoireTree();
-				LoadGrimoireMummy();
+				//LoadGrimoireMummy();
 				//LoadGrimoireWolf();
-				//LoadGrimoireWizard();
+				LoadGrimoireWizard();
 
 				//LoadBeachBlocks();
 
