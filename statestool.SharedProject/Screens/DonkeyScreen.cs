@@ -119,7 +119,8 @@ namespace StatesTool
 				//LoadGrimoireMummy();
 				//LoadGrimoireWolf();
 				//LoadGrimoireWizard();
-				LoadGrimoireFireballSpell();
+				//LoadGrimoireFireballSpell();
+				LoadGrimoirePumpkin();
 
 				//LoadBeachBlocks();
 
@@ -554,6 +555,11 @@ namespace StatesTool
 		private void LoadGrimoireFireballSpell()
 		{
 			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Fireball\Fireball_Data.xml");
+		}
+
+		private void LoadGrimoirePumpkin()
+		{
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Pumpkin\Pumpkin_Data.xml");
 		}
 
 		private void LoadGrimoireDan()

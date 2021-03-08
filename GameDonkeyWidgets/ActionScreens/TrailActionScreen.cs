@@ -16,6 +16,8 @@ namespace GameDonkeyWidgets
 
 		protected override void AddStateActionWidgets()
 		{
+			base.AddStateActionWidgets();
+
 			var trailAction = StateAction as TrailAction;
 
 			//start color
