@@ -29,6 +29,8 @@ namespace GameDonkeyWidgets
 			//add the close button
 			AddTitle(StateAction.ActionType.ToString(), false, ToolStack);
 
+			AddIdControl();
+
 			//add the time
 			AddTimeControl();
 
@@ -38,6 +40,17 @@ namespace GameDonkeyWidgets
 		}
 
 		protected abstract void AddStateActionWidgets();
+
+		protected void AddIdControl()
+		{
+			//add a control to change the time of the action
+			CreateLabel("Id", ToolStack);
+			var idWidget = CreateEditBox(StateAction.Id, ToolStack);
+			idWidget.OnTextEdited += (obj, e) =>
+			{
+				StateAction.Id = idWidget.Text;
+			};
+		}
 
 		protected void AddTimeControl()
 		{
