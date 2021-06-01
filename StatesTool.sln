@@ -11,8 +11,6 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WeddingGameDonkey.SharedPro
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GrimoireDonkey.SharedProject", "..\Grimoire\GrimoireDonkey.SharedProject\GrimoireDonkey.SharedProject.shproj", "{F43FD178-1BD4-48C3-B2A2-609CD4627B82}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "RoboJetsDonkey.SharedProject", "..\robojets\RoboJets\RoboJetsDonkey.SharedProject\RoboJetsDonkey.SharedProject.shproj", "{78B29E36-D1FA-4EAC-8EB7-47A6DAAD9F77}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "statestool.SharedProject", "statestool.SharedProject\statestool.SharedProject.shproj", "{9DA568E9-5BAF-4340-B591-B743E3593017}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatesTool.WindowsDX", "StatesTool.WindowsDX\StatesTool.WindowsDX.csproj", "{7A63FBD8-DCFA-4C9B-8318-F32DA36B62C4}"
@@ -29,16 +27,18 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BeachBlocksGameDonkey.Share
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonoGame.Framework.DesktopGL", "MonoGame\MonoGame.Framework\MonoGame.Framework.DesktopGL.csproj", "{5725C8FC-4C76-4741-9BD7-DA2EBF641D3F}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "RoboJets.Donkey", "..\robojets\RoboJets\RoboJets.Donkey\RoboJets.Donkey.shproj", "{78B29E36-D1FA-4EAC-8EB7-47A6DAAD9F77}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		..\gamedonkey\GameDonkey\GameDonkey.SharedProject\GameDonkey.SharedProject.projitems*{27f5328a-5c7f-4429-bd5e-2434ff5cf7c1}*SharedItemsImports = 4
 		..\BeachBlocks\BeachBlocksGameDonkey.SharedProject\BeachBlocksGameDonkey.SharedProject.projitems*{3d6d161d-5b3e-4678-aaa5-1c3ef1af0f27}*SharedItemsImports = 13
-		..\robojets\RoboJets\RoboJetsDonkey.SharedProject\RoboJetsDonkey.SharedProject.projitems*{78b29e36-d1fa-4eac-8eb7-47a6daad9f77}*SharedItemsImports = 13
+		..\robojets\RoboJets\RoboJets.Donkey\RoboJets.Donkey.projitems*{78b29e36-d1fa-4eac-8eb7-47a6daad9f77}*SharedItemsImports = 13
 		..\BeachBlocks\BeachBlocksGameDonkey.SharedProject\BeachBlocksGameDonkey.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
 		..\Grimoire\GrimoireDonkey.SharedProject\WeddingGameDonkey.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
 		..\languagegame\LanguageGameDonkey.SharedProject\LanguageGameDonkey.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
 		..\PajamoramaMobile\PajamoramaDonkey.SharedProject\PajamoramaDonkey.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
-		..\robojets\RoboJets\RoboJetsDonkey.SharedProject\RoboJetsDonkey.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
+		..\robojets\RoboJets\RoboJets.Donkey\RoboJets.Donkey.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
 		GameDonkeyWidgets\GameDonkeyWidgets.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
 		statestool.SharedProject\statestool.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
 		..\tasslegamelib\TassleGameLib.SharedProject\TassleGameLib.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4

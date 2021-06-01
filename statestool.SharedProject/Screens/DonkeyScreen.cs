@@ -12,7 +12,7 @@ using Microsoft.Xna.Framework.Graphics;
 using PajamoramaLib;
 using RenderBuddy;
 using ResolutionBuddy;
-using RoboJetsDonkeyLib;
+using RoboJets.Donkey;
 using StateMachineBuddy;
 using System;
 using System.Collections.Generic;
@@ -97,14 +97,13 @@ namespace StatesTool
 				//LoadWarrior();
 				//LoadWizard();
 				//LoadTassleCarrie();
-				//LoadRoboJet();
 
 				//LoadWeddingTabby();
 				//LoadWeddingDan();
 				//LoadWeddingCarrie();
 				//LoadWeddingBestMen();
 
-				//LoadRoboJet();
+				LoadRoboJet();
 
 				//LoadGrimoireDan();
 				//LoadGrimoireWarrior();
@@ -120,7 +119,7 @@ namespace StatesTool
 				//LoadGrimoireWolf();
 				//LoadGrimoireWizard();
 				//LoadGrimoireFireballSpell();
-				LoadGrimoirePumpkin();
+				//LoadGrimoirePumpkin();
 
 				//LoadBeachBlocks();
 
@@ -403,7 +402,7 @@ namespace StatesTool
 		private void LoadRoboJet()
 		{
 			//create the correct engine
-			Filename.SetCurrentDirectory(@"C:\Projects\robojets\RoboJets\RoboJets.SharedProject\Content\");
+			Filename.SetCurrentDirectory(@"C:\Projects\robojets\RoboJets\RoboJets.Core\Content\");
 			Engine = new RoboJetsDonkey(Renderer, ScreenManager.Game)
 			{
 				ToolMode = true,
@@ -414,7 +413,7 @@ namespace StatesTool
 			//load the file
 			var dataFile = new Filename
 			{
-				File = @"C:\Projects\robojets\RoboJets\RoboJets.SharedProject\Content\Robot\RobotData.xml"
+				File = @"C:\Projects\robojets\RoboJets\RoboJets.Core\Content\Robot\RobotData.xml"
 			};
 			Character = Engine.LoadPlayer(Color.White, dataFile, 0, "Catpants");
 			Engine.Start();
