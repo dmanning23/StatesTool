@@ -2,6 +2,7 @@ using AnimationLib;
 using BeachBlocksGameDonkey;
 using FilenameBuddy;
 using FontBuddyLib;
+using GameDonkey.SharedProject.ObjectManager;
 using GameDonkeyLib;
 using GrimoireLib;
 using HadoukInput;
@@ -193,13 +194,14 @@ namespace StatesTool
 		{
 			if (null != Engine)
 			{
+				Engine.Board = new Board();
 				Engine.WorldBoundaries = new Rectangle(Resolution.ScreenArea.X, 
 					Resolution.ScreenArea.Y, 
 					Resolution.ScreenArea.Width, 
 					Resolution.ScreenArea.Height * 5);
 				Engine.Renderer.Camera.IgnoreWorldBoundary = true;
 
-				Engine.SpawnPoints = new List<Vector2> { new Vector2(-1000f,1000f) };
+				Engine.Board.SpawnPoints = new List<Vector2> { new Vector2(-1000f, 1000f) };
 			}
 		}
 
