@@ -94,7 +94,7 @@ namespace StatesTool
 				//LoadDragon();
 				//LoadHydra();
 				//LoadWolf();
-				//LoadArcher();
+				LoadArcher();
 				//LoadWarrior();
 				//LoadWizard();
 				//LoadTassleCarrie();
@@ -104,7 +104,7 @@ namespace StatesTool
 				//LoadWeddingCarrie();
 				//LoadWeddingBestMen();
 
-				LoadRoboJet();
+				//LoadRoboJet();
 
 				//LoadGrimoireDan();
 				//LoadGrimoireWarrior();
@@ -296,6 +296,7 @@ namespace StatesTool
 			if (null != Engine)
 			{
 				Engine.RespawnPlayer(Character);
+				Character.Character.Flip = !Character.Character.Flip;
 			}
 		}
 
@@ -331,58 +332,58 @@ namespace StatesTool
 
 		private void LoadArcher()
 		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Archer\Archer_Data.xml");
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.Core\Content\Monsters\Archer\Archer_Data.xml");
 		}
 
 		private void LoadWarrior()
 		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Warrior\Warrior_Data.xml");
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.Core\Content\Monsters\Warrior\Warrior_Data.xml");
 		}
 
 		private void LoadTree()
 		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Tree\Tree_Data.xml");
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.Core\Content\Monsters\Tree\Tree_Data.xml");
 		}
 
 		private void LoadGoblin()
 		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Goblin\Goblin_Data.xml");
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.Core\Content\Monsters\Goblin\Goblin_Data.xml");
 		}
 
 		private void LoadMummy()
 		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Mummy\Mummy_Data.xml");
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.Core\Content\Monsters\Mummy\Mummy_Data.xml");
 		}
 
 		private void LoadSkeleton()
 		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Skeleton\Skeleton_Data.xml");
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.Core\Content\Monsters\Skeleton\Skeleton_Data.xml");
 		}
 
 		private void LoadDragon()
 		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Dragon\Dragon_Data.xml");
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.Core\Content\Monsters\Dragon\Dragon_Data.xml");
 		}
 
 		private void LoadHydra()
 		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Hydra\Hydra_Data.xml");
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.Core\Content\Monsters\Hydra\Hydra_Data.xml");
 		}
 
 		private void LoadWolf()
 		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Wolf\Wolf_Data.xml");
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.Core\Content\Monsters\Wolf\Wolf_Data.xml");
 		}
 
 		private void LoadWizard()
 		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\Monsters\Wizard\Wizard_Data.xml", true);
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.Core\Content\Monsters\Wizard\Wizard_Data.xml", true);
 		}
 
 		private void LoadLanguageMonster(string resource, bool setColor = false)
 		{
 			//create the correct engine
-			Filename.SetCurrentDirectory(@"C:\Projects\languagegame\LanguageGame.SharedProject\Content\");
+			Filename.SetCurrentDirectory(@"C:\Projects\languagegame\LanguageGame.Core\Content\");
 			Engine = new LanguageDonkey(Renderer, ScreenManager.Game);
 			Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
 			SetWorldBoundaries();
@@ -393,7 +394,7 @@ namespace StatesTool
 				File = resource
 			};
 			Character = Engine.LoadPlayer(setColor ? new Color(55, 155, 240) : Color.White, dataFile, 0, "Catpants");
-			Character.Character.Flip = false;
+			Character.Character.Flip = true;
 			Engine.Start();
 		}
 

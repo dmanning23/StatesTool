@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LanguageGameDonkey.SharedProject", "..\languagegame\LanguageGameDonkey.SharedProject\LanguageGameDonkey.SharedProject.shproj", "{E7262486-CAF4-4973-AEBF-E94FC3DF6C37}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GameDonkeyWidgets", "GameDonkeyWidgets\GameDonkeyWidgets.shproj", "{9AE0F5BE-8505-4D20-B4B8-02D191A0FAF0}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WeddingGameDonkey.SharedProject", "..\weddinggame\WeddingGameDonkey.SharedProject\WeddingGameDonkey.SharedProject.shproj", "{9DF20236-AB29-467E-9FCD-0A99EDBF2302}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GrimoireDonkey.SharedProject", "..\Grimoire\GrimoireDonkey.SharedProject\GrimoireDonkey.SharedProject.shproj", "{F43FD178-1BD4-48C3-B2A2-609CD4627B82}"
@@ -17,10 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatesTool.WindowsDX", "Sta
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "PajamoramaDonkey.SharedProject", "..\PajamoramaMobile\PajamoramaDonkey.SharedProject\PajamoramaDonkey.SharedProject.shproj", "{A146E27C-869A-4B78-96CA-F81DE350B656}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GameDonkey.SharedProject", "..\gamedonkey\GameDonkey\GameDonkey.SharedProject\GameDonkey.SharedProject.shproj", "{A242C23A-06C6-4462-941A-49B5CF426F00}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameDonkey.WindowsDX", "..\gamedonkey\GameDonkey\GameDonkey.WindowsDX\GameDonkey.WindowsDX.csproj", "{27F5328A-5C7F-4429-BD5E-2434FF5CF7C1}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TassleGameLib.SharedProject", "..\tasslegamelib\TassleGameLib.SharedProject\TassleGameLib.SharedProject.shproj", "{D6DB4B9E-2F37-498B-8655-2D9F8364F9CF}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BeachBlocksGameDonkey.SharedProject", "..\BeachBlocks\BeachBlocksGameDonkey.SharedProject\BeachBlocksGameDonkey.SharedProject.shproj", "{3D6D161D-5B3E-4678-AAA5-1C3EF1AF0F27}"
@@ -29,14 +21,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonoGame.Framework.DesktopG
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "RoboJets.Donkey", "..\robojets\RoboJets\RoboJets.Donkey\RoboJets.Donkey.shproj", "{78B29E36-D1FA-4EAC-8EB7-47A6DAAD9F77}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GameDonkeyWidgets", "GameDonkeyWidgets\GameDonkeyWidgets.shproj", "{9AE0F5BE-8505-4D20-B4B8-02D191A0FAF0}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LanguageGame.Donkey", "..\languagegame\LanguageGame.Donkey\LanguageGame.Donkey.shproj", "{E7262486-CAF4-4973-AEBF-E94FC3DF6C37}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		..\gamedonkey\GameDonkey\GameDonkey.SharedProject\GameDonkey.SharedProject.projitems*{27f5328a-5c7f-4429-bd5e-2434ff5cf7c1}*SharedItemsImports = 4
 		..\BeachBlocks\BeachBlocksGameDonkey.SharedProject\BeachBlocksGameDonkey.SharedProject.projitems*{3d6d161d-5b3e-4678-aaa5-1c3ef1af0f27}*SharedItemsImports = 13
 		..\robojets\RoboJets\RoboJets.Donkey\RoboJets.Donkey.projitems*{78b29e36-d1fa-4eac-8eb7-47a6daad9f77}*SharedItemsImports = 13
 		..\BeachBlocks\BeachBlocksGameDonkey.SharedProject\BeachBlocksGameDonkey.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
 		..\Grimoire\GrimoireDonkey.SharedProject\WeddingGameDonkey.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
-		..\languagegame\LanguageGameDonkey.SharedProject\LanguageGameDonkey.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
+		..\languagegame\LanguageGame.Donkey\LanguageGame.Donkey.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
 		..\PajamoramaMobile\PajamoramaDonkey.SharedProject\PajamoramaDonkey.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
 		..\robojets\RoboJets\RoboJets.Donkey\RoboJets.Donkey.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
 		GameDonkeyWidgets\GameDonkeyWidgets.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
@@ -47,9 +42,8 @@ Global
 		statestool.SharedProject\statestool.SharedProject.projitems*{9da568e9-5baf-4340-b591-b743e3593017}*SharedItemsImports = 13
 		..\weddinggame\WeddingGameDonkey.SharedProject\WeddingGameDonkey.SharedProject.projitems*{9df20236-ab29-467e-9fcd-0a99edbf2302}*SharedItemsImports = 13
 		..\PajamoramaMobile\PajamoramaDonkey.SharedProject\PajamoramaDonkey.SharedProject.projitems*{a146e27c-869a-4b78-96ca-f81de350b656}*SharedItemsImports = 13
-		..\gamedonkey\GameDonkey\GameDonkey.SharedProject\GameDonkey.SharedProject.projitems*{a242c23a-06c6-4462-941a-49b5cf426f00}*SharedItemsImports = 13
 		..\tasslegamelib\TassleGameLib.SharedProject\TassleGameLib.SharedProject.projitems*{d6db4b9e-2f37-498b-8655-2d9f8364f9cf}*SharedItemsImports = 13
-		..\languagegame\LanguageGameDonkey.SharedProject\LanguageGameDonkey.SharedProject.projitems*{e7262486-caf4-4973-aebf-e94fc3df6c37}*SharedItemsImports = 13
+		..\languagegame\LanguageGame.Donkey\LanguageGame.Donkey.projitems*{e7262486-caf4-4973-aebf-e94fc3df6c37}*SharedItemsImports = 13
 		..\Grimoire\GrimoireDonkey.SharedProject\WeddingGameDonkey.SharedProject.projitems*{f43fd178-1bd4-48c3-b2a2-609cd4627b82}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,14 +61,6 @@ Global
 		{7A63FBD8-DCFA-4C9B-8318-F32DA36B62C4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7A63FBD8-DCFA-4C9B-8318-F32DA36B62C4}.Release|x86.ActiveCfg = Release|Any CPU
 		{7A63FBD8-DCFA-4C9B-8318-F32DA36B62C4}.Release|x86.Build.0 = Release|Any CPU
-		{27F5328A-5C7F-4429-BD5E-2434FF5CF7C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{27F5328A-5C7F-4429-BD5E-2434FF5CF7C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{27F5328A-5C7F-4429-BD5E-2434FF5CF7C1}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{27F5328A-5C7F-4429-BD5E-2434FF5CF7C1}.Debug|x86.Build.0 = Debug|Any CPU
-		{27F5328A-5C7F-4429-BD5E-2434FF5CF7C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{27F5328A-5C7F-4429-BD5E-2434FF5CF7C1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{27F5328A-5C7F-4429-BD5E-2434FF5CF7C1}.Release|x86.ActiveCfg = Release|Any CPU
-		{27F5328A-5C7F-4429-BD5E-2434FF5CF7C1}.Release|x86.Build.0 = Release|Any CPU
 		{5725C8FC-4C76-4741-9BD7-DA2EBF641D3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5725C8FC-4C76-4741-9BD7-DA2EBF641D3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5725C8FC-4C76-4741-9BD7-DA2EBF641D3F}.Debug|x86.ActiveCfg = Debug|Any CPU
