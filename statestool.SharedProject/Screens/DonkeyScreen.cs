@@ -10,7 +10,6 @@ using LanguageGameDonkey.SharedProject;
 using MenuBuddy;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using PajamoramaLib;
 using RenderBuddy;
 using ResolutionBuddy;
 using RoboJets.Donkey;
@@ -94,7 +93,7 @@ namespace StatesTool
 				//LoadDragon();
 				//LoadHydra();
 				//LoadWolf();
-				LoadArcher();
+				//LoadArcher();
 				//LoadWarrior();
 				//LoadWizard();
 				//LoadTassleCarrie();
@@ -109,7 +108,7 @@ namespace StatesTool
 				//LoadGrimoireDan();
 				//LoadGrimoireWarrior();
 				//LoadGrimoireArcher();
-				//LoadGrimoireDragon();
+				LoadGrimoireDragon();
 				//LoadGrimoireDragonFireball();
 				//LoadGrimoireGoblin();
 				//LoadGrimoireGoblinAx();
@@ -332,58 +331,58 @@ namespace StatesTool
 
 		private void LoadArcher()
 		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.Core\Content\Monsters\Archer\Archer_Data.xml");
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageWarriors.Content\Content\Monsters\Archer\Archer_Data.xml");
 		}
 
 		private void LoadWarrior()
 		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.Core\Content\Monsters\Warrior\Warrior_Data.xml");
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageWarriors.Content\Content\Monsters\Warrior\Warrior_Data.xml");
 		}
 
 		private void LoadTree()
 		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.Core\Content\Monsters\Tree\Tree_Data.xml");
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageWarriors.Content\Content\Monsters\Tree\Tree_Data.xml");
 		}
 
 		private void LoadGoblin()
 		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.Core\Content\Monsters\Goblin\Goblin_Data.xml");
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageWarriors.Content\Content\Monsters\Goblin\Goblin_Data.xml");
 		}
 
 		private void LoadMummy()
 		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.Core\Content\Monsters\Mummy\Mummy_Data.xml");
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageWarriors.Content\Content\Monsters\Mummy\Mummy_Data.xml");
 		}
 
 		private void LoadSkeleton()
 		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.Core\Content\Monsters\Skeleton\Skeleton_Data.xml");
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageWarriors.Content\Content\Monsters\Skeleton\Skeleton_Data.xml");
 		}
 
 		private void LoadDragon()
 		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.Core\Content\Monsters\Dragon\Dragon_Data.xml");
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageWarriors.Content\Content\Monsters\Dragon\Dragon_Data.xml");
 		}
 
 		private void LoadHydra()
 		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.Core\Content\Monsters\Hydra\Hydra_Data.xml");
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageWarriors.Content\Content\Monsters\Hydra\Hydra_Data.xml");
 		}
 
 		private void LoadWolf()
 		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.Core\Content\Monsters\Wolf\Wolf_Data.xml");
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageWarriors.Content\Content\Monsters\Wolf\Wolf_Data.xml");
 		}
 
 		private void LoadWizard()
 		{
-			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageGame.Core\Content\Monsters\Wizard\Wizard_Data.xml", true);
+			LoadLanguageMonster(@"C:\Projects\languagegame\LanguageWarriors.Content\Content\Monsters\Wizard\Wizard_Data.xml", true);
 		}
 
 		private void LoadLanguageMonster(string resource, bool setColor = false)
 		{
 			//create the correct engine
-			Filename.SetCurrentDirectory(@"C:\Projects\languagegame\LanguageGame.Core\Content\");
+			Filename.SetCurrentDirectory(@"C:\Projects\languagegame\LanguageWarriors.Content\Content\");
 			Engine = new LanguageDonkey(Renderer, ScreenManager.Game);
 			Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
 			SetWorldBoundaries();
@@ -506,7 +505,12 @@ namespace StatesTool
 
 		private void LoadGrimoireDragon()
 		{
-			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Dragon\Dragon_Data.xml");
+			var dragon = LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Dragon\Dragon_Default.xml");
+			
+			dragon.Character.AnimationContainer.SetColor("1st", Color.Green);
+			dragon.Character.AnimationContainer.SetColor("2nd", Color.DarkGoldenrod);
+			dragon.Character.AnimationContainer.SetColor("Eyes", Color.Blue);
+			dragon.Character.AnimationContainer.SetColor("Fireball", Color.Green);
 		}
 
 		private void LoadGrimoireDragonFireball()
@@ -601,7 +605,7 @@ namespace StatesTool
 			Character.Character.AnimationContainer.SetColor("tetrad", new Color(0, 0, 128));
 		}
 
-		private void LoadGrimoire(string dataFilename)
+		private PlayerQueue LoadGrimoire(string dataFilename)
 		{
 			//create the correct engine
 			Filename.SetCurrentDirectory(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\");
@@ -620,6 +624,7 @@ namespace StatesTool
 			};
 			Character = Engine.LoadPlayer(Color.White, dataFile, 0, "Catpants");
 			Engine.Start();
+			return Character;
 		}
 
 		#endregion //Grimoire
@@ -663,33 +668,33 @@ namespace StatesTool
 
 		#region Pajamorama
 
-		private void LoadPajamoramaDan()
-		{
-			LoadPajamorama(@"C:\Projects\PajamoramaMobile\Pajamorama.SharedProject\Content\Dan\DanData.xml");
-		}
+		//private void LoadPajamoramaDan()
+		//{
+		//	LoadPajamorama(@"C:\Projects\PajamoramaMobile\Pajamorama.SharedProject\Content\Dan\DanData.xml");
+		//}
 
-		private void LoadPajamorama(string dataFilename)
-		{
-			//create the correct engine
-			Filename.SetCurrentDirectory(@"C:\Projects\PajamoramaMobile\Pajamorama.SharedProject\Content\");
-			Engine = new PajamoramaDonkey(Renderer, ScreenManager.Game)
-			{
-				ToolMode = true,
-				HasShadows = false
-			};
-			Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
+		//private void LoadPajamorama(string dataFilename)
+		//{
+		//	//create the correct engine
+		//	Filename.SetCurrentDirectory(@"C:\Projects\PajamoramaMobile\Pajamorama.SharedProject\Content\");
+		//	Engine = new PajamoramaDonkey(Renderer, ScreenManager.Game)
+		//	{
+		//		ToolMode = true,
+		//		HasShadows = false
+		//	};
+		//	Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
 
-			//SetWorldBoundaries();
-			Engine.LoadBoard(new Filename(@"WeddingVenue\WeddingVenueBoard.xml"));
+		//	//SetWorldBoundaries();
+		//	Engine.LoadBoard(new Filename(@"WeddingVenue\WeddingVenueBoard.xml"));
 
-			//load the file
-			var dataFile = new Filename
-			{
-				File = dataFilename
-			};
-			Character = Engine.LoadPlayer(Color.White, dataFile, 0, "Catpants");
-			Engine.Start();
-		}
+		//	//load the file
+		//	var dataFile = new Filename
+		//	{
+		//		File = dataFilename
+		//	};
+		//	Character = Engine.LoadPlayer(Color.White, dataFile, 0, "Catpants");
+		//	Engine.Start();
+		//}
 
 		#endregion //Pajamorama
 
