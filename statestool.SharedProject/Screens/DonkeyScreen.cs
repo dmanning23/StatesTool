@@ -1,5 +1,4 @@
 using AnimationLib;
-using BeachBlocksGameDonkey;
 using FilenameBuddy;
 using FontBuddyLib;
 using GameDonkey.SharedProject.ObjectManager;
@@ -17,7 +16,6 @@ using StateMachineBuddy;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using TassleGameLib;
 using WeddingGameLib;
 
 namespace StatesTool
@@ -65,27 +63,27 @@ namespace StatesTool
 
 		public override async Task LoadContent()
 		{
-			await base.LoadContent();
-
-			_text = new FontBuddy();
-			_text.LoadContent(Content, @"Fonts\ArialBlack14");
-
-			Renderer = new Renderer(ScreenManager.Game, Content)
-			{
-				TextureLoader = new TextureFileLoader(),
-				AmbientColor = new Color(.2f, .2f, .2f)
-			};
-			Renderer.ClearLights();
-			Renderer.AddDirectionalLight(new Vector3(-.5f, -1f, .6f), new Color(1f, 1f, .75f));
-			Renderer.AddDirectionalLight(new Vector3(.5f, -1f, -.1f), new Color(1f, .7f, 0f));
-			Renderer.AddDirectionalLight(new Vector3(0f, 1f, .1f), new Color(.2f, 0f, .3f));
-
-			_input = new InputState();
-
-			addAllMessages = false;
-
 			try
 			{
+				await base.LoadContent();
+
+				_text = new FontBuddy();
+				_text.LoadContent(Content, @"Fonts\ArialBlack14");
+
+				Renderer = new Renderer(ScreenManager.Game, Content)
+				{
+					TextureLoader = new TextureFileLoader(),
+					AmbientColor = new Color(.2f, .2f, .2f)
+				};
+				Renderer.ClearLights();
+				Renderer.AddDirectionalLight(new Vector3(-.5f, -1f, .6f), new Color(1f, 1f, .75f));
+				Renderer.AddDirectionalLight(new Vector3(.5f, -1f, -.1f), new Color(1f, .7f, 0f));
+				Renderer.AddDirectionalLight(new Vector3(0f, 1f, .1f), new Color(.2f, 0f, .3f));
+
+				_input = new InputState();
+
+				addAllMessages = false;
+
 				//LoadTree();
 				//LoadGoblin();
 				//LoadMummy();
@@ -472,22 +470,22 @@ namespace StatesTool
 
 		#region Tassle
 
-		private void LoadTassleCarrie()
-		{
-			//create the correct engine
-			Filename.SetCurrentDirectory(@"C:\Projects\tasslegame\Windows\Content\");
-			Engine = new TassleDonkey(Renderer, ScreenManager.Game);
-			Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
-			SetWorldBoundaries();
+		//private void LoadTassleCarrie()
+		//{
+		//	//create the correct engine
+		//	Filename.SetCurrentDirectory(@"C:\Projects\tasslegame\Windows\Content\");
+		//	Engine = new TassleDonkey(Renderer, ScreenManager.Game);
+		//	Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
+		//	SetWorldBoundaries();
 
-			//load the file
-			var dataFile = new Filename
-			{
-				File = @"C:\Projects\tasslegame\Windows\Content\Carrie\carrie data.xml"
-			};
-			Character = Engine.LoadPlayer(Color.White, dataFile, 0, "Catpants");
-			Engine.Start();
-		}
+		//	//load the file
+		//	var dataFile = new Filename
+		//	{
+		//		File = @"C:\Projects\tasslegame\Windows\Content\Carrie\carrie data.xml"
+		//	};
+		//	Character = Engine.LoadPlayer(Color.White, dataFile, 0, "Catpants");
+		//	Engine.Start();
+		//}
 
 		#endregion //Tassle
 
@@ -495,17 +493,17 @@ namespace StatesTool
 
 		private void LoadGrimoireWarrior()
 		{
-			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Warrior\Warrior_Data.xml");
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.Content\Content\Spells\Warrior\Warrior_Data.xml");
 		}
 
 		private void LoadGrimoireArcher()
 		{
-			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Archer\Archer_Data.xml");
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.Content\Content\Spells\Archer\Archer_Data.xml");
 		}
 
 		private void LoadGrimoireDragon()
 		{
-			var dragon = LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Dragon\Dragon_Default.xml");
+			var dragon = LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.Content\Content\Spells\Dragon\Dragon_Default.xml");
 			
 			dragon.Character.AnimationContainer.SetColor("1st", Color.Green);
 			dragon.Character.AnimationContainer.SetColor("2nd", Color.DarkGoldenrod);
@@ -515,57 +513,57 @@ namespace StatesTool
 
 		private void LoadGrimoireDragonFireball()
 		{
-			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Dragon\Projectiles\Data.xml");
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.Content\Content\Spells\Dragon\Projectiles\Data.xml");
 		}
 
 		private void LoadGrimoireGoblin()
 		{
-			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Goblin\Goblin_Data.xml");
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.Content\Content\Spells\Goblin\Goblin_Data.xml");
 		}
 
 		private void LoadGrimoireGoblinAx()
 		{
-			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Goblin\Projectiles\Data.xml");
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.Content\Content\Spells\Goblin\Projectiles\Data.xml");
 		}
 
 		private void LoadGrimoireArcherArrow()
 		{
-			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Archer\Projectiles\Data.xml");
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.Content\Content\Spells\Archer\Projectiles\Data.xml");
 		}
 
 		private void LoadGrimoireSkeleton()
 		{
-			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Skeleton\Skeleton_Data.xml");
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.Content\Content\Spells\Skeleton\Skeleton_Data.xml");
 		}
 
 		private void LoadGrimoireWolf()
 		{
-			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Wolf\Wolf_Data.xml");
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.Content\Content\Spells\Wolf\Wolf_Data.xml");
 		}
 
 		private void LoadGrimoireWizard()
 		{
-			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Wizard\Wizard_Data.xml");
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.Content\Content\Spells\Wizard\Wizard_Data.xml");
 		}
 
 		private void LoadGrimoireTree()
 		{
-			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Tree\Tree_Data.xml");
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.Content\Content\Spells\Tree\Tree_Data.xml");
 		}
 
 		private void LoadGrimoireMummy()
 		{
-			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Mummy\Mummy_Data.xml");
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.Content\Content\Spells\Mummy\Mummy_Data.xml");
 		}
 
 		private void LoadGrimoireFireballSpell()
 		{
-			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Fireball\Fireball_Data.xml");
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.Content\Content\Spells\Fireball\Fireball_Data.xml");
 		}
 
 		private void LoadGrimoirePumpkin()
 		{
-			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Pumpkin\Pumpkin_Data.xml");
+			LoadGrimoire(@"C:\Projects\Grimoire\Grimoire.Content\Content\Spells\Pumpkin\Pumpkin_Data.xml");
 		}
 
 		private void LoadGrimoireDan()
@@ -573,19 +571,19 @@ namespace StatesTool
 			//load the file
 			var dataFile = new Filename
 			{
-				File = @"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Character\Grimoire_Character_Data.xml"
+				File = @"C:\Projects\Grimoire\Grimoire.Content\Content\Character\Grimoire_Character_Data.xml"
 			};
 
 			LoadGrimoire(dataFile.File);
 			LoadStateContainer("Sword", 
-				@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Sword\Slash_StateMachine.xml",
-				@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Sword\Slash_States.xml");
+				@"C:\Projects\Grimoire\Grimoire.Content\Content\Spells\Sword\Slash_StateMachine.xml",
+				@"C:\Projects\Grimoire\Grimoire.Content\Content\Spells\Sword\Slash_States.xml");
 			LoadStateContainer("Shield",
-				@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Shield\Block_StateMachine.xml",
-				@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Shield\Block_States.xml");
+				@"C:\Projects\Grimoire\Grimoire.Content\Content\Spells\Shield\Block_StateMachine.xml",
+				@"C:\Projects\Grimoire\Grimoire.Content\Content\Spells\Shield\Block_States.xml");
 			LoadStateContainer("Broom",
-				@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Broom\Dash_StateMachine.xml",
-				@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\Spells\Broom\Dash_States.xml");
+				@"C:\Projects\Grimoire\Grimoire.Content\Content\Spells\Broom\Dash_StateMachine.xml",
+				@"C:\Projects\Grimoire\Grimoire.Content\Content\Spells\Broom\Dash_States.xml");
 
 			var garmentFile = new Filename();
 			garmentFile.SetFilenameRelativeToPath(dataFile, @"Skin\Skin.xml");
@@ -608,7 +606,7 @@ namespace StatesTool
 		private PlayerQueue LoadGrimoire(string dataFilename)
 		{
 			//create the correct engine
-			Filename.SetCurrentDirectory(@"C:\Projects\Grimoire\Grimoire.SharedProject\Content\");
+			Filename.SetCurrentDirectory(@"C:\Projects\Grimoire\Grimoire.Content\Content\");
 			Engine = new GrimoireDonkey(Renderer, ScreenManager.Game, false)
 			{
 				ToolMode = true,
@@ -631,38 +629,38 @@ namespace StatesTool
 
 		#region Beach Blocks
 
-		private void LoadBeachBlocks()
-		{
-			//create the correct engine
-			Filename.SetCurrentDirectory(@"C:\Projects\opposites.mobile\Opposites.SharedProject\Content\");
-			Engine = new BeachBlocksDonkey(Renderer, ScreenManager.Game);
-			Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
-			SetWorldBoundaries();
+		//private void LoadBeachBlocks()
+		//{
+		//	//create the correct engine
+		//	Filename.SetCurrentDirectory(@"C:\Projects\opposites.mobile\Opposites.SharedProject\Content\");
+		//	Engine = new BeachBlocksDonkey(Renderer, ScreenManager.Game);
+		//	Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
+		//	SetWorldBoundaries();
 
-			//load the file
-			var dataFile = new Filename
-			{
-				File = @"C:\Projects\opposites.mobile\Opposites.SharedProject\Content\Character\Character_Data.xml"
-			};
-			Character = Engine.LoadPlayer(Color.White, dataFile, 0, "Catpants");
+		//	//load the file
+		//	var dataFile = new Filename
+		//	{
+		//		File = @"C:\Projects\opposites.mobile\Opposites.SharedProject\Content\Character\Character_Data.xml"
+		//	};
+		//	Character = Engine.LoadPlayer(Color.White, dataFile, 0, "Catpants");
 
-			var garmentFile = new Filename();
-			garmentFile.SetFilenameRelativeToPath(dataFile, @"Clothes\Eye\GreenEyes.xml");
-			LoadGarment(garmentFile.File, Character);
-			garmentFile.SetFilenameRelativeToPath(dataFile, @"Clothes\Bikini\RedBikini.xml");
-			LoadGarment(garmentFile.File, Character);
-			garmentFile.SetFilenameRelativeToPath(dataFile, @"Hair\PixieCut\PixieCut.xml");
-			LoadGarment(garmentFile.File, Character);
+		//	var garmentFile = new Filename();
+		//	garmentFile.SetFilenameRelativeToPath(dataFile, @"Clothes\Eye\GreenEyes.xml");
+		//	LoadGarment(garmentFile.File, Character);
+		//	garmentFile.SetFilenameRelativeToPath(dataFile, @"Clothes\Bikini\RedBikini.xml");
+		//	LoadGarment(garmentFile.File, Character);
+		//	garmentFile.SetFilenameRelativeToPath(dataFile, @"Hair\PixieCut\PixieCut.xml");
+		//	LoadGarment(garmentFile.File, Character);
 
-			Character.Character.AnimationContainer.SetColor("skin", new Color(255, 210, 210));
-			Character.Character.AnimationContainer.SetColor("lips", Color.HotPink);
-			Character.Character.AnimationContainer.SetColor("lashes", new Color(40, 30, 20));
-			Character.Character.AnimationContainer.SetColor("eyebrows", new Color(140, 110, 40));
-			Character.Character.AnimationContainer.SetColor("hair", new Color(230, 230, 130));
-			Character.Character.AnimationContainer.SetColor("tetrad", new Color(0, 0, 128));
+		//	Character.Character.AnimationContainer.SetColor("skin", new Color(255, 210, 210));
+		//	Character.Character.AnimationContainer.SetColor("lips", Color.HotPink);
+		//	Character.Character.AnimationContainer.SetColor("lashes", new Color(40, 30, 20));
+		//	Character.Character.AnimationContainer.SetColor("eyebrows", new Color(140, 110, 40));
+		//	Character.Character.AnimationContainer.SetColor("hair", new Color(230, 230, 130));
+		//	Character.Character.AnimationContainer.SetColor("tetrad", new Color(0, 0, 128));
 
-			Engine.Start();
-		}
+		//	Engine.Start();
+		//}
 
 		#endregion //Beach Blocks
 

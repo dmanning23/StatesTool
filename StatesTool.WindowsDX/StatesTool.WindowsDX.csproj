@@ -296,13 +296,11 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="..\..\languagegame\LanguageGame.Donkey\LanguageGame.Donkey.projitems" Label="Shared" />
-  <Import Project="..\..\tasslegamelib\TassleGameLib.SharedProject\TassleGameLib.SharedProject.projitems" Label="Shared" />
   <Import Project="..\..\weddinggame\WeddingGameDonkey.SharedProject\WeddingGameDonkey.SharedProject.projitems" Label="Shared" />
-  <Import Project="..\..\Grimoire\GrimoireDonkey.SharedProject\WeddingGameDonkey.SharedProject.projitems" Label="Shared" />
-  <Import Project="..\..\BeachBlocks\BeachBlocksGameDonkey.SharedProject\BeachBlocksGameDonkey.SharedProject.projitems" Label="Shared" />
   <Import Project="..\..\robojets\RoboJets\RoboJets.Donkey\RoboJets.Donkey.projitems" Label="Shared" />
   <Import Project="..\statestool.SharedProject\statestool.SharedProject.projitems" Label="Shared" />
   <Import Project="..\GameDonkeyWidgets\GameDonkeyWidgets.projitems" Label="Shared" />
+  <Import Project="..\..\Grimoire\Grimoire.Donkey\Grimoire.Donkey.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
