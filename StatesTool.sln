@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32106.194
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WeddingGameDonkey.SharedProject", "..\weddinggame\WeddingGameDonkey.SharedProject\WeddingGameDonkey.SharedProject.shproj", "{9DF20236-AB29-467E-9FCD-0A99EDBF2302}"
 EndProject
