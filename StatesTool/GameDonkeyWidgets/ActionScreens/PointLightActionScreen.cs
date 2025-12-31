@@ -13,7 +13,7 @@ namespace StatesTool
 
         #region Methods
 
-        public PointLightActionScreen(BaseAction stateAction, PlayerQueue character) : base("Point Light", stateAction, character)
+        public PointLightActionScreen(BaseAction stateAction, IPlayerQueue character) : base("Point Light", stateAction, character)
         {
         }
 

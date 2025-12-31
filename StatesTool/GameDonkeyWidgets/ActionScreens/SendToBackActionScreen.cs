@@ -10,7 +10,7 @@ namespace StatesTool
 
         #region Methods
 
-        public SendToBackActionScreen(BaseAction stateAction, PlayerQueue character) : base("Send To Back", stateAction, character)
+        public SendToBackActionScreen(BaseAction stateAction, IPlayerQueue character) : base("Send To Back", stateAction, character)
         {
         }
 

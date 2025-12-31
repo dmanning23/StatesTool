@@ -9,13 +9,13 @@ namespace StatesTool
         #region Properties
 
         IGameDonkey Engine { get; set; }
-        PlayerQueue Character { get; set; }
+        IPlayerQueue Character { get; set; }
 
         #endregion //Properties
 
         #region Methods
 
-        public StateContainersScreen(IGameDonkey donkey, PlayerQueue character) : base("StateContainers")
+        public StateContainersScreen(IGameDonkey donkey, IPlayerQueue character) : base("StateContainers")
         {
             CoveredByOtherScreens = true;
             CoverOtherScreens = true;

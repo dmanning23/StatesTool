@@ -6,7 +6,7 @@ namespace StatesTool
     {
         #region Methods
 
-        public AccelerationActionScreen(BaseAction stateAction, PlayerQueue character) : base("Acceleration", stateAction, character)
+        public AccelerationActionScreen(BaseAction stateAction, IPlayerQueue character) : base("Acceleration", stateAction, character)
         {
         }
 

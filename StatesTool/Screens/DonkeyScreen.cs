@@ -30,7 +30,7 @@ namespace StatesTool
         /// The character we are editing the states for
         /// null until the files get loaded
         /// </summary>
-        public PlayerQueue Character { get; set; }
+        public IPlayerQueue Character { get; set; }
 
         /// <summary>
         /// Extra state container to add & save out
@@ -302,7 +302,7 @@ namespace StatesTool
 
         #region Load Stuff
 
-        private Garment LoadGarment(string garmentFile, PlayerQueue player)
+        private Garment LoadGarment(string garmentFile, IPlayerQueue player)
         {
             if (!string.IsNullOrEmpty(garmentFile))
             {
@@ -445,7 +445,7 @@ namespace StatesTool
             Engine = new GameDonkey(Renderer, ScreenManager.Game)
             {
                 ToolMode = true,
-                HasShadows = false
+                //HasShadows = false
             };
             Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
 
@@ -598,14 +598,14 @@ namespace StatesTool
             Character.Character.AnimationContainer.SetColor("tetrad", new Color(0, 0, 128));
         }
 
-        private PlayerQueue LoadGrimoire(string dataFilename)
+        private IPlayerQueue LoadGrimoire(string dataFilename)
         {
             //create the correct engine
             Filename.SetCurrentDirectory(@"C:\Projects\Grimoire\Grimoire.Content\Content\");
-            Engine = new GameDonkey(Renderer, ScreenManager.Game, false)
+            Engine = new GameDonkey(Renderer, ScreenManager.Game)
             {
                 ToolMode = true,
-                HasShadows = false
+                //HasShadows = false
             };
             Engine.LoadContent(ScreenManager.Game.GraphicsDevice, null);
             SetWorldBoundaries();

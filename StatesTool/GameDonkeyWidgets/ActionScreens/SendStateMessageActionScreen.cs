@@ -10,7 +10,7 @@ namespace StatesTool
 
         #region Methods
 
-        public SendStateMessageActionScreen(BaseAction stateAction, PlayerQueue character) : base("Send State Message", stateAction, character)
+        public SendStateMessageActionScreen(BaseAction stateAction, IPlayerQueue character) : base("Send State Message", stateAction, character)
         {
         }
 

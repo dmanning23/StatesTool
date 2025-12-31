@@ -10,7 +10,7 @@ namespace StatesTool
         #region Properties
 
         IGameDonkey Engine { get; set; }
-        PlayerQueue Character { get; set; }
+        IPlayerQueue Character { get; set; }
 
         public IStateActionsList StateActions { get; private set; }
 
@@ -18,7 +18,7 @@ namespace StatesTool
 
         #region Methods
 
-        public StateActionsScreen(IGameDonkey donkey, PlayerQueue character, IStateActionsList stateActions, string screenName) : base(screenName, true, true)
+        public StateActionsScreen(IGameDonkey donkey, IPlayerQueue character, IStateActionsList stateActions, string screenName) : base(screenName, true, true)
         {
             CoveredByOtherScreens = true;
             CoverOtherScreens = true;

@@ -8,7 +8,7 @@ namespace StatesTool
         #region Properties
 
         protected BaseAction StateAction { get; set; }
-        protected PlayerQueue Character { get; set; }
+        protected IPlayerQueue Character { get; set; }
 
         public IGameDonkey Engine { get; set; }
 
@@ -16,7 +16,7 @@ namespace StatesTool
 
         #region Methods
 
-        public BaseActionScreen(string screenName, BaseAction stateAction, PlayerQueue character) : base(screenName)
+        public BaseActionScreen(string screenName, BaseAction stateAction, IPlayerQueue character) : base(screenName)
         {
             StateAction = stateAction;
             Character = character;

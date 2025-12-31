@@ -10,11 +10,11 @@ namespace StatesTool
 
         #region Methods
 
-        public CreateAttackActionScreen(BaseAction stateAction, PlayerQueue character) : this("Attack", stateAction, character)
+        public CreateAttackActionScreen(BaseAction stateAction, IPlayerQueue character) : this("Attack", stateAction, character)
         {
         }
 
-        protected CreateAttackActionScreen(string screenName, BaseAction stateAction, PlayerQueue character) : base(screenName, stateAction, character)
+        protected CreateAttackActionScreen(string screenName, BaseAction stateAction, IPlayerQueue character) : base(screenName, stateAction, character)
         {
         }
 

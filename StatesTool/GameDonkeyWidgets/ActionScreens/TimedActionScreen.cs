@@ -10,7 +10,7 @@ namespace StatesTool
 
         #region Methods
 
-        public TimedActionScreen(string screenName, BaseAction stateAction, PlayerQueue character) : base(screenName, stateAction, character)
+        public TimedActionScreen(string screenName, BaseAction stateAction, IPlayerQueue character) : base(screenName, stateAction, character)
         {
         }
 

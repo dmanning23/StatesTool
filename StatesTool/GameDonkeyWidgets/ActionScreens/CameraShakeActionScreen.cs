@@ -10,7 +10,7 @@ namespace StatesTool
 
         #region Methods
 
-        public CameraShakeActionScreen(BaseAction stateAction, PlayerQueue character) : base("Camera Shake", stateAction, character)
+        public CameraShakeActionScreen(BaseAction stateAction, IPlayerQueue character) : base("Camera Shake", stateAction, character)
         {
         }
 

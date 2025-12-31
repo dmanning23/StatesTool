@@ -10,7 +10,7 @@ namespace StatesTool
 
         #region Methods
 
-        public ShieldActionScreen(BaseAction stateAction, PlayerQueue character) : base("Shield", stateAction, character)
+        public ShieldActionScreen(BaseAction stateAction, IPlayerQueue character) : base("Shield", stateAction, character)
         {
         }
 

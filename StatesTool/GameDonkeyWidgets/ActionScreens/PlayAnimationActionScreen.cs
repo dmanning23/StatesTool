@@ -12,7 +12,7 @@ namespace StatesTool
 
         #region Methods
 
-        public PlayAnimationActionScreen(BaseAction stateAction, PlayerQueue character) : base("Play Animation", stateAction, character)
+        public PlayAnimationActionScreen(BaseAction stateAction, IPlayerQueue character) : base("Play Animation", stateAction, character)
         {
         }
 

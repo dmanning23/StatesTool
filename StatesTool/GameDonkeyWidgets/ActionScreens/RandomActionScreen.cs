@@ -6,7 +6,7 @@ namespace StatesTool
     {
         #region Methods
 
-        public RandomActionScreen(BaseAction stateAction, PlayerQueue character) : base("Random Action", stateAction, character)
+        public RandomActionScreen(BaseAction stateAction, IPlayerQueue character) : base("Random Action", stateAction, character)
         {
         }
 

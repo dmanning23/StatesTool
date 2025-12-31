@@ -5,7 +5,7 @@ namespace StatesTool
 {
     public static class ActionScreenFactory
     {
-        public static BaseActionScreen CreateStateActionScreen(BaseAction stateAction, PlayerQueue character)
+        public static BaseActionScreen CreateStateActionScreen(BaseAction stateAction, IPlayerQueue character)
         {
             switch (stateAction.ActionType)
             {

@@ -6,7 +6,7 @@ namespace StatesTool
     {
         #region Methods
 
-        public AddVelocityActionScreen(BaseAction stateAction, PlayerQueue character) : base("Add Velocity", stateAction, character)
+        public AddVelocityActionScreen(BaseAction stateAction, IPlayerQueue character) : base("Add Velocity", stateAction, character)
         {
         }
 

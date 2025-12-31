@@ -10,7 +10,7 @@ namespace StatesTool
 
         #region Methods
 
-        public TrailActionScreen(BaseAction stateAction, PlayerQueue character) : base("Trail", stateAction, character)
+        public TrailActionScreen(BaseAction stateAction, IPlayerQueue character) : base("Trail", stateAction, character)
         {
         }
 

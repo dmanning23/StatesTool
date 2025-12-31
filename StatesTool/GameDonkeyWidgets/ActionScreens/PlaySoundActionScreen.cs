@@ -10,7 +10,7 @@ namespace StatesTool
 
         #region Methods
 
-        public PlaySoundActionScreen(BaseAction stateAction, PlayerQueue character) : base("Play Sound", stateAction, character)
+        public PlaySoundActionScreen(BaseAction stateAction, IPlayerQueue character) : base("Play Sound", stateAction, character)
         {
         }
 

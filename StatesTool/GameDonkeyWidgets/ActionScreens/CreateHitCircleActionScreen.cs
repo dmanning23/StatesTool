@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using GameDonkeyLib;
+﻿using GameDonkeyLib;
 
 namespace StatesTool
 {
     public class CreateHitCircleActionScreen : CreateAttackActionScreen
     {
-        public CreateHitCircleActionScreen(BaseAction stateAction, PlayerQueue character) : base("Hit Circle", stateAction, character)
+        public CreateHitCircleActionScreen(BaseAction stateAction, IPlayerQueue character) : base("Hit Circle", stateAction, character)
         {
         }
 

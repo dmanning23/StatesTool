@@ -13,7 +13,7 @@ namespace StatesTool
 
         #region Methods
 
-        public ParticleEffectActionScreen(BaseAction stateAction, PlayerQueue character) : base("Particle Effect", stateAction, character)
+        public ParticleEffectActionScreen(BaseAction stateAction, IPlayerQueue character) : base("Particle Effect", stateAction, character)
         {
         }
 

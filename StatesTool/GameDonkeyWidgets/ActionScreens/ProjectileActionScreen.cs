@@ -10,7 +10,7 @@ namespace StatesTool
 
         #region Methods
 
-        public ProjectileActionScreen(BaseAction stateAction, PlayerQueue character) : base("Projectile", stateAction, character)
+        public ProjectileActionScreen(BaseAction stateAction, IPlayerQueue character) : base("Projectile", stateAction, character)
         {
         }
 
