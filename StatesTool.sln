@@ -1,67 +1,34 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.1.32328.378
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WeddingGameDonkey.SharedProject", "..\weddinggame\WeddingGameDonkey.SharedProject\WeddingGameDonkey.SharedProject.shproj", "{9DF20236-AB29-467E-9FCD-0A99EDBF2302}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "statestool.SharedProject", "statestool.SharedProject\statestool.SharedProject.shproj", "{7515DE50-1669-4595-9ABF-0C49F5845431}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatesTool.WindowsDX", "StatesTool.WindowsDX\StatesTool.WindowsDX.csproj", "{7A63FBD8-DCFA-4C9B-8318-F32DA36B62C4}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonoGame.Framework.DesktopGL", "MonoGame\MonoGame.Framework\MonoGame.Framework.DesktopGL.csproj", "{5725C8FC-4C76-4741-9BD7-DA2EBF641D3F}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "RoboJets.Donkey", "..\robojets\RoboJets\RoboJets.Donkey\RoboJets.Donkey.shproj", "{78B29E36-D1FA-4EAC-8EB7-47A6DAAD9F77}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GameDonkeyWidgets", "GameDonkeyWidgets\GameDonkeyWidgets.shproj", "{9AE0F5BE-8505-4D20-B4B8-02D191A0FAF0}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LanguageGame.Donkey", "..\languagegame\LanguageGame.Donkey\LanguageGame.Donkey.shproj", "{E7262486-CAF4-4973-AEBF-E94FC3DF6C37}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Grimoire.Donkey", "..\Grimoire\Grimoire.Donkey\Grimoire.Donkey.shproj", "{822A2A94-2B64-4677-9562-F3662F9476B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatesTool", "StatesTool\StatesTool.csproj", "{836FC468-D189-41C1-ACFA-AADEC21CCE81}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		statestool.SharedProject\statestool.SharedProject.projitems*{7515de50-1669-4595-9abf-0c49f5845431}*SharedItemsImports = 13
-		..\robojets\RoboJets\RoboJets.Donkey\RoboJets.Donkey.projitems*{78b29e36-d1fa-4eac-8eb7-47a6daad9f77}*SharedItemsImports = 13
-		..\Grimoire\Grimoire.Donkey\Grimoire.Donkey.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
-		..\languagegame\LanguageGame.Donkey\LanguageGame.Donkey.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
-		..\robojets\RoboJets\RoboJets.Donkey\RoboJets.Donkey.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
-		GameDonkeyWidgets\GameDonkeyWidgets.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
-		statestool.SharedProject\statestool.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
-		..\weddinggame\WeddingGameDonkey.SharedProject\WeddingGameDonkey.SharedProject.projitems*{7a63fbd8-dcfa-4c9b-8318-f32da36b62c4}*SharedItemsImports = 4
-		..\Grimoire\Grimoire.Donkey\Grimoire.Donkey.projitems*{822a2a94-2b64-4677-9562-f3662f9476b5}*SharedItemsImports = 13
-		GameDonkeyWidgets\GameDonkeyWidgets.projitems*{9ae0f5be-8505-4d20-b4b8-02d191a0faf0}*SharedItemsImports = 13
-		..\weddinggame\WeddingGameDonkey.SharedProject\WeddingGameDonkey.SharedProject.projitems*{9df20236-ab29-467e-9fcd-0a99edbf2302}*SharedItemsImports = 13
-		..\languagegame\LanguageGame.Donkey\LanguageGame.Donkey.projitems*{e7262486-caf4-4973-aebf-e94fc3df6c37}*SharedItemsImports = 13
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7A63FBD8-DCFA-4C9B-8318-F32DA36B62C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7A63FBD8-DCFA-4C9B-8318-F32DA36B62C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7A63FBD8-DCFA-4C9B-8318-F32DA36B62C4}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{7A63FBD8-DCFA-4C9B-8318-F32DA36B62C4}.Debug|x86.Build.0 = Debug|Any CPU
-		{7A63FBD8-DCFA-4C9B-8318-F32DA36B62C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7A63FBD8-DCFA-4C9B-8318-F32DA36B62C4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7A63FBD8-DCFA-4C9B-8318-F32DA36B62C4}.Release|x86.ActiveCfg = Release|Any CPU
-		{7A63FBD8-DCFA-4C9B-8318-F32DA36B62C4}.Release|x86.Build.0 = Release|Any CPU
-		{5725C8FC-4C76-4741-9BD7-DA2EBF641D3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5725C8FC-4C76-4741-9BD7-DA2EBF641D3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5725C8FC-4C76-4741-9BD7-DA2EBF641D3F}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{5725C8FC-4C76-4741-9BD7-DA2EBF641D3F}.Debug|x86.Build.0 = Debug|Any CPU
-		{5725C8FC-4C76-4741-9BD7-DA2EBF641D3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5725C8FC-4C76-4741-9BD7-DA2EBF641D3F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5725C8FC-4C76-4741-9BD7-DA2EBF641D3F}.Release|x86.ActiveCfg = Release|Any CPU
-		{5725C8FC-4C76-4741-9BD7-DA2EBF641D3F}.Release|x86.Build.0 = Release|Any CPU
+		{836FC468-D189-41C1-ACFA-AADEC21CCE81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{836FC468-D189-41C1-ACFA-AADEC21CCE81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{836FC468-D189-41C1-ACFA-AADEC21CCE81}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{836FC468-D189-41C1-ACFA-AADEC21CCE81}.Debug|x64.Build.0 = Debug|Any CPU
+		{836FC468-D189-41C1-ACFA-AADEC21CCE81}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{836FC468-D189-41C1-ACFA-AADEC21CCE81}.Debug|x86.Build.0 = Debug|Any CPU
+		{836FC468-D189-41C1-ACFA-AADEC21CCE81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{836FC468-D189-41C1-ACFA-AADEC21CCE81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{836FC468-D189-41C1-ACFA-AADEC21CCE81}.Release|x64.ActiveCfg = Release|Any CPU
+		{836FC468-D189-41C1-ACFA-AADEC21CCE81}.Release|x64.Build.0 = Release|Any CPU
+		{836FC468-D189-41C1-ACFA-AADEC21CCE81}.Release|x86.ActiveCfg = Release|Any CPU
+		{836FC468-D189-41C1-ACFA-AADEC21CCE81}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {456A7AAC-C411-428E-A9E7-5225305890CF}
 	EndGlobalSection
 EndGlobal
