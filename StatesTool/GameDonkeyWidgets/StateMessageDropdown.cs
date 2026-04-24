@@ -8,7 +8,7 @@ namespace StatesTool
     {
         #region Methods
 
-        public StateMessageDropdown(HybridStateMachine stateMachine, IScreen screen) : base(screen)
+        public StateMessageDropdown(StringStateMachine stateMachine, IScreen screen) : base(screen)
         {
             OnClick += CreateDropdownList;
 

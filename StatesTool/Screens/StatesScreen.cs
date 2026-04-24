@@ -19,7 +19,7 @@ namespace StatesTool
 
         #region Methods
 
-        public StatesScreen(IGameDonkey donkey, IPlayerQueue character, SingleStateContainer container) : base(null, container.Name, false, false)
+        public StatesScreen(IGameDonkey donkey, IPlayerQueue character, IStateContainer container) : base(null, container.Name, false, false)
         {
             CoveredByOtherScreens = true;
             CoverOtherScreens = true;

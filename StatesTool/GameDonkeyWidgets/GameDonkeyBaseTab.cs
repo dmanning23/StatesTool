@@ -12,31 +12,7 @@ namespace StatesTool
         {
         }
 
-        protected StateContainerDropdown AddStateContainerDropdown(IStateContainer container, IStackLayout layout)
-        {
-            layout.AddItem(new Label("State Containers: ", Content, FontSize.Small)
-            {
-                Horizontal = HorizontalAlignment.Left,
-                Vertical = VerticalAlignment.Top,
-                TransitionObject = new WipeTransitionObject(TransitionWipeType.PopRight),
-                Highlightable = false
-            });
-            var dropdown = new StateContainerDropdown(this)
-            {
-                Size = new Vector2(360f, 32f),
-                Horizontal = HorizontalAlignment.Left,
-                Vertical = VerticalAlignment.Top,
-                TransitionObject = new WipeTransitionObject(TransitionWipeType.PopRight),
-                HasOutline = true
-            };
-            dropdown.AddData(container);
-            layout.AddItem(dropdown);
-            AddShim(layout);
-
-            return dropdown;
-        }
-
-        protected StateMessageDropdown AddStateMessageDropdown(HybridStateMachine stateMachine, IStackLayout layout)
+        protected StateMessageDropdown AddStateMessageDropdown(StringStateMachine stateMachine, IStackLayout layout)
         {
             layout.AddItem(new Label("Messages: ", Content, FontSize.Small)
             {

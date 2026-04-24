@@ -92,7 +92,7 @@ namespace StatesTool
                 //LoadTassleCarrie();
 
                 //LoadWeddingTabby();
-                //LoadWeddingDan();
+                LoadWeddingDan();
                 //LoadWeddingCarrie();
                 //LoadWeddingBestMen();
 
@@ -101,7 +101,7 @@ namespace StatesTool
                 //LoadGrimoireDan();
                 //LoadGrimoireWarrior();
                 //LoadGrimoireArcher();
-                LoadGrimoireDragon();
+                //LoadGrimoireDragon();
                 //LoadGrimoireDragonFireball();
                 //LoadGrimoireGoblin();
                 //LoadGrimoireGoblinAx();
@@ -122,6 +122,8 @@ namespace StatesTool
 
                 await ScreenManager.AddScreen(new ToolsScreen(Engine, this));
                 await ScreenManager.AddScreen(new StateContainersScreen(Engine, Character));
+
+                ResetPlayer();
             }
             catch (Exception ex)
             {
@@ -138,16 +140,14 @@ namespace StatesTool
 
                 var containerFilename = new Filename() { File = containerFile };
                 var stateActions = new StateMachineActions();
-                var stateContainer = new SingleStateContainerModel(containerFilename);
+                var stateContainer = new StateContainerModel(containerFilename);
                 stateContainer.ReadXmlFile();
                 stateActions.LoadStateActions(stateChanges.StateNames, stateContainer, Character.Character, Character.Character.States);
 
                 stateActions.LoadContent(Engine, Content);
 
-                foreach (var characterStateContainer in Character.Character.States.StateContainers)
-                {
-                    characterStateContainer.Actions.AddStateMachineActions(stateActions);
-                }
+                Character.Character.States.Actions.AddStateMachineActions(stateActions);
+
                 StateActions[containerFile] = stateActions;
             }
         }
@@ -157,25 +157,19 @@ namespace StatesTool
             foreach (var stateContainer in StateActions)
             {
                 var filename = new Filename() { File = stateContainer.Key };
-                using (var single = new SingleStateContainerModel(filename, stateContainer.Value))
+                using (var single = new StateContainerModel(filename, stateContainer.Value))
                 {
                     single.WriteXml();
                 }
 
-                foreach (var characterStateContainer in Character.Character.States.StateContainers)
-                {
-                    characterStateContainer.Actions.RemoveStateMachineActions(stateContainer.Value);
-                }
+                Character.Character.States.Actions.RemoveStateMachineActions(stateContainer.Value);
             }
 
-            Character.Character.States.WriteXml(addAllMessages);
+            Character.Character.States.WriteXml();
 
             foreach (var stateContainer in StateActions)
             {
-                foreach (var characterStateContainer in Character.Character.States.StateContainers)
-                {
-                    characterStateContainer.Actions.AddStateMachineActions(stateContainer.Value);
-                }
+                Character.Character.States.Actions.AddStateMachineActions(stateContainer.Value);
             }
         }
 
@@ -425,7 +419,7 @@ namespace StatesTool
 
         private void LoadWeddingDan()
         {
-            LoadWedding(@"C:\Projects\weddinggame\WeddingGame.SharedProject\Content\Dan\DanData.xml");
+            LoadWedding(@"Dan/DanData.xml");
         }
 
         private void LoadWeddingCarrie()
@@ -440,8 +434,9 @@ namespace StatesTool
 
         private void LoadWedding(string dataFilename)
         {
+            Filename.SetRelativeCurrentDirectory("../../../../../weddinggame/WeddingGame/");
+
             //create the correct engine
-            Filename.SetCurrentDirectory(@"C:\Projects\weddinggame\WeddingGame.SharedProject\Content\");
             Engine = new GameDonkey(Renderer, ScreenManager.Game)
             {
                 ToolMode = true,
@@ -453,10 +448,7 @@ namespace StatesTool
             Engine.LoadBoard(new Filename(@"WeddingVenue\WeddingVenueBoard.xml"));
 
             //load the file
-            var dataFile = new Filename
-            {
-                File = dataFilename
-            };
+            var dataFile = new Filename(dataFilename);
             Character = Engine.LoadPlayer(Color.White, dataFile, 0, "Catpants");
             Engine.Start();
         }
