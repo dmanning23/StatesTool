@@ -14,6 +14,12 @@ namespace StatesTool
         {
             var action = StateAction as TemplateAction;
 
+            var soundFiles = AddContentFileDropdown("Template files:", string.Empty, ".xml", action.FileName, ToolStack);
+            soundFiles.OnSelectedItemChange += (obj, e) =>
+            {
+                action.FileName = soundFiles.SelectedItem;
+            };
+
             var button = CreateButton("Actions", ToolStack);
             button.OnClick += Button_OnClick;
         }

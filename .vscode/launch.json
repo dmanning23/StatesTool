@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug StatesTool",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/StatesTool/bin/Debug/net8.0/StatesTool",
+            "args": [],
+            "cwd": "${workspaceFolder}/StatesTool",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        }
+    ]
+}

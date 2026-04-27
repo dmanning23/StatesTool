@@ -81,6 +81,10 @@ namespace StatesTool
                     {
                         return new ShieldActionScreen(stateAction, character);
                     }
+                case EActionType.TemplateAction:
+                    {
+                        return new TemplateActionScreen(stateAction, character);
+                    }
                 default:
                     {
                         throw new Exception($"{stateAction.ActionType.ToString()} screen has not been implemented yet.");
